@@ -1,0 +1,27 @@
+{
+  "name": "bem2c.js",
+  "version": "1.0.0",
+  "description": "Backend model to code in node js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Werayootk/BEM2C.js.git"
+  },
+  "keywords": [
+    "model to text transformation",
+    "text to model transformation",
+    "forward engineering",
+    "reverse engineering",
+    "model driven development",
+    "model driven architecture"
+  ],
+  "author": "werayootk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Werayootk/BEM2C.js/issues"
+  },
+  "homepage": "https://github.com/Werayootk/BEM2C.js#readme"
+}
