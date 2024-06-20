@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.0" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1">
+	<xmi:Documentation exporter="StarUML" exporterVersion="2.0"/>
+	<uml:Model xmi:id="AAAAAAGNF26N3wz4sgM=" xmi:type="uml:Model" name="RootModel">
+		
+      <packagedElement xmi:id="c1hhTHVYWGc5VXVkSkZjWg==" name="backend" xmi:type="uml:Model">
+          
+  <packagedElement xmi:id="TW5aczJwOVBSOUExT1M5Yg==" name="Model" xmi:type="uml:Package">
+    
+  <packagedElement xmi:id="NXpBSDVxSmpFNXF3Wm10TA==" name="BillModel" xmi:type="uml:Class">
+      
+      <ownedAttribute xmi:id="bEtWbk9vRXJqMjZhYmVVcg==" name="billId" type="Id_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="cXlhc0JoaGUydG5nUTJrSg==" name="billDate" type="Date_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="ekxhMWU5aVg2eEVvV1d2bQ==" name="paidDate" type="Date_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="RU4xd3RwcHd1cWRYbGI3TA==" name="billStatus" type="String_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="d000RkZ1RzZFOExjNUgzWQ==" name="amount" type="Integer_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="eUhzbmdYNDd2WFB0S1VpMQ==" name="totalAmount" type="Integer_id" xmi:type="uml:Property"/>
+      
+  </packagedElement>
+  
+  <packagedElement xmi:id="WjFFbmZTZHR0blUydGFteg==" name="CarModel" xmi:type="uml:Class">
+      
+      <ownedAttribute xmi:id="VkhaUktRR1FjTTlLUVRCcg==" name="carId" type="Id_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="ZkxaQ1Y5NlE1QTNMVWVqSQ==" name="carBrand" type="String_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="S0Vjb1BNVFEwcHN6TkRNUQ==" name="carRegister" type="String_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="WURyWkhEQnVNTlFmaFVaZw==" name="carPrice" type="Float_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="TTFQWEpXaFFRM1kxVmMycg==" name="carType" type="String_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="Q20xMFFhY0dUdUtWcllaTw==" name="carTransmission" type="String_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="NlBydUdCcEltR3VIVVRZNQ==" name="carSeat" type="String_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="Y2JpR1NGN1Njc2o2U1Y0dA==" name="carStatus" type="String_id" xmi:type="uml:Property"/>
+      
+  </packagedElement>
+  
+  <packagedElement xmi:id="djhuZmcxQ2RwYUhvSzhXeQ==" name="ImageModel" xmi:type="uml:Class">
+      
+      <ownedAttribute xmi:id="T0dOeWhnTnRqbXZGdWJtcQ==" name="imageId" type="Id_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="ZlR0R1o4V0NFWndiYUpDcw==" name="fileName" type="String_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="cDFoYVlCa3dkcmFKcUo5Rw==" name="filePath" type="String_id" xmi:type="uml:Property"/>
+      
+  </packagedElement>
+  
+  <packagedElement xmi:id="Q1BNTnhuUDZMdktZMW5FVg==" name="locationModel" xmi:type="uml:Class">
+      
+      <ownedAttribute xmi:id="ODlvNWVHd2JQZDBWNXlkbQ==" name="locationId" type="Id_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="V1FjOWFaM0N5OEx3R2c5YQ==" name="province" type="String_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="RmkwQ0hXanpYY0N1UUtNTw==" name="location" type="String_id" xmi:type="uml:Property"/>
+      
+  </packagedElement>
+  
+  <packagedElement xmi:id="a3Z4bnA4OTBtdm1TNUFSdw==" name="OrderModel" xmi:type="uml:Class">
+      
+      <ownedAttribute xmi:id="MHR6dXNYaFowY0xXR2V3Uw==" name="orderId" type="Id_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="MVdGZUUwT1RmNmdnNHJwSQ==" name="orderStatus" type="String_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="UTVSc0FxRDJxVzFZaWRjMA==" name="refund" type="String_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="TFduaVVuVzhhU1pld3lGdQ==" name="returnLocation" type="String_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="b2UwVnJMNU5HR2JMeUc3Zw==" name="pickupLocation" type="String_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="U25YQmh2S1ZGSURhdDdZTg==" name="bookingNo" type="String_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="SnV5cFh4WGRsbjlxNzhIYw==" name="startDateTime" type="Date_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="ZHlsdzl6d2NDNWRUbVFneQ==" name="endDateTime" type="Date_id" xmi:type="uml:Property"/>
+      
+  </packagedElement>
+  
+  <packagedElement xmi:id="ZGFGY0NlbXNRWlV0bnNOSw==" name="MerchantModel" xmi:type="uml:Class">
+      
+      <ownedAttribute xmi:id="RWh0RFFrc2RoR0lSZHZ2Yw==" name="userId" type="Id_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="ODhwRzROekhBeWsySmF6VQ==" name="email" type="String_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="YzZzcFVrdFRnYjdzRFlaVg==" name="passWord" type="String_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="RGo3WTdWMmRXRkY0UHRqUw==" name="role" type="String_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="ZlN4bXg4eHViTmVJSEdGVA==" name="firstName" type="String_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="TExvblBpSnVnVE9VYTV4bg==" name="lastName" type="String_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="NE4wS1dsRENFNDRWVUNBWQ==" name="phoneNumber" type="String_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="Wlg0R2JNZ21mMnNWRjEwVw==" name="resetPasswordToken" type="String_id" xmi:type="uml:Property"/>
+      
+      <ownedAttribute xmi:id="cVNNM0hnZXF2dEJkWk1mSQ==" name="resetPasswordExpired" type="String_id" xmi:type="uml:Property"/>
+      
+  </packagedElement>
+  
+  </packagedElement>
+  
+          
+  <packagedElement xmi:id="ZURwNjlnd1RhWmdhU3dCcw==" name="Controller" xmi:type="uml:Package">
+    
+            <packagedElement xmi:id="NEI1dlEwSDZkRTBLTGV1MQ==" name="BillController" xmi:type="uml:Class">
+                <ownedOperation xmi:id="c3o4UkFIR095NVAxR09LWQ==" name="getBillAll" xmi:type="uml:Operation"/><ownedOperation xmi:id="QUVmM0hhU1RLR2o4aHBKcw==" name="getBillById" xmi:type="uml:Operation"/><ownedOperation xmi:id="ZE43TXJkN0hKY2pVREFieg==" name="updateBillById" xmi:type="uml:Operation"/>
+            </packagedElement>
+          
+            <packagedElement xmi:id="WUtSOUI2MHl5YVBlc2FGZg==" name="CarController" xmi:type="uml:Class">
+                <ownedOperation xmi:id="UEZHSElENFZaV0JjdHA4cA==" name="getAllCar" xmi:type="uml:Operation"/><ownedOperation xmi:id="cnE2RnpRbGV3RHY5UWw2WA==" name="addCar" xmi:type="uml:Operation"/><ownedOperation xmi:id="N241WHhXcng5WFBXTG40dA==" name="getCarById" xmi:type="uml:Operation"/><ownedOperation xmi:id="OGd6bWp3WDdOOWJXMjA5Vg==" name="updateCarById" xmi:type="uml:Operation"/><ownedOperation xmi:id="MnJ0YnR2VXlJd3Z5TXBqTw==" name="deleteCarById" xmi:type="uml:Operation"/>
+            </packagedElement>
+          
+            <packagedElement xmi:id="d2daNnBna1JrOG1HSWlsZQ==" name="BookingController" xmi:type="uml:Class">
+                <ownedOperation xmi:id="SHVrN2dQdjRFMExLWEhmTQ==" name="getBookingList" xmi:type="uml:Operation"/><ownedOperation xmi:id="VGprZzl5VlV0WEc5MkxMRA==" name="getBookingByStatus" xmi:type="uml:Operation"/><ownedOperation xmi:id="YjNpUmgxSGp3Rk85NEdLYQ==" name="cancelBookingById" xmi:type="uml:Operation"/>
+            </packagedElement>
+          
+            <packagedElement xmi:id="enFhOVJrZDJsME1LbjhDSw==" name="LocationController" xmi:type="uml:Class">
+                <ownedOperation xmi:id="bnpUUVMwSHVNYjZBMTd2Tw==" name="getAllLocation" xmi:type="uml:Operation"/><ownedOperation xmi:id="ZkI1dmFEQW4wc2c2eWNYdA==" name="addLocation" xmi:type="uml:Operation"/><ownedOperation xmi:id="ZGlvWDVZYnc2V21oUE9RTw==" name="getLocationById" xmi:type="uml:Operation"/><ownedOperation xmi:id="RjVBRG5yaDdpWktrcHVLOQ==" name="updateLocationById" xmi:type="uml:Operation"/><ownedOperation xmi:id="ckc5Z2VkNDFmMjJXdVlMTw==" name="deleteLocationById" xmi:type="uml:Operation"/>
+            </packagedElement>
+          
+            <packagedElement xmi:id="WUEyc3V1TnlIM3Z3N01GRQ==" name="OrderController" xmi:type="uml:Class">
+                <ownedOperation xmi:id="OGdnRmxpU0hkcjNHRGtUQg==" name="getAllOrder" xmi:type="uml:Operation"/><ownedOperation xmi:id="RXZLb0ZTQWQ5bTIyeDBxOQ==" name="getOrderById" xmi:type="uml:Operation"/><ownedOperation xmi:id="aHFtc2dFRHIyWUlQaXZJTQ==" name="updateOrderById" xmi:type="uml:Operation"/>
+            </packagedElement>
+          
+            <packagedElement xmi:id="Z1lWS3hSY2xvTmpFemg0eg==" name="CustomerController" xmi:type="uml:Class">
+                <ownedOperation xmi:id="SDQ1QThsZU1TakJMM1pETQ==" name="Operation1" xmi:type="uml:Operation"/><ownedOperation xmi:id="TU9zbUlnaHBGMUR0b0xFSg==" name="Operation2" xmi:type="uml:Operation"/><ownedOperation xmi:id="dGd6b3ZRcXlGWjFFZHVKSw==" name="Operation3" xmi:type="uml:Operation"/><ownedOperation xmi:id="aUZoY2lGZkxPWlBUN1VMSQ==" name="Operation4" xmi:type="uml:Operation"/>
+            </packagedElement>
+          
+            <packagedElement xmi:id="QVVyNGFSdXhWN1p6WUVYUA==" name="PaymentController" xmi:type="uml:Class">
+                <ownedOperation xmi:id="QTdvUHVDZjZTRDFabDY0bw==" name="paymentCheckoutCreditCard" xmi:type="uml:Operation"/><ownedOperation xmi:id="SmN1Z0FoMnBrczB1bW5POA==" name="paymentCheckoutInternetBanking" xmi:type="uml:Operation"/><ownedOperation xmi:id="SjlTZjIxWTJUelVwaTdCOA==" name="updatePaymentStatus" xmi:type="uml:Operation"/>
+            </packagedElement>
+          
+            <packagedElement xmi:id="eWluU0hTOUwxS0JWZEVLSg==" name="UserController" xmi:type="uml:Class">
+                <ownedOperation xmi:id="eHJDZDVDamJaNmhRUGpOVQ==" name="login" xmi:type="uml:Operation"/><ownedOperation xmi:id="dG95eEtpUG5haDU2S2RQOA==" name="logout" xmi:type="uml:Operation"/><ownedOperation xmi:id="R2tSVVJXN0plQ2FsbVhFNw==" name="register" xmi:type="uml:Operation"/><ownedOperation xmi:id="bDZsSnZrV21zZUdpalg0Rw==" name="forgotPassword" xmi:type="uml:Operation"/><ownedOperation xmi:id="V2t3SnhrTkdPMXZzcTR3eA==" name="editUserProfile" xmi:type="uml:Operation"/>
+            </packagedElement>
+          
+            <packagedElement xmi:id="MGdmYmt0U0RKRmM5THU1aA==" name="SearchController" xmi:type="uml:Class">
+                <ownedOperation xmi:id="MVZweTN2bmYzaW1kOEFGMw==" name="getCarsList" xmi:type="uml:Operation"/><ownedOperation xmi:id="RDdSd3NNNFl3OTBwczZmQg==" name="getProvinceAndLocation" xmi:type="uml:Operation"/><ownedOperation xmi:id="S3lGWHhxdjZ4amJGcHZYaQ==" name="createCarOrder" xmi:type="uml:Operation"/><ownedOperation xmi:id="aFU3Z1dFaHpmM2x3S0JkWg==" name="getCarDetailById" xmi:type="uml:Operation"/>
+            </packagedElement>
+          
+  </packagedElement>
+    
+          
+  <packagedElement xmi:id="R3RjOG1IaFdMNGxKb1BSeQ==" name="Database" xmi:type="uml:Package">
+    
+  <packagedElement xmi:id="SnZtdmlXOUUyck9Wbk1XeQ==" name="MySQL" xmi:type="uml:Class">
+    
+  <ownedAttribute xmi:id="UlYzRHAxb3l0UDZHZ3YxRQ==" name="MySQL" xmi:type="uml:Property"/>
+  
+  </packagedElement>
+  </packagedElement>
+  
+         
+  <packagedElement xmi:id="dW95R0dJZFdsU2pBRU9KTA==" name="Route" xmi:type="uml:Package">
+    
+    <packagedElement xmi:id="UE5Rc2RDUXNxOGxpdlZFeA==" name="CustomersRoute" xmi:type="uml:Class">
+      <ownedMember xmi:id="SlZwMlhsME8xQVYyWmtnWA===" name="/:customerId" xmi:type="uml:Dependency" client="UE5Rc2RDUXNxOGxpdlZFeA==" supplier="MGVOSUJucUlVOHNUdkFyeQ=="/>
+            <ownedOperation xmi:id="cmcwOUtMaVBlbGlDWjNoRQ==" name="getAllCustomer" xmi:type="uml:Operation"/>
+          
+    </packagedElement>
+    ,
+    <packagedElement xmi:id="MGVOSUJucUlVOHNUdkFyeQ==" name="CustomerRoute" xmi:type="uml:Class">
+      <ownedOperation xmi:id="SU00bFBnZmJzR0JhY1E0dg==" name="getCustomerById" xmi:type="uml:Operation"/>
+          <ownedOperation xmi:id="a3czQnNSeEd0ejBGZU9ZSA==" name="updateCustomerById" xmi:type="uml:Operation"/>
+          <ownedOperation xmi:id="dHQzVVFwaXFOTnFlWUptQw==" name="deleteCustomerById" xmi:type="uml:Operation"/>
+          
+    </packagedElement>
+    ,
+    <packagedElement xmi:id="Unk1cHVuRm5pVUNHdGo4TA==" name="LocationsRoute" xmi:type="uml:Class">
+      <ownedMember xmi:id="VUhTQklMSFluUGdRRVQ1NQ===" name="/:location" xmi:type="uml:Dependency" client="Unk1cHVuRm5pVUNHdGo4TA==" supplier="RWlNOTJRNFkyczhhUTBjaw=="/>
+            <ownedOperation xmi:id="VHY3TksydjZseFBaMzhsaw==" name="getAllLocation" xmi:type="uml:Operation"/>
+          <ownedOperation xmi:id="djRRZjV4d2c4c1dxQ0hwWg==" name="addLocation" xmi:type="uml:Operation"/>
+          
+    </packagedElement>
+    ,
+    <packagedElement xmi:id="RWlNOTJRNFkyczhhUTBjaw==" name="LocationRoute" xmi:type="uml:Class">
+      <ownedOperation xmi:id="ek5ad2RFZTBGNFhWbXlaag==" name="getLocationById" xmi:type="uml:Operation"/>
+          <ownedOperation xmi:id="Rlo2RGlncXJJU2ZNT0twMQ==" name="updateLocationById" xmi:type="uml:Operation"/>
+          <ownedOperation xmi:id="WUNEM1pXRTFHZ1dOWkRoYg==" name="deleteLocationById" xmi:type="uml:Operation"/>
+          
+    </packagedElement>
+    ,
+    <packagedElement xmi:id="Z2U4YW5uOHlESzk0WEthQw==" name="CarsRoute" xmi:type="uml:Class">
+      <ownedMember xmi:id="bzA4NmZwWUlnZVlHeER4NQ===" name="/:carId" xmi:type="uml:Dependency" client="Z2U4YW5uOHlESzk0WEthQw==" supplier="OU5XYm1kV0ZnQ3N3M0FGdA=="/>
+            <ownedOperation xmi:id="YzY4U3BvaE90Vk5FOTAxcQ==" name="getAllCar" xmi:type="uml:Operation"/>
+          <ownedOperation xmi:id="M0tZTHBoc243M3lPVE9XQw==" name="addCar" xmi:type="uml:Operation"/>
+          
+    </packagedElement>
+    ,
+    <packagedElement xmi:id="OU5XYm1kV0ZnQ3N3M0FGdA==" name="CarRoute" xmi:type="uml:Class">
+      <ownedOperation xmi:id="MFBWWkVxZHhHWmlCSHJZSA==" name="getCarById" xmi:type="uml:Operation"/>
+          <ownedOperation xmi:id="RHpFdzBIOVZ1VnJ6cUFicw==" name="updateCarById" xmi:type="uml:Operation"/>
+          <ownedOperation xmi:id="OTBZdnVoN0luRmN5OUFiWA==" name="deleteCarById" xmi:type="uml:Operation"/>
+          
+    </packagedElement>
+    ,
+    <packagedElement xmi:id="bFlUVGRKbU11SVNTQVpoYg==" name="OrdersRoute" xmi:type="uml:Class">
+      <ownedMember xmi:id="NFlGaHFIbVphT2VoUk95VA===" name="/:orderId" xmi:type="uml:Dependency" client="bFlUVGRKbU11SVNTQVpoYg==" supplier="NUJENDJaRld6VU5wMXVBNQ=="/>
+            <ownedOperation xmi:id="VUsxc2xHeXNZU0d3QXgzaA==" name="getAllOrder" xmi:type="uml:Operation"/>
+          
+    </packagedElement>
+    ,
+    <packagedElement xmi:id="NUJENDJaRld6VU5wMXVBNQ==" name="OrderRoute" xmi:type="uml:Class">
+      <ownedOperation xmi:id="UzdJdXVPWjZnMk9GMVFobQ==" name="getOrderById" xmi:type="uml:Operation"/>
+          <ownedOperation xmi:id="SkFSVXpsWnlUWWVNbGcwag==" name="updateOrderById" xmi:type="uml:Operation"/>
+          
+    </packagedElement>
+    ,
+    <packagedElement xmi:id="RWRnaERkOXV6akRUSVVjWQ==" name="BillsRoute" xmi:type="uml:Class">
+      <ownedMember xmi:id="Rm83cXFFQXUwNzRkUW5POA===" name="/:billId" xmi:type="uml:Dependency" client="RWRnaERkOXV6akRUSVVjWQ==" supplier="WmppNlhLeXpZVGRUbkhyYw=="/>
+            <ownedOperation xmi:id="aUszZ0hTVnNZdllocDUzdw==" name="getBillAll" xmi:type="uml:Operation"/>
+          
+    </packagedElement>
+    ,
+    <packagedElement xmi:id="WmppNlhLeXpZVGRUbkhyYw==" name="BillRoute" xmi:type="uml:Class">
+      <ownedOperation xmi:id="M2pZck5NMGQwTHJtSDRWUw==" name="getBillById" xmi:type="uml:Operation"/>
+          <ownedOperation xmi:id="ZDZQNkxTS2hJY0kwaUlxNQ==" name="updateBillById" xmi:type="uml:Operation"/>
+          
+    </packagedElement>
+    ,
+    <packagedElement xmi:id="SjlDMzJuN2VVSFUyVGhBVw==" name="BookingsRoute" xmi:type="uml:Class">
+      <ownedMember xmi:id="TzhtUXVGMzJRWWROczNSSQ===" name="/:bookingId" xmi:type="uml:Dependency" client="SjlDMzJuN2VVSFUyVGhBVw==" supplier="enRtb28wakx2S1k0cHNRZw=="/>
+            <ownedOperation xmi:id="UWZTT0pZRFJ6anhadWtqVA==" name="getBookingList" xmi:type="uml:Operation"/>
+          
+    </packagedElement>
+    ,
+    <packagedElement xmi:id="enRtb28wakx2S1k0cHNRZw==" name="BookingRoute" xmi:type="uml:Class">
+      <ownedOperation xmi:id="QWRZUE5mTHZ5VGh2NERnVg==" name="getBookingByStatus" xmi:type="uml:Operation"/>
+          <ownedOperation xmi:id="d2RiczNoWVVLZE9JU0o3aw==" name="cancelBookingById" xmi:type="uml:Operation"/>
+          
+    </packagedElement>
+    ,
+    <packagedElement xmi:id="aHo1Znl1YjJFNVN3R2pkMQ==" name="PaymentsRoute" xmi:type="uml:Class">
+      <ownedMember xmi:id="UndZMXYyUWM1NU14QWh6eg===" name="/:paymentId" xmi:type="uml:Dependency" client="aHo1Znl1YjJFNVN3R2pkMQ==" supplier="cmp3NU5ld1dhMDI0RWJxMQ=="/>
+            <ownedOperation xmi:id="SnlqUGpmd3Y4UERhTzlqTQ==" name="paymentCheckoutCreditCard" xmi:type="uml:Operation"/>
+          <ownedOperation xmi:id="TmZwQVYydnJVa24yOTB2TA==" name="paymentCheckoutInternetBanking" xmi:type="uml:Operation"/>
+          
+    </packagedElement>
+    ,
+    <packagedElement xmi:id="cmp3NU5ld1dhMDI0RWJxMQ==" name="PaymentRoute" xmi:type="uml:Class">
+      <ownedOperation xmi:id="TnZrb0RWZ0s2U2VZMTUwdg==" name="updatePaymentStatus" xmi:type="uml:Operation"/>
+          
+    </packagedElement>
+    ,
+    <packagedElement xmi:id="czhsSXNUUUhmU3dydUJPUA==" name="SearchCarRoute" xmi:type="uml:Class">
+      <ownedMember xmi:id="a1l5YjFxOWd1UlRtelh3Ug===" name="/:carId" xmi:type="uml:Dependency" client="czhsSXNUUUhmU3dydUJPUA==" supplier="a01tVmNPazhkd3hjNHc1cw=="/>
+            <ownedOperation xmi:id="bENsNEtPbkRVMmxFRWZYZA==" name="getCarsList" xmi:type="uml:Operation"/>
+          <ownedOperation xmi:id="SXhIakpMb2RFUVJKTXdQNg==" name="getProvinceAndLocation" xmi:type="uml:Operation"/>
+          <ownedOperation xmi:id="N1lva25rVEl4OXYySEF2cg==" name="createCarOrder" xmi:type="uml:Operation"/>
+          
+    </packagedElement>
+    ,
+    <packagedElement xmi:id="a01tVmNPazhkd3hjNHc1cw==" name="CarDetailRoute" xmi:type="uml:Class">
+      <ownedOperation xmi:id="NHFiVkM3NkZTbGtPY0I4SQ==" name="getCarDetailById" xmi:type="uml:Operation"/>
+          
+    </packagedElement>
+    ,
+    <packagedElement xmi:id="S2hZVzUyYkZSUUs0T3pTcw==" name="UserRoute" xmi:type="uml:Class">
+      <ownedOperation xmi:id="TnV2MFdnQjE2T2RkY0lMVQ==" name="login" xmi:type="uml:Operation"/>
+          <ownedOperation xmi:id="ZElLeXZFV0ZSVnZrcURRSg==" name="logout" xmi:type="uml:Operation"/>
+          <ownedOperation xmi:id="N2lIR01pcG9rV3Z0RHZJag==" name="register" xmi:type="uml:Operation"/>
+          <ownedOperation xmi:id="MmVqVHVnZmg2SjdSaWg3VA==" name="forgotPassword" xmi:type="uml:Operation"/>
+          <ownedOperation xmi:id="Z2laOW45RVR2T056dkFPaA==" name="editUserProfile" xmi:type="uml:Operation"/>
+          
+    </packagedElement>
+    
+  </packagedElement>
+  
+      </packagedElement>
+      
+	    
+<packagedElement xmi:id="AAAAAAGMmYYazF13nfo=" name="UML_profile_for_NodeJs" visibility="public" xmi:type="uml:Profile">
+<packagedElement xmi:id="AAAAAAGMmc+pm15OkLo=" name="Route" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+  <ownedMember xmi:id="AAAAAAGNm/uVCvvZQa4=" xmi:type="uml:Extension">
+    <memberEnd xmi:idref="AAAAAAGMtN6dTFg9ixA="/>
+    <ownedEnd xmi:id="AAAAAAGNm/uVCvva+cQ=" xmi:type="uml:ExtensionEnd" type="AAAAAAGMmc+pm15OkLo="/>
+  </ownedMember>
+  <ownedAttribute xmi:id="AAAAAAGMtN6dTFg9ixA=" xmi:type="uml:Property" name="base_Class" association="AAAAAAGNm/uVCvvZQa4=">
+    <type href="http://schema.omg.org/spec/UML/2.0/uml.xml#Class"/>
+  </ownedAttribute>
+</packagedElement>
+<packagedElement xmi:id="AAAAAAGMmdUuwV9zed8=" name="HTTPMethod" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+  <ownedMember xmi:id="AAAAAAGNm/uVCvvb7hU=" xmi:type="uml:Extension">
+    <memberEnd xmi:idref="AAAAAAGMmfkBCWv/o80="/>
+    <ownedEnd xmi:id="AAAAAAGNm/uVCvvcRj0=" xmi:type="uml:ExtensionEnd" type="AAAAAAGMmdUuwV9zed8="/>
+  </ownedMember>
+  <ownedAttribute xmi:id="AAAAAAGMmfkBCWv/o80=" xmi:type="uml:Property" name="base_Class" association="AAAAAAGNm/uVCvvb7hU=">
+    <type href="http://schema.omg.org/spec/UML/2.0/uml.xml#Class"/>
+  </ownedAttribute>
+</packagedElement>
+<packagedElement xmi:id="AAAAAAGMmdhx6F/AjOw=" name="Controller" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+  <ownedMember xmi:id="AAAAAAGNm/uVCvvdWic=" xmi:type="uml:Extension">
+    <memberEnd xmi:idref="AAAAAAGMtN6oOVhOzPk="/>
+    <ownedEnd xmi:id="AAAAAAGNm/uVCvvea48=" xmi:type="uml:ExtensionEnd" type="AAAAAAGMmdhx6F/AjOw="/>
+  </ownedMember>
+  <ownedAttribute xmi:id="AAAAAAGMtN6oOVhOzPk=" xmi:type="uml:Property" name="base_Class" association="AAAAAAGNm/uVCvvdWic=">
+    <type href="http://schema.omg.org/spec/UML/2.0/uml.xml#Class"/>
+  </ownedAttribute>
+</packagedElement>
+<packagedElement xmi:id="AAAAAAGMmdjJmGABFtE=" name="Model" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+  <ownedMember xmi:id="AAAAAAGNm/uVCvvf0jw=" xmi:type="uml:Extension">
+    <memberEnd xmi:idref="AAAAAAGMtN607FhfT5Q="/>
+    <ownedEnd xmi:id="AAAAAAGNm/uVCvvg8aI=" xmi:type="uml:ExtensionEnd" type="AAAAAAGMmdjJmGABFtE="/>
+  </ownedMember>
+  <ownedAttribute xmi:id="AAAAAAGMtN607FhfT5Q=" xmi:type="uml:Property" name="base_Class" association="AAAAAAGNm/uVCvvf0jw=">
+    <type href="http://schema.omg.org/spec/UML/2.0/uml.xml#Class"/>
+  </ownedAttribute>
+</packagedElement>
+<packagedElement xmi:id="AAAAAAGMmgLI/3Kpf3A=" name="GET" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+  <generalization xmi:id="AAAAAAGMmgO7DXOiR3k=" visibility="public" xmi:type="uml:Generalization" specific="AAAAAAGMmgLI/3Kpf3A=" general="AAAAAAGMmdUuwV9zed8="/>
+</packagedElement>
+<packagedElement xmi:id="AAAAAAGMmgLxTHLXFS4=" name="POST" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+  <generalization xmi:id="AAAAAAGMmgOvtXORM3c=" visibility="public" xmi:type="uml:Generalization" specific="AAAAAAGMmgLxTHLXFS4=" general="AAAAAAGMmdUuwV9zed8="/>
+</packagedElement>
+<packagedElement xmi:id="AAAAAAGMmgMTNnMFpHg=" name="DELETE" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+  <generalization xmi:id="AAAAAAGMmgPGgnOz878=" visibility="public" xmi:type="uml:Generalization" specific="AAAAAAGMmgMTNnMFpHg=" general="AAAAAAGMmdUuwV9zed8="/>
+</packagedElement>
+<packagedElement xmi:id="AAAAAAGMmgM/jHMzGcI=" name="PUT" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+  <generalization xmi:id="AAAAAAGMmgPlxHPVg88=" visibility="public" xmi:type="uml:Generalization" specific="AAAAAAGMmgM/jHMzGcI=" general="AAAAAAGMmdUuwV9zed8="/>
+</packagedElement>
+<packagedElement xmi:id="AAAAAAGMmgNrlHNizAM=" name="PATCH" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+  <generalization xmi:id="AAAAAAGMmgRKFnP6RUQ=" visibility="public" xmi:type="uml:Generalization" specific="AAAAAAGMmgNrlHNizAM=" general="AAAAAAGMmdUuwV9zed8="/>
+</packagedElement>
+<packagedElement xmi:id="AAAAAAGMmgYuNHQtJpU=" name="Database" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+  <ownedMember xmi:id="AAAAAAGNm/uVCvvh8n4=" xmi:type="uml:Extension">
+    <memberEnd xmi:idref="AAAAAAGMtN7AQVhwLFQ="/>
+    <ownedEnd xmi:id="AAAAAAGNm/uVCvviagE=" xmi:type="uml:ExtensionEnd" type="AAAAAAGMmgYuNHQtJpU="/>
+  </ownedMember>
+  <ownedAttribute xmi:id="AAAAAAGMtN7AQVhwLFQ=" xmi:type="uml:Property" name="base_Class" association="AAAAAAGNm/uVCvvh8n4=">
+    <type href="http://schema.omg.org/spec/UML/2.0/uml.xml#Class"/>
+  </ownedAttribute>
+</packagedElement>
+<packagedElement xmi:id="AAAAAAGMt9vIbknkDC0=" name="ResourcePath" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+  <ownedMember xmi:id="AAAAAAGNm/uVC/vjjUM=" xmi:type="uml:Extension">
+    <memberEnd xmi:idref="AAAAAAGMt9vWmUoQc98="/>
+    <ownedEnd xmi:id="AAAAAAGNm/uVC/vkRfw=" xmi:type="uml:ExtensionEnd" type="AAAAAAGMt9vIbknkDC0="/>
+  </ownedMember>
+  <ownedAttribute xmi:id="AAAAAAGMt9vWmUoQc98=" xmi:type="uml:Property" name="base_Class" association="AAAAAAGNm/uVC/vjjUM=">
+    <type href="http://schema.omg.org/spec/UML/2.0/uml.xml#Class"/>
+  </ownedAttribute>
+</packagedElement>
+<packagedElement xmi:id="AAAAAAGNm4m4d2OgCNQ=" name="API" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+  <ownedMember xmi:id="AAAAAAGNm/uVC/vlsWs=" xmi:type="uml:Extension">
+    <memberEnd xmi:idref="AAAAAAGNm4tWemPOfdU="/>
+    <ownedEnd xmi:id="AAAAAAGNm/uVC/vm4U0=" xmi:type="uml:ExtensionEnd" type="AAAAAAGNm4m4d2OgCNQ="/>
+  </ownedMember>
+  <ownedAttribute xmi:id="AAAAAAGNm4tWemPOfdU=" xmi:type="uml:Property" name="base_Class" association="AAAAAAGNm/uVC/vlsWs=">
+    <type href="http://schema.omg.org/spec/UML/2.0/uml.xml#Class"/>
+  </ownedAttribute>
+</packagedElement>
+<packagedElement xmi:id="AAAAAAGNm5lfNROkcaQ=" name="ControllerPackage" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+  <ownedMember xmi:id="AAAAAAGNm/uVC/vnuec=" xmi:type="uml:Extension">
+    <memberEnd xmi:idref="AAAAAAGNm5nWSRQxsbc="/>
+    <ownedEnd xmi:id="AAAAAAGNm/uVC/vo6qU=" xmi:type="uml:ExtensionEnd" type="AAAAAAGNm5lfNROkcaQ="/>
+  </ownedMember>
+  <ownedAttribute xmi:id="AAAAAAGNm5nWSRQxsbc=" xmi:type="uml:Property" name="base_Class" association="AAAAAAGNm/uVC/vnuec=">
+    <type href="http://schema.omg.org/spec/UML/2.0/uml.xml#Class"/>
+  </ownedAttribute>
+</packagedElement>
+<packagedElement xmi:id="AAAAAAGNm5l9ehPS+rU=" name="ModelPackage" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+  <ownedMember xmi:id="AAAAAAGNm/uVC/vp9cc=" xmi:type="uml:Extension">
+    <memberEnd xmi:idref="AAAAAAGNm5nicxRCy/c="/>
+    <ownedEnd xmi:id="AAAAAAGNm/uVC/vqFxY=" xmi:type="uml:ExtensionEnd" type="AAAAAAGNm5l9ehPS+rU="/>
+  </ownedMember>
+  <ownedAttribute xmi:id="AAAAAAGNm5nicxRCy/c=" xmi:type="uml:Property" name="base_Class" association="AAAAAAGNm/uVC/vp9cc=">
+    <type href="http://schema.omg.org/spec/UML/2.0/uml.xml#Class"/>
+  </ownedAttribute>
+</packagedElement>
+<packagedElement xmi:id="AAAAAAGNm5mxXRQB3tc=" name="DatabasePackage" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+  <ownedMember xmi:id="AAAAAAGNm/uVC/vrprg=" xmi:type="uml:Extension">
+    <memberEnd xmi:idref="AAAAAAGNm5nuPRRTAr8="/>
+    <ownedEnd xmi:id="AAAAAAGNm/uVC/vsm2c=" xmi:type="uml:ExtensionEnd" type="AAAAAAGNm5mxXRQB3tc="/>
+  </ownedMember>
+  <ownedAttribute xmi:id="AAAAAAGNm5nuPRRTAr8=" xmi:type="uml:Property" name="base_Class" association="AAAAAAGNm/uVC/vrprg=">
+    <type href="http://schema.omg.org/spec/UML/2.0/uml.xml#Class"/>
+  </ownedAttribute>
+</packagedElement>
+</packagedElement>
+
+        
+<packagedElement xmi:id="String_id" name="String" xmi:type="uml:DataType"/>
+<packagedElement xmi:id="Boolean_id" name="Boolean" xmi:type="uml:DataType"/>
+<packagedElement xmi:id="Integer_id" name="Integer" xmi:type="uml:DataType"/>
+<packagedElement xmi:id="Float_id" name="Float" xmi:type="uml:DataType"/>
+<packagedElement xmi:id="Date_id" name="Date" xmi:type="uml:DataType"/>
+<packagedElement xmi:id="Id_id" name="Id" xmi:type="uml:DataType"/>
+
+    </uml:Model>
+</xmi:XMI>

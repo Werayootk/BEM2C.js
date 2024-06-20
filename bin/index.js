@@ -24,11 +24,9 @@ if (yargs.argv._[0] == null) {
             } else {
                 console.log("\n" + boxen(chalk.red("\n" + "-i and -o not null." + "\n"), { padding: 1, borderColor: 'red', dimBorder: true, borderStyle: 'classic' }) + "\n");
                 return;
-            }
-            console.log("\n" + boxen(chalk.green("\n" + "Forward Method Successfully." + "\n"), { padding: 1, borderColor: 'green', dimBorder: true, borderStyle: 'classic' }) + "\n");
-            return;
+            }            
         } catch (error) {
-            console.log("\n" + boxen(chalk.red("\n" + "Forward Method Failure." + "\n"), { padding: 1, borderColor: 'red', dimBorder: true, borderStyle: 'classic' }) + "\n");
+            console.log("\n" + boxen(chalk.red("\n" + "Forward Method Failure." + error +" \n"), { padding: 1, borderColor: 'red', dimBorder: true, borderStyle: 'classic' }) + "\n");
             return;
         }
     } else if (yargs.argv.m === 'reverse') {
@@ -39,22 +37,15 @@ if (yargs.argv._[0] == null) {
                 console.log("\n" + boxen(chalk.red("\n" + "-i and -o not null." + "\n"), { padding: 1, borderColor: 'red', dimBorder: true, borderStyle: 'classic' }) + "\n");
                 return;
             }
-            console.log("\n" + boxen(chalk.green("\n" + "Forward Method Successfully." + "\n"), { padding: 1, borderColor: 'green', dimBorder: true, borderStyle: 'classic' }) + "\n");
-            return;
         } catch (error) {
-            console.log("\n" + boxen(chalk.red("\n" + "Forward Method Failure." + "\n"), { padding: 1, borderColor: 'red', dimBorder: true, borderStyle: 'classic' }) + "\n");
+            console.log("\n" + boxen(chalk.red("\n" + "Reverse Method Failure." + error + " \n"), { padding: 1, borderColor: 'red', dimBorder: true, borderStyle: 'classic' }) + "\n");
             return;
         }
     } else if ((yargs.argv.m != 'reverse' || yargs.argv.m != 'forward') && yargs.argv.m != null) {
         console.log(chalk.red('-m must be "forward" or "reverse"'));
         return;
-    }
-    utils.showHelp();
-    return;
+    }    
 } else {
     utils.showHelp();
     return;
 }
-
-// /Users/werayootk/Downloads/project_code/thesis/BEM2C.js/data/forward/output/
-// /Users/werayootk/Downloads/project_code/thesis/BEM2C.js/data/forward/input/CarRentalSystemDiagram.xmi
