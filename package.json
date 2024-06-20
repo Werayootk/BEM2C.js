@@ -2,7 +2,7 @@
   "name": "bem2c.js",
   "version": "1.0.0",
   "description": "Backend model to code in node js",
-  "main": "index.js",
+  "main": "bin/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,10 +18,21 @@
     "model driven development",
     "model driven architecture"
   ],
+  "engine": {
+    "node": ">16"
+  },
+  "bin": {
+    "bem2c": "./bin/index.js"
+  },
   "author": "werayootk",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Werayootk/BEM2C.js/issues"
   },
-  "homepage": "https://github.com/Werayootk/BEM2C.js#readme"
+  "homepage": "https://github.com/Werayootk/BEM2C.js#readme",
+  "dependencies": {
+    "boxen": "^4.2.0",
+    "chalk": "^4.1.1",
+    "yargs": "^16.1.1"
+  }
 }
