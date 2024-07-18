@@ -687,10 +687,9 @@ function generateModel(data) {
         });
         let commentSection = `
   /**
-   * @model :${JSON.stringify(model)}
-   * @database :${JSON.stringify(database)}
+   * @modelName :${JSON.stringify(model)}
+   * @databaseType :${JSON.stringify(database)}
    * @attribute :${JSON.stringify(attribute)}
-   * @relations :${JSON.stringify(relations)}
    */
         `;
         let modelTemplate = `
@@ -759,10 +758,9 @@ function generateModel(data) {
         });
         let commentSection = `
   /**
-   * @model :${JSON.stringify(model)}
-   * @database :${JSON.stringify(database)}
+   * @modelName :${JSON.stringify(model)}
+   * @databaseType :${JSON.stringify(database)}
    * @attribute :${JSON.stringify(attribute)}
-   * @relations :${JSON.stringify(relations)}
    */
     `;
         let modelTemplate = `
@@ -828,8 +826,8 @@ function generateController(data) {
       });
       let commentSection = `
   /**
-   * @controllerName :${JSON.stringify(controllerName)}
-   * @className :${JSON.stringify(className)}
+   * @operationName :${JSON.stringify(controllerName)}
+   * @controllerClass :${JSON.stringify(className)}
    */
   
   const asyncHandler = require("express-async-handler");
@@ -895,16 +893,16 @@ async function dataInModel(pathFile) {
   try {
     const fileModelContent = await fs_promises.readFile(pathFile, 'utf-8');
     // Define regex patterns
-    const modelPattern = /@model\s*:\s*\[([^\]]+)\]/;
-    const databasePattern = /@database\s*:\s*\[([^\]]+)\]/;
+    const modelPattern = /@modelName\s*:\s*\[([^\]]+)\]/;
+    const databasePattern = /@databaseType\s*:\s*\[([^\]]+)\]/;
     const attributePattern = /@attribute\s*:\s*\[([^\]]+)\]/;
-    const relationsPattern = /@relations\s*:\s*\[([^\]]+)\]/;
+    // const relationsPattern = /@relations\s*:\s*\[([^\]]+)\]/;
 
     // Extract matches using regex
     const modelMatches = fileModelContent.match(modelPattern);
     const databaseMatches = fileModelContent.match(databasePattern);
     const attributeMatches = fileModelContent.match(attributePattern);
-    const relationsMatches = fileModelContent.match(relationsPattern);
+    // const relationsMatches = fileModelContent.match(relationsPattern);
     // Convert matches to arrays
     const model = modelMatches ? JSON.parse(`[${modelMatches[1]}]`) : [];
     const database = databaseMatches
@@ -913,16 +911,16 @@ async function dataInModel(pathFile) {
     const attribute = attributeMatches
       ? JSON.parse(`[${attributeMatches[1]}]`)
       : [];
-    const relations = relationsMatches
-      ? JSON.parse(`[${relationsMatches[1]}]`)
-      : [];
+    // const relations = relationsMatches
+    //   ? JSON.parse(`[${relationsMatches[1]}]`)
+    //   : [];
 
     // Create the final object
     const data = {
       model,
       database,
       attribute,
-      relations,
+      // relations,
     };
     return await data;
   } catch (err) {
@@ -934,8 +932,8 @@ async function dataInController(pathFile) {
   try {
     const fileControllerContent = await fs_promises.readFile(pathFile, 'utf-8');
     // Define regex patterns
-    const controllerNamePattern = /@controllerName\s*:\s*\[([^\]]+)\]/;
-    const classNamePattern = /@className\s*:\s*\[([^\]]+)\]/;
+    const controllerNamePattern = /@operationName\s*:\s*\[([^\]]+)\]/;
+    const classNamePattern = /@controllerClass\s*:\s*\[([^\]]+)\]/;
 
     // Extract matches using regex
     const controllerNameMatches = fileControllerContent.match(
@@ -1356,31 +1354,31 @@ function mappingModel(data) {
   </packagedElement>
   `;
 
-    item.relations.forEach((i) => {
-      let storeEndID = generateId();
-      let storeStartID = generateId();
-      const idEndValue = mappedID.find((obj) => obj.hasOwnProperty(i))[i];
-      let ownedMember = `
-      <ownedMember xmi:id="${generateId()}" xmi:type="uml:Association">
-        <!-- <<Model_MEMBER>> -->
-      </ownedMember>
-      `;
-      let ownedStart = `
-      <ownedEnd xmi:id="${storeStartID}" xmi:type="uml:Property" type="${idValue}" />
-      `;
-      let ownedEnd = `
-        <ownedEnd xmi:id="${storeEndID}" xmi:type="uml:Property" type="${idEndValue}" />
-      `;
-      let memberStart = `
-      <memberEnd xmi:idref="${storeStartID}"/>
-      `;
-      let memberEnd = `
-      <memberEnd xmi:idref="${storeEndID}"/>
-      `;
-      let member = ownedStart + ownedEnd + memberStart + memberEnd;
-      ownedMember = ownedMember.replace('<!-- <<Model_MEMBER>> -->', member);
-      ownedMemberMapped.push(ownedMember);
-    });
+    // item.relations.forEach((i) => {
+    //   let storeEndID = generateId();
+    //   let storeStartID = generateId();
+    //   const idEndValue = mappedID.find((obj) => obj.hasOwnProperty(i))[i];
+    //   let ownedMember = `
+    //   <ownedMember xmi:id="${generateId()}" xmi:type="uml:Association">
+    //     <!-- <<Model_MEMBER>> -->
+    //   </ownedMember>
+    //   `;
+    //   let ownedStart = `
+    //   <ownedEnd xmi:id="${storeStartID}" xmi:type="uml:Property" type="${idValue}" />
+    //   `;
+    //   let ownedEnd = `
+    //     <ownedEnd xmi:id="${storeEndID}" xmi:type="uml:Property" type="${idEndValue}" />
+    //   `;
+    //   let memberStart = `
+    //   <memberEnd xmi:idref="${storeStartID}"/>
+    //   `;
+    //   let memberEnd = `
+    //   <memberEnd xmi:idref="${storeEndID}"/>
+    //   `;
+    //   let member = ownedStart + ownedEnd + memberStart + memberEnd;
+    //   ownedMember = ownedMember.replace('<!-- <<Model_MEMBER>> -->', member);
+    //   ownedMemberMapped.push(ownedMember);
+    // });
     item.attribute.forEach((a) => {
       const mappedType = mapType(a.type);
       const outputMapped = { ...a, type: mappedType };
