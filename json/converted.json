@@ -13,7 +13,7 @@
     },
     "uml:Model": {
       "$": {
-        "xmi:id": "AAAAAAGQMHd6YViSpic=",
+        "xmi:id": "AAAAAAGQMHTuPjtRTCc=",
         "xmi:type": "uml:Model",
         "name": "RootModel"
       },
@@ -116,7 +116,7 @@
                     {
                       "$": {
                         "xmi:id": "AAAAAAGOakxwUV0wCPM=",
-                        "name": "userId",
+                        "name": "merchantId",
                         "visibility": "private",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -143,7 +143,7 @@
                     {
                       "$": {
                         "xmi:id": "AAAAAAGOalWsVF1OeWI=",
-                        "name": "email",
+                        "name": "userName",
                         "visibility": "private",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -194,7 +194,7 @@
                     {
                       "$": {
                         "xmi:id": "AAAAAAGOalduAF1krlc=",
-                        "name": "firstName",
+                        "name": "merchantName",
                         "visibility": "private",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -211,7 +211,24 @@
                     {
                       "$": {
                         "xmi:id": "AAAAAAGOalex9l1rujI=",
-                        "name": "lastName",
+                        "name": "merchantInfo",
+                        "visibility": "private",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "type": "String_id",
+                        "isReadOnly": "false",
+                        "isOrdered": "false",
+                        "isUnique": "false",
+                        "xmi:type": "uml:Property",
+                        "aggregation": "none",
+                        "isDerived": "false",
+                        "isID": "false"
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOalfyql1yapg=",
+                        "name": "merchantPhoto",
                         "visibility": "private",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -228,7 +245,75 @@
                     {
                       "$": {
                         "xmi:id": "AAAAAAGOallDI116yKc=",
-                        "name": "phoneNumber",
+                        "name": "merchantPhoneNumber",
+                        "visibility": "private",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "type": "String_id",
+                        "isReadOnly": "false",
+                        "isOrdered": "false",
+                        "isUnique": "false",
+                        "xmi:type": "uml:Property",
+                        "aggregation": "none",
+                        "isDerived": "false",
+                        "isID": "false"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "$": {
+                    "xmi:id": "AAAAAAGOakTVSVvKPgo=",
+                    "name": "SupplierModel",
+                    "visibility": "public",
+                    "isAbstract": "false",
+                    "isFinalSpecialization": "false",
+                    "isLeaf": "false",
+                    "xmi:type": "uml:Class",
+                    "isActive": "false"
+                  },
+                  "xmi:Extension": {
+                    "$": {
+                      "extender": "StarUML"
+                    },
+                    "stereotype": {
+                      "$": {
+                        "value": "AAAAAAGOZS0Q/fhNIKw="
+                      }
+                    }
+                  },
+                  "ownedAttribute": [
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOalT88F1AHcs=",
+                        "name": "supplierId",
+                        "visibility": "private",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "type": "Id_id",
+                        "isReadOnly": "false",
+                        "isOrdered": "false",
+                        "isUnique": "false",
+                        "xmi:type": "uml:Property",
+                        "aggregation": "none",
+                        "isDerived": "false",
+                        "isID": "false"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": ""
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOalqOy12Luzs=",
+                        "name": "userName",
                         "visibility": "private",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -244,8 +329,8 @@
                     },
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGQIByUfYkaO7I=",
-                        "name": "resetPasswordToken",
+                        "xmi:id": "AAAAAAGOalq8Sl2TEz0=",
+                        "name": "passWord",
                         "visibility": "private",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -261,8 +346,76 @@
                     },
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGQIB0PGYkkhcA=",
-                        "name": "resetPasswordExpired",
+                        "xmi:id": "AAAAAAGOalrjS12aCVs=",
+                        "name": "role",
+                        "visibility": "private",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "type": "String_id",
+                        "isReadOnly": "false",
+                        "isOrdered": "false",
+                        "isUnique": "false",
+                        "xmi:type": "uml:Property",
+                        "aggregation": "none",
+                        "isDerived": "false",
+                        "isID": "false"
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOalsV812hSTw=",
+                        "name": "supplierName",
+                        "visibility": "private",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "type": "String_id",
+                        "isReadOnly": "false",
+                        "isOrdered": "false",
+                        "isUnique": "false",
+                        "xmi:type": "uml:Property",
+                        "aggregation": "none",
+                        "isDerived": "false",
+                        "isID": "false"
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOaltFZV2ocVg=",
+                        "name": "supplierInfo",
+                        "visibility": "private",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "type": "String_id",
+                        "isReadOnly": "false",
+                        "isOrdered": "false",
+                        "isUnique": "false",
+                        "xmi:type": "uml:Property",
+                        "aggregation": "none",
+                        "isDerived": "false",
+                        "isID": "false"
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOalt3l12vdtM=",
+                        "name": "supplierPhoto",
+                        "visibility": "private",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "type": "String_id",
+                        "isReadOnly": "false",
+                        "isOrdered": "false",
+                        "isUnique": "false",
+                        "xmi:type": "uml:Property",
+                        "aggregation": "none",
+                        "isDerived": "false",
+                        "isID": "false"
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOalukhF22cuI=",
+                        "name": "supplierPhoneNumber",
                         "visibility": "private",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -281,7 +434,7 @@
                 {
                   "$": {
                     "xmi:id": "AAAAAAGOakVobFv3q7U=",
-                    "name": "CarModel",
+                    "name": "ProductModel",
                     "visibility": "public",
                     "isAbstract": "false",
                     "isFinalSpecialization": "false",
@@ -303,7 +456,7 @@
                     {
                       "$": {
                         "xmi:id": "AAAAAAGOanLual2/Ei0=",
-                        "name": "carId",
+                        "name": "productId",
                         "visibility": "private",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -330,7 +483,7 @@
                     {
                       "$": {
                         "xmi:id": "AAAAAAGOan2nsV3LLYI=",
-                        "name": "carBrand",
+                        "name": "productName",
                         "visibility": "private",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -347,7 +500,7 @@
                     {
                       "$": {
                         "xmi:id": "AAAAAAGOan6hGF3SpD8=",
-                        "name": "carRegister",
+                        "name": "category",
                         "visibility": "private",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -364,7 +517,7 @@
                     {
                       "$": {
                         "xmi:id": "AAAAAAGOan9OYl3gy2o=",
-                        "name": "carPrice",
+                        "name": "price",
                         "visibility": "private",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -381,7 +534,7 @@
                     {
                       "$": {
                         "xmi:id": "AAAAAAGOan+FcF3nLI4=",
-                        "name": "carType",
+                        "name": "description",
                         "visibility": "private",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -398,41 +551,7 @@
                     {
                       "$": {
                         "xmi:id": "AAAAAAGOaoFvc13ukCY=",
-                        "name": "carTransmission",
-                        "visibility": "private",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "type": "String_id",
-                        "isReadOnly": "false",
-                        "isOrdered": "false",
-                        "isUnique": "false",
-                        "xmi:type": "uml:Property",
-                        "aggregation": "none",
-                        "isDerived": "false",
-                        "isID": "false"
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIBLuaohbSew=",
-                        "name": "carSeat",
-                        "visibility": "private",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "type": "String_id",
-                        "isReadOnly": "false",
-                        "isOrdered": "false",
-                        "isUnique": "false",
-                        "xmi:type": "uml:Property",
-                        "aggregation": "none",
-                        "isDerived": "false",
-                        "isID": "false"
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIBNXUohke2g=",
-                        "name": "carStatus",
+                        "name": "sku",
                         "visibility": "private",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -517,7 +636,7 @@
                     {
                       "$": {
                         "xmi:id": "AAAAAAGOari39nxBxo4=",
-                        "name": "refund",
+                        "name": "orderTo",
                         "visibility": "private",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -534,79 +653,11 @@
                     {
                       "$": {
                         "xmi:id": "AAAAAAGOauEQBaITkWU=",
-                        "name": "returnLocation",
+                        "name": "orderQuantity",
                         "visibility": "private",
                         "isStatic": "false",
                         "isLeaf": "false",
-                        "type": "String_id",
-                        "isReadOnly": "false",
-                        "isOrdered": "false",
-                        "isUnique": "false",
-                        "xmi:type": "uml:Property",
-                        "aggregation": "none",
-                        "isDerived": "false",
-                        "isID": "false"
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIBi5hYjryaA=",
-                        "name": "pickupLocation",
-                        "visibility": "private",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "type": "String_id",
-                        "isReadOnly": "false",
-                        "isOrdered": "false",
-                        "isUnique": "false",
-                        "xmi:type": "uml:Property",
-                        "aggregation": "none",
-                        "isDerived": "false",
-                        "isID": "false"
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIBjJiYjxfKM=",
-                        "name": "bookingNo",
-                        "visibility": "private",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "type": "String_id",
-                        "isReadOnly": "false",
-                        "isOrdered": "false",
-                        "isUnique": "false",
-                        "xmi:type": "uml:Property",
-                        "aggregation": "none",
-                        "isDerived": "false",
-                        "isID": "false"
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIBjS4Ij3/Vw=",
-                        "name": "startDateTime",
-                        "visibility": "private",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "type": "Date_id",
-                        "isReadOnly": "false",
-                        "isOrdered": "false",
-                        "isUnique": "false",
-                        "xmi:type": "uml:Property",
-                        "aggregation": "none",
-                        "isDerived": "false",
-                        "isID": "false"
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIBn59YkGUtE=",
-                        "name": "endDateTime",
-                        "visibility": "private",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "type": "Date_id",
+                        "type": "Integer_id",
                         "isReadOnly": "false",
                         "isOrdered": "false",
                         "isUnique": "false",
@@ -621,7 +672,7 @@
                 {
                   "$": {
                     "xmi:id": "AAAAAAGOakbEJVx9DMg=",
-                    "name": "BillModel",
+                    "name": "PaymentModel",
                     "visibility": "public",
                     "isAbstract": "false",
                     "isFinalSpecialization": "false",
@@ -643,7 +694,7 @@
                     {
                       "$": {
                         "xmi:id": "AAAAAAGOapDMJl5KiFs=",
-                        "name": "billId",
+                        "name": "paymentId",
                         "visibility": "private",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -670,41 +721,7 @@
                     {
                       "$": {
                         "xmi:id": "AAAAAAGOaqtot156lUU=",
-                        "name": "billDate",
-                        "visibility": "private",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "type": "Date_id",
-                        "isReadOnly": "false",
-                        "isOrdered": "false",
-                        "isUnique": "false",
-                        "xmi:type": "uml:Property",
-                        "aggregation": "none",
-                        "isDerived": "false",
-                        "isID": "false"
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGOaquprl6B23c=",
-                        "name": "paidDate",
-                        "visibility": "private",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "type": "Date_id",
-                        "isReadOnly": "false",
-                        "isOrdered": "false",
-                        "isUnique": "false",
-                        "xmi:type": "uml:Property",
-                        "aggregation": "none",
-                        "isDerived": "false",
-                        "isID": "false"
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIA4xCog4i78=",
-                        "name": "billStatus",
+                        "name": "paymentMethod",
                         "visibility": "private",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -720,29 +737,12 @@
                     },
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGQIA629YhBNXg=",
-                        "name": "amount",
+                        "xmi:id": "AAAAAAGOaquprl6B23c=",
+                        "name": "paymentStatus",
                         "visibility": "private",
                         "isStatic": "false",
                         "isLeaf": "false",
-                        "type": "Integer_id",
-                        "isReadOnly": "false",
-                        "isOrdered": "false",
-                        "isUnique": "false",
-                        "xmi:type": "uml:Property",
-                        "aggregation": "none",
-                        "isDerived": "false",
-                        "isID": "false"
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIA9ZuIhKTEs=",
-                        "name": "totalAmount",
-                        "visibility": "private",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "type": "Integer_id",
+                        "type": "String_id",
                         "isReadOnly": "false",
                         "isOrdered": "false",
                         "isUnique": "false",
@@ -836,13 +836,115 @@
                         "isDerived": "false",
                         "isID": "false"
                       }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOaoVh3F4WGRQ=",
+                        "name": "fileType",
+                        "visibility": "private",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "type": "String_id",
+                        "isReadOnly": "false",
+                        "isOrdered": "false",
+                        "isUnique": "false",
+                        "xmi:type": "uml:Property",
+                        "aggregation": "none",
+                        "isDerived": "false",
+                        "isID": "false"
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOaoWMpV4drf8=",
+                        "name": "fileSize",
+                        "visibility": "private",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "type": "String_id",
+                        "isReadOnly": "false",
+                        "isOrdered": "false",
+                        "isUnique": "false",
+                        "xmi:type": "uml:Property",
+                        "aggregation": "none",
+                        "isDerived": "false",
+                        "isID": "false"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "$": {
+                    "xmi:id": "AAAAAAGOakcEiFyq5sg=",
+                    "name": "StockModel",
+                    "visibility": "public",
+                    "isAbstract": "false",
+                    "isFinalSpecialization": "false",
+                    "isLeaf": "false",
+                    "xmi:type": "uml:Class",
+                    "isActive": "false"
+                  },
+                  "xmi:Extension": {
+                    "$": {
+                      "extender": "StarUML"
+                    },
+                    "stereotype": {
+                      "$": {
+                        "value": "AAAAAAGOZS0Q/fhNIKw="
+                      }
+                    }
+                  },
+                  "ownedAttribute": [
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOaokail5DRvU=",
+                        "name": "stockId",
+                        "visibility": "private",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "type": "Id_id",
+                        "isReadOnly": "false",
+                        "isOrdered": "false",
+                        "isUnique": "false",
+                        "xmi:type": "uml:Property",
+                        "aggregation": "none",
+                        "isDerived": "false",
+                        "isID": "false"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": ""
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOapeQtV5qjxU=",
+                        "name": "quantity",
+                        "visibility": "private",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "type": "Integer_id",
+                        "isReadOnly": "false",
+                        "isOrdered": "false",
+                        "isUnique": "false",
+                        "xmi:type": "uml:Property",
+                        "aggregation": "none",
+                        "isDerived": "false",
+                        "isID": "false"
+                      }
                     }
                   ]
                 },
                 {
                   "$": {
                     "xmi:id": "AAAAAAGOakdNEVzY3Lg=",
-                    "name": "locationModel",
+                    "name": "InvoiceModel",
                     "visibility": "public",
                     "isAbstract": "false",
                     "isFinalSpecialization": "false",
@@ -864,7 +966,7 @@
                     {
                       "$": {
                         "xmi:id": "AAAAAAGOapE+iF5Y9zE=",
-                        "name": "locationId",
+                        "name": "invoiceId",
                         "visibility": "private",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -891,7 +993,24 @@
                     {
                       "$": {
                         "xmi:id": "AAAAAAGOaqy0/l6R1xQ=",
-                        "name": "province",
+                        "name": "invoicePrice",
+                        "visibility": "private",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "type": "Float_id",
+                        "isReadOnly": "false",
+                        "isOrdered": "false",
+                        "isUnique": "false",
+                        "xmi:type": "uml:Property",
+                        "aggregation": "none",
+                        "isDerived": "false",
+                        "isID": "false"
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOaq0RPl6Yl/A=",
+                        "name": "invoiceStatus",
                         "visibility": "private",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -907,8 +1026,110 @@
                     },
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGOaq0RPl6Yl/A=",
-                        "name": "location",
+                        "xmi:id": "AAAAAAGOar0CMYwQyo0=",
+                        "name": "invoiceTo",
+                        "visibility": "private",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "type": "String_id",
+                        "isReadOnly": "false",
+                        "isOrdered": "false",
+                        "isUnique": "false",
+                        "xmi:type": "uml:Property",
+                        "aggregation": "none",
+                        "isDerived": "false",
+                        "isID": "false"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "$": {
+                    "xmi:id": "AAAAAAGOakeSy10D0JI=",
+                    "name": "DeliveryModel",
+                    "visibility": "public",
+                    "isAbstract": "false",
+                    "isFinalSpecialization": "false",
+                    "isLeaf": "false",
+                    "xmi:type": "uml:Class",
+                    "isActive": "false"
+                  },
+                  "xmi:Extension": {
+                    "$": {
+                      "extender": "StarUML"
+                    },
+                    "stereotype": {
+                      "$": {
+                        "value": "AAAAAAGOZS0Q/fhNIKw="
+                      }
+                    }
+                  },
+                  "ownedAttribute": [
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOapEJEl5RfRU=",
+                        "name": "deliveryId",
+                        "visibility": "private",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "type": "Id_id",
+                        "isReadOnly": "false",
+                        "isOrdered": "false",
+                        "isUnique": "false",
+                        "xmi:type": "uml:Property",
+                        "aggregation": "none",
+                        "isDerived": "false",
+                        "isID": "false"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": ""
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOarDUiWF17vc=",
+                        "name": "deliveryMethod",
+                        "visibility": "private",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "type": "String_id",
+                        "isReadOnly": "false",
+                        "isOrdered": "false",
+                        "isUnique": "false",
+                        "xmi:type": "uml:Property",
+                        "aggregation": "none",
+                        "isDerived": "false",
+                        "isID": "false"
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOarFVLWIM0bY=",
+                        "name": "deliveryStatus",
+                        "visibility": "private",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "type": "String_id",
+                        "isReadOnly": "false",
+                        "isOrdered": "false",
+                        "isUnique": "false",
+                        "xmi:type": "uml:Property",
+                        "aggregation": "none",
+                        "isDerived": "false",
+                        "isID": "false"
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOasBKbg0ovuI=",
+                        "name": "deliveryTo",
                         "visibility": "private",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -946,8 +1167,8 @@
               "packagedElement": [
                 {
                   "$": {
-                    "xmi:id": "AAAAAAGOau3L12ZwjgM=",
-                    "name": "AdminRoute",
+                    "xmi:id": "AAAAAAGOavA5IsxHlSE=",
+                    "name": "ProductsRoute",
                     "visibility": "public",
                     "isAbstract": "false",
                     "isFinalSpecialization": "false",
@@ -958,12 +1179,12 @@
                   "ownedMember": [
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGQICSmx4tiR24=",
-                        "name": "/",
+                        "xmi:id": "AAAAAAGOayqYdQtx/eg=",
+                        "name": "/:productId",
                         "visibility": "public",
                         "xmi:type": "uml:Dependency",
-                        "client": "AAAAAAGOau3L12ZwjgM=",
-                        "supplier": "AAAAAAGQICNPG4soPkI="
+                        "client": "AAAAAAGOavA5IsxHlSE=",
+                        "supplier": "AAAAAAGOavDAm+uyQM0="
                       },
                       "xmi:Extension": {
                         "$": {
@@ -978,72 +1199,12 @@
                     },
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGQICfjSIvZ2/c=",
-                        "name": "/",
+                        "xmi:id": "AAAAAAGOaysTVBfB4jg=",
+                        "name": "/:productId",
                         "visibility": "public",
                         "xmi:type": "uml:Dependency",
-                        "client": "AAAAAAGOau3L12ZwjgM=",
-                        "supplier": "AAAAAAGQICa7q4ue6DA="
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhlUzM="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQICs4aIyROdE=",
-                        "name": "/",
-                        "visibility": "public",
-                        "xmi:type": "uml:Dependency",
-                        "client": "AAAAAAGOau3L12ZwjgM=",
-                        "supplier": "AAAAAAGQICo1x4xSWMk="
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhlUzM="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIC5M+Y1ZTL0=",
-                        "name": "/",
-                        "visibility": "public",
-                        "xmi:type": "uml:Dependency",
-                        "client": "AAAAAAGOau3L12ZwjgM=",
-                        "supplier": "AAAAAAGQIC2nNI0AxDw="
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhlUzM="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIC62Ko1yiWU=",
-                        "name": "/",
-                        "visibility": "public",
-                        "xmi:type": "uml:Dependency",
-                        "client": "AAAAAAGOau3L12ZwjgM=",
-                        "supplier": "AAAAAAGQIC3YsI0rffs="
+                        "client": "AAAAAAGOavA5IsxHlSE=",
+                        "supplier": "AAAAAAGOavGK1CUN5ew="
                       },
                       "xmi:Extension": {
                         "$": {
@@ -1066,1141 +1227,12 @@
                         "value": "AAAAAAGOZS0Q/fhE91w="
                       }
                     }
-                  }
-                },
-                {
-                  "$": {
-                    "xmi:id": "AAAAAAGOauzzuxtPzpA=",
-                    "name": "CustomerRoute",
-                    "visibility": "public",
-                    "isAbstract": "false",
-                    "isFinalSpecialization": "false",
-                    "isLeaf": "false",
-                    "xmi:type": "uml:Class",
-                    "isActive": "false"
-                  },
-                  "xmi:Extension": {
-                    "$": {
-                      "extender": "StarUML"
-                    },
-                    "stereotype": {
-                      "$": {
-                        "value": "AAAAAAGOZS0Q/fhE91w="
-                      }
-                    }
                   },
                   "ownedOperation": [
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGOayRoNt4lwLQ=",
-                        "name": "getCustomerById",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhS9jU="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGOayXC0y8/W0E=",
-                        "name": "updateCustomerById",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhb/nA="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGOayYXTzXFbvw=",
-                        "name": "deleteCustomerById",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhYprA="
-                          }
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "$": {
-                    "xmi:id": "AAAAAAGQICNPG4soPkI=",
-                    "name": "CustomersRoute",
-                    "visibility": "public",
-                    "isAbstract": "false",
-                    "isFinalSpecialization": "false",
-                    "isLeaf": "false",
-                    "xmi:type": "uml:Class",
-                    "isActive": "false"
-                  },
-                  "ownedMember": {
-                    "$": {
-                      "xmi:id": "AAAAAAGQICUHJIt3QDo=",
-                      "name": "/:customerId",
-                      "visibility": "public",
-                      "xmi:type": "uml:Dependency",
-                      "client": "AAAAAAGQICNPG4soPkI=",
-                      "supplier": "AAAAAAGOauzzuxtPzpA="
-                    },
-                    "xmi:Extension": {
-                      "$": {
-                        "extender": "StarUML"
-                      },
-                      "stereotype": {
-                        "$": {
-                          "value": "AAAAAAGOZS0Q/fhlUzM="
-                        }
-                      }
-                    }
-                  },
-                  "xmi:Extension": {
-                    "$": {
-                      "extender": "StarUML"
-                    },
-                    "stereotype": {
-                      "$": {
-                        "value": "AAAAAAGOZS0Q/fhE91w="
-                      }
-                    }
-                  },
-                  "ownedOperation": {
-                    "$": {
-                      "xmi:id": "AAAAAAGQICQSzYtannc=",
-                      "name": "getAllCustomer",
-                      "visibility": "public",
-                      "isStatic": "false",
-                      "isLeaf": "false",
-                      "concurrency": "sequential",
-                      "isQuery": "false",
-                      "isAbstract": "false",
-                      "xmi:type": "uml:Operation"
-                    },
-                    "xmi:Extension": {
-                      "$": {
-                        "extender": "StarUML"
-                      },
-                      "stereotype": {
-                        "$": {
-                          "value": "AAAAAAGOZS0Q/fhS9jU="
-                        }
-                      }
-                    }
-                  }
-                },
-                {
-                  "$": {
-                    "xmi:id": "AAAAAAGQIC/cqo2bjPQ=",
-                    "name": "OrderRoute",
-                    "visibility": "public",
-                    "isAbstract": "false",
-                    "isFinalSpecialization": "false",
-                    "isLeaf": "false",
-                    "xmi:type": "uml:Class",
-                    "isActive": "false"
-                  },
-                  "xmi:Extension": {
-                    "$": {
-                      "extender": "StarUML"
-                    },
-                    "stereotype": {
-                      "$": {
-                        "value": "AAAAAAGOZS0Q/fhE91w="
-                      }
-                    }
-                  },
-                  "ownedOperation": [
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIDChhY3fqK8=",
-                        "name": "getOrderById",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhS9jU="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIDEuy43lfgI=",
-                        "name": "updateOrderById",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhb/nA="
-                          }
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "$": {
-                    "xmi:id": "AAAAAAGQIDOuAY5HgdE=",
-                    "name": "BookingsRoute",
-                    "visibility": "public",
-                    "isAbstract": "false",
-                    "isFinalSpecialization": "false",
-                    "isLeaf": "false",
-                    "xmi:type": "uml:Class",
-                    "isActive": "false"
-                  },
-                  "ownedMember": {
-                    "$": {
-                      "xmi:id": "AAAAAAGQIDV9Qo64Q0A=",
-                      "name": "/:bookingId",
-                      "visibility": "public",
-                      "xmi:type": "uml:Dependency",
-                      "client": "AAAAAAGQIDOuAY5HgdE=",
-                      "supplier": "AAAAAAGQIDTIi4574KQ="
-                    },
-                    "xmi:Extension": {
-                      "$": {
-                        "extender": "StarUML"
-                      },
-                      "stereotype": {
-                        "$": {
-                          "value": "AAAAAAGOZS0Q/fhlUzM="
-                        }
-                      }
-                    }
-                  },
-                  "xmi:Extension": {
-                    "$": {
-                      "extender": "StarUML"
-                    },
-                    "stereotype": {
-                      "$": {
-                        "value": "AAAAAAGOZS0Q/fhE91w="
-                      }
-                    }
-                  },
-                  "ownedOperation": {
-                    "$": {
-                      "xmi:id": "AAAAAAGQIDRwXo5yPJc=",
-                      "name": "getBookingList",
-                      "visibility": "public",
-                      "isStatic": "false",
-                      "isLeaf": "false",
-                      "concurrency": "sequential",
-                      "isQuery": "false",
-                      "isAbstract": "false",
-                      "xmi:type": "uml:Operation"
-                    },
-                    "xmi:Extension": {
-                      "$": {
-                        "extender": "StarUML"
-                      },
-                      "stereotype": {
-                        "$": {
-                          "value": "AAAAAAGOZS0Q/fhS9jU="
-                        }
-                      }
-                    }
-                  }
-                },
-                {
-                  "$": {
-                    "xmi:id": "AAAAAAGQIDTIi4574KQ=",
-                    "name": "BookingRoute",
-                    "visibility": "public",
-                    "isAbstract": "false",
-                    "isFinalSpecialization": "false",
-                    "isLeaf": "false",
-                    "xmi:type": "uml:Class",
-                    "isActive": "false"
-                  },
-                  "xmi:Extension": {
-                    "$": {
-                      "extender": "StarUML"
-                    },
-                    "stereotype": {
-                      "$": {
-                        "value": "AAAAAAGOZS0Q/fhE91w="
-                      }
-                    }
-                  },
-                  "ownedOperation": [
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIDUTE46nhRg=",
-                        "name": "getBookingByStatus",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhS9jU="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIDUeVY6tzwI=",
-                        "name": "cancelBookingById",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhe+sc="
-                          }
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "$": {
-                    "xmi:id": "AAAAAAGQIFKD+49VhSQ=",
-                    "name": "SearchCarRoute",
-                    "visibility": "public",
-                    "isAbstract": "false",
-                    "isFinalSpecialization": "false",
-                    "isLeaf": "false",
-                    "xmi:type": "uml:Class",
-                    "isActive": "false"
-                  },
-                  "ownedMember": {
-                    "$": {
-                      "xmi:id": "AAAAAAGQIFPCP4/J+ss=",
-                      "name": "/:carId",
-                      "visibility": "public",
-                      "xmi:type": "uml:Dependency",
-                      "client": "AAAAAAGQIFKD+49VhSQ=",
-                      "supplier": "AAAAAAGQIFMmno+Bbsw="
-                    },
-                    "xmi:Extension": {
-                      "$": {
-                        "extender": "StarUML"
-                      },
-                      "stereotype": {
-                        "$": {
-                          "value": "AAAAAAGOZS0Q/fhlUzM="
-                        }
-                      }
-                    }
-                  },
-                  "xmi:Extension": {
-                    "$": {
-                      "extender": "StarUML"
-                    },
-                    "stereotype": {
-                      "$": {
-                        "value": "AAAAAAGOZS0Q/fhE91w="
-                      }
-                    }
-                  },
-                  "ownedOperation": [
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIFOWHI+09Z0=",
-                        "name": "getCarsList",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhS9jU="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIFOfwI+6X8M=",
-                        "name": "getProvinceAndLocation",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhS9jU="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIFOoNo/A3Kc=",
-                        "name": "createCarOrder",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhVfqE="
-                          }
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "$": {
-                    "xmi:id": "AAAAAAGQIFMmno+Bbsw=",
-                    "name": "CarDetailRoute",
-                    "visibility": "public",
-                    "isAbstract": "false",
-                    "isFinalSpecialization": "false",
-                    "isLeaf": "false",
-                    "xmi:type": "uml:Class",
-                    "isActive": "false"
-                  },
-                  "xmi:Extension": {
-                    "$": {
-                      "extender": "StarUML"
-                    },
-                    "stereotype": {
-                      "$": {
-                        "value": "AAAAAAGOZS0Q/fhE91w="
-                      }
-                    }
-                  },
-                  "ownedOperation": {
-                    "$": {
-                      "xmi:id": "AAAAAAGQIFOMZ4+u7Eo=",
-                      "name": "getCarDetailById",
-                      "visibility": "public",
-                      "isStatic": "false",
-                      "isLeaf": "false",
-                      "concurrency": "sequential",
-                      "isQuery": "false",
-                      "isAbstract": "false",
-                      "xmi:type": "uml:Operation"
-                    },
-                    "xmi:Extension": {
-                      "$": {
-                        "extender": "StarUML"
-                      },
-                      "stereotype": {
-                        "$": {
-                          "value": "get"
-                        }
-                      }
-                    }
-                  }
-                },
-                {
-                  "$": {
-                    "xmi:id": "AAAAAAGQICa7q4ue6DA=",
-                    "name": "LocationsRoute",
-                    "visibility": "public",
-                    "isAbstract": "false",
-                    "isFinalSpecialization": "false",
-                    "isLeaf": "false",
-                    "xmi:type": "uml:Class",
-                    "isActive": "false"
-                  },
-                  "ownedMember": {
-                    "$": {
-                      "xmi:id": "AAAAAAGQICmLX4w8qzU=",
-                      "name": "/:location",
-                      "visibility": "public",
-                      "xmi:type": "uml:Dependency",
-                      "client": "AAAAAAGQICa7q4ue6DA=",
-                      "supplier": "AAAAAAGQICgws4vvBBI="
-                    },
-                    "xmi:Extension": {
-                      "$": {
-                        "extender": "StarUML"
-                      },
-                      "stereotype": {
-                        "$": {
-                          "value": "AAAAAAGOZS0Q/fhlUzM="
-                        }
-                      }
-                    }
-                  },
-                  "xmi:Extension": {
-                    "$": {
-                      "extender": "StarUML"
-                    },
-                    "stereotype": {
-                      "$": {
-                        "value": "AAAAAAGOZS0Q/fhE91w="
-                      }
-                    }
-                  },
-                  "ownedOperation": [
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQICcnFYvJDyM=",
-                        "name": "getAllLocation",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhS9jU="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQICe3zovRVuo=",
-                        "name": "addLocation",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhVfqE="
-                          }
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "$": {
-                    "xmi:id": "AAAAAAGQICgws4vvBBI=",
-                    "name": "LocationRoute",
-                    "visibility": "public",
-                    "isAbstract": "false",
-                    "isFinalSpecialization": "false",
-                    "isLeaf": "false",
-                    "xmi:type": "uml:Class",
-                    "isActive": "false"
-                  },
-                  "xmi:Extension": {
-                    "$": {
-                      "extender": "StarUML"
-                    },
-                    "stereotype": {
-                      "$": {
-                        "value": "AAAAAAGOZS0Q/fhE91w="
-                      }
-                    }
-                  },
-                  "ownedOperation": [
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQICiC6IwaOx0=",
-                        "name": "getLocationById",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhS9jU="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQICjgaYwj/rE=",
-                        "name": "updateLocationById",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhb/nA="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIClmJIw0kbA=",
-                        "name": "deleteLocationById",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhYprA="
-                          }
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "$": {
-                    "xmi:id": "AAAAAAGQICo1x4xSWMk=",
-                    "name": "CarsRoute",
-                    "visibility": "public",
-                    "isAbstract": "false",
-                    "isFinalSpecialization": "false",
-                    "isLeaf": "false",
-                    "xmi:type": "uml:Class",
-                    "isActive": "false"
-                  },
-                  "ownedMember": {
-                    "$": {
-                      "xmi:id": "AAAAAAGQICv3OYzjOCw=",
-                      "name": "/:carId",
-                      "visibility": "public",
-                      "xmi:type": "uml:Dependency",
-                      "client": "AAAAAAGQICo1x4xSWMk=",
-                      "supplier": "AAAAAAGQICt8AIymwqE="
-                    },
-                    "xmi:Extension": {
-                      "$": {
-                        "extender": "StarUML"
-                      },
-                      "stereotype": {
-                        "$": {
-                          "value": "AAAAAAGOZS0Q/fhlUzM="
-                        }
-                      }
-                    }
-                  },
-                  "xmi:Extension": {
-                    "$": {
-                      "extender": "StarUML"
-                    },
-                    "stereotype": {
-                      "$": {
-                        "value": "AAAAAAGOZS0Q/fhE91w="
-                      }
-                    }
-                  },
-                  "ownedOperation": [
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQICqHa4yA0I0=",
-                        "name": "getAllCar",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhS9jU="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQICqSA4yG+Ds=",
-                        "name": "addCar",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhVfqE="
-                          }
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "$": {
-                    "xmi:id": "AAAAAAGQICt8AIymwqE=",
-                    "name": "CarRoute",
-                    "visibility": "public",
-                    "isAbstract": "false",
-                    "isFinalSpecialization": "false",
-                    "isLeaf": "false",
-                    "xmi:type": "uml:Class",
-                    "isActive": "false"
-                  },
-                  "xmi:Extension": {
-                    "$": {
-                      "extender": "StarUML"
-                    },
-                    "stereotype": {
-                      "$": {
-                        "value": "AAAAAAGOZS0Q/fhE91w="
-                      }
-                    }
-                  },
-                  "ownedOperation": [
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQICvSUYzRHaw=",
-                        "name": "getCarById",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhS9jU="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQICvci4zXxWs=",
-                        "name": "updateCarById",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhb/nA="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQICvni4zdmiY=",
-                        "name": "deleteCarById",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhYprA="
-                          }
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "$": {
-                    "xmi:id": "AAAAAAGQIC2nNI0AxDw=",
-                    "name": "OrdersRoute",
-                    "visibility": "public",
-                    "isAbstract": "false",
-                    "isFinalSpecialization": "false",
-                    "isLeaf": "false",
-                    "xmi:type": "uml:Class",
-                    "isActive": "false"
-                  },
-                  "ownedMember": {
-                    "$": {
-                      "xmi:id": "AAAAAAGQIDAk0o3H4F0=",
-                      "name": "/:orderId",
-                      "visibility": "public",
-                      "xmi:type": "uml:Dependency",
-                      "client": "AAAAAAGQIC2nNI0AxDw=",
-                      "supplier": "AAAAAAGQIC/cqo2bjPQ="
-                    },
-                    "xmi:Extension": {
-                      "$": {
-                        "extender": "StarUML"
-                      },
-                      "stereotype": {
-                        "$": {
-                          "value": "AAAAAAGOZS0Q/fhlUzM="
-                        }
-                      }
-                    }
-                  },
-                  "xmi:Extension": {
-                    "$": {
-                      "extender": "StarUML"
-                    },
-                    "stereotype": {
-                      "$": {
-                        "value": "AAAAAAGOZS0Q/fhE91w="
-                      }
-                    }
-                  },
-                  "ownedOperation": {
-                    "$": {
-                      "xmi:id": "AAAAAAGQIC8tg42LUos=",
-                      "name": "getAllOrder",
-                      "visibility": "public",
-                      "isStatic": "false",
-                      "isLeaf": "false",
-                      "concurrency": "sequential",
-                      "isQuery": "false",
-                      "isAbstract": "false",
-                      "xmi:type": "uml:Operation"
-                    },
-                    "xmi:Extension": {
-                      "$": {
-                        "extender": "StarUML"
-                      },
-                      "stereotype": {
-                        "$": {
-                          "value": "AAAAAAGOZS0Q/fhS9jU="
-                        }
-                      }
-                    }
-                  }
-                },
-                {
-                  "$": {
-                    "xmi:id": "AAAAAAGQIC3YsI0rffs=",
-                    "name": "BillsRoute",
-                    "visibility": "public",
-                    "isAbstract": "false",
-                    "isFinalSpecialization": "false",
-                    "isLeaf": "false",
-                    "xmi:type": "uml:Class",
-                    "isActive": "false"
-                  },
-                  "ownedMember": {
-                    "$": {
-                      "xmi:id": "AAAAAAGQIDJBUo4rYZ0=",
-                      "name": "/:billId",
-                      "visibility": "public",
-                      "xmi:type": "uml:Dependency",
-                      "client": "AAAAAAGQIC3YsI0rffs=",
-                      "supplier": "AAAAAAGQIDHJ8Y3znTw="
-                    },
-                    "xmi:Extension": {
-                      "$": {
-                        "extender": "StarUML"
-                      },
-                      "stereotype": {
-                        "$": {
-                          "value": "AAAAAAGOZS0Q/fhlUzM="
-                        }
-                      }
-                    }
-                  },
-                  "xmi:Extension": {
-                    "$": {
-                      "extender": "StarUML"
-                    },
-                    "stereotype": {
-                      "$": {
-                        "value": "AAAAAAGOZS0Q/fhE91w="
-                      }
-                    }
-                  },
-                  "ownedOperation": {
-                    "$": {
-                      "xmi:id": "AAAAAAGQIC86hI2RnsY=",
-                      "name": "getBillAll",
-                      "visibility": "public",
-                      "isStatic": "false",
-                      "isLeaf": "false",
-                      "concurrency": "sequential",
-                      "isQuery": "false",
-                      "isAbstract": "false",
-                      "xmi:type": "uml:Operation"
-                    },
-                    "xmi:Extension": {
-                      "$": {
-                        "extender": "StarUML"
-                      },
-                      "stereotype": {
-                        "$": {
-                          "value": "AAAAAAGOZS0Q/fhS9jU="
-                        }
-                      }
-                    }
-                  }
-                },
-                {
-                  "$": {
-                    "xmi:id": "AAAAAAGQIDHJ8Y3znTw=",
-                    "name": "BillRoute",
-                    "visibility": "public",
-                    "isAbstract": "false",
-                    "isFinalSpecialization": "false",
-                    "isLeaf": "false",
-                    "xmi:type": "uml:Class",
-                    "isActive": "false"
-                  },
-                  "xmi:Extension": {
-                    "$": {
-                      "extender": "StarUML"
-                    },
-                    "stereotype": {
-                      "$": {
-                        "value": "AAAAAAGOZS0Q/fhE91w="
-                      }
-                    }
-                  },
-                  "ownedOperation": [
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIDIdEo4fueQ=",
-                        "name": "getBillById",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhS9jU="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIDIxPI4l/8M=",
-                        "name": "updateBillById",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhe+sc="
-                          }
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "$": {
-                    "xmi:id": "AAAAAAGQIDZEEI7NBao=",
-                    "name": "PaymentsRoute",
-                    "visibility": "public",
-                    "isAbstract": "false",
-                    "isFinalSpecialization": "false",
-                    "isLeaf": "false",
-                    "xmi:type": "uml:Class",
-                    "isActive": "false"
-                  },
-                  "ownedMember": {
-                    "$": {
-                      "xmi:id": "AAAAAAGQIFGpZY8/if8=",
-                      "name": "/:paymentId",
-                      "visibility": "public",
-                      "xmi:type": "uml:Dependency",
-                      "client": "AAAAAAGQIDZEEI7NBao=",
-                      "supplier": "AAAAAAGQIFAnRY8HAdE="
-                    },
-                    "xmi:Extension": {
-                      "$": {
-                        "extender": "StarUML"
-                      },
-                      "stereotype": {
-                        "$": {
-                          "value": "AAAAAAGOZS0Q/fhlUzM="
-                        }
-                      }
-                    }
-                  },
-                  "xmi:Extension": {
-                    "$": {
-                      "extender": "StarUML"
-                    },
-                    "stereotype": {
-                      "$": {
-                        "value": "AAAAAAGOZS0Q/fhE91w="
-                      }
-                    }
-                  },
-                  "ownedOperation": [
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIFAULY77EXk=",
-                        "name": "paymentCheckoutCreditCard",
+                        "xmi:id": "AAAAAAGOaye9290VEBk=",
+                        "name": "createProduct",
                         "visibility": "public",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -2222,8 +1254,8 @@
                     },
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGQIFAe2I8BVeY=",
-                        "name": "paymentCheckoutInternetBanking",
+                        "xmi:id": "AAAAAAGOaygF+uB8B5s=",
+                        "name": "getProducts",
                         "visibility": "public",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -2238,7 +1270,7 @@
                         },
                         "stereotype": {
                           "$": {
-                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                            "value": "AAAAAAGOZS0Q/fhS9jU="
                           }
                         }
                       }
@@ -2247,8 +1279,8 @@
                 },
                 {
                   "$": {
-                    "xmi:id": "AAAAAAGQIFAnRY8HAdE=",
-                    "name": "PaymentRoute",
+                    "xmi:id": "AAAAAAGOau3L12ZwjgM=",
+                    "name": "SupplierRoute",
                     "visibility": "public",
                     "isAbstract": "false",
                     "isFinalSpecialization": "false",
@@ -2256,51 +1288,48 @@
                     "xmi:type": "uml:Class",
                     "isActive": "false"
                   },
-                  "xmi:Extension": {
-                    "$": {
-                      "extender": "StarUML"
-                    },
-                    "stereotype": {
+                  "ownedMember": [
+                    {
                       "$": {
-                        "value": "AAAAAAGOZS0Q/fhE91w="
-                      }
-                    }
-                  },
-                  "ownedOperation": {
-                    "$": {
-                      "xmi:id": "AAAAAAGQIFCQOI8zYGI=",
-                      "name": "updatePaymentStatus",
-                      "visibility": "public",
-                      "isStatic": "false",
-                      "isLeaf": "false",
-                      "concurrency": "sequential",
-                      "isQuery": "false",
-                      "isAbstract": "false",
-                      "xmi:type": "uml:Operation"
-                    },
-                    "xmi:Extension": {
-                      "$": {
-                        "extender": "StarUML"
+                        "xmi:id": "AAAAAAGOa3OCkb1BRUo=",
+                        "name": "/:supplierId",
+                        "visibility": "public",
+                        "xmi:type": "uml:Dependency",
+                        "client": "AAAAAAGOau3L12ZwjgM=",
+                        "supplier": "AAAAAAGOavKhu0dVjt8="
                       },
-                      "stereotype": {
+                      "xmi:Extension": {
                         "$": {
-                          "value": "AAAAAAGOZS0Q/fhe+sc="
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhlUzM="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOa3OmD8KGtOc=",
+                        "name": "/:supplierId",
+                        "visibility": "public",
+                        "xmi:type": "uml:Dependency",
+                        "client": "AAAAAAGOau3L12ZwjgM=",
+                        "supplier": "AAAAAAGOavI+cjgX4sw="
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhlUzM="
+                          }
                         }
                       }
                     }
-                  }
-                },
-                {
-                  "$": {
-                    "xmi:id": "AAAAAAGQIFYCMo/qX14=",
-                    "name": "UserRoute",
-                    "visibility": "public",
-                    "isAbstract": "false",
-                    "isFinalSpecialization": "false",
-                    "isLeaf": "false",
-                    "xmi:type": "uml:Class",
-                    "isActive": "false"
-                  },
+                  ],
                   "xmi:Extension": {
                     "$": {
                       "extender": "StarUML"
@@ -2314,7 +1343,7 @@
                   "ownedOperation": [
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGQIFh6WZAWjQ8=",
+                        "xmi:id": "AAAAAAGOayUY9uGMq4I=",
                         "name": "login",
                         "visibility": "public",
                         "isStatic": "false",
@@ -2330,14 +1359,14 @@
                         },
                         "stereotype": {
                           "$": {
-                            "value": "AAAAAAGOZS0Q/fhS9jU="
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
                           }
                         }
                       }
                     },
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGQIFiFqpAcX2w=",
+                        "xmi:id": "AAAAAAGOayXpbTHyhDA=",
                         "name": "logout",
                         "visibility": "public",
                         "isStatic": "false",
@@ -2360,7 +1389,7 @@
                     },
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGQIFiQ7ZAiIys=",
+                        "xmi:id": "AAAAAAGOayYzozksh2M=",
                         "name": "register",
                         "visibility": "public",
                         "isStatic": "false",
@@ -2383,8 +1412,8 @@
                     },
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGQIFigfJAo6/A=",
-                        "name": "forgotPassword",
+                        "xmi:id": "AAAAAAGOayZ0bkBmaxk=",
+                        "name": "updateInfo",
                         "visibility": "public",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -2406,8 +1435,8 @@
                     },
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGQIFitDpAu2k0=",
-                        "name": "editUserProfile",
+                        "xmi:id": "AAAAAAGOayaw+kbsjYU=",
+                        "name": "forgetPassword",
                         "visibility": "public",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -2422,12 +1451,1102 @@
                         },
                         "stereotype": {
                           "$": {
-                            "value": "AAAAAAGOZS0Q/fhb/nA="
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
                           }
                         }
                       }
                     }
                   ]
+                },
+                {
+                  "$": {
+                    "xmi:id": "AAAAAAGOauzzuxtPzpA=",
+                    "name": "MerchantRoute",
+                    "visibility": "public",
+                    "isAbstract": "false",
+                    "isFinalSpecialization": "false",
+                    "isLeaf": "false",
+                    "xmi:type": "uml:Class",
+                    "isActive": "false"
+                  },
+                  "ownedMember": [
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOa0KZEcuxK/g=",
+                        "name": "/:merchantId",
+                        "visibility": "public",
+                        "xmi:type": "uml:Dependency",
+                        "client": "AAAAAAGOauzzuxtPzpA=",
+                        "supplier": "AAAAAAGOavElEw2lygA="
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhlUzM="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOa1qefKuMULo=",
+                        "name": "/:merchantId",
+                        "visibility": "public",
+                        "xmi:type": "uml:Dependency",
+                        "client": "AAAAAAGOauzzuxtPzpA=",
+                        "supplier": "AAAAAAGOavJvmz9KQiY="
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhlUzM="
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "xmi:Extension": {
+                    "$": {
+                      "extender": "StarUML"
+                    },
+                    "stereotype": {
+                      "$": {
+                        "value": "AAAAAAGOZS0Q/fhE91w="
+                      }
+                    }
+                  },
+                  "ownedOperation": [
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOayRoNt4lwLQ=",
+                        "name": "login",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOayXC0y8/W0E=",
+                        "name": "logout",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhS9jU="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOayYXTzXFbvw=",
+                        "name": "register",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOayZXLTxLWCg=",
+                        "name": "updateInfo",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOayaaskOFMA4=",
+                        "name": "forgetPassword",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "$": {
+                    "xmi:id": "AAAAAAGOavDAm+uyQM0=",
+                    "name": "ProductRoute",
+                    "visibility": "public",
+                    "isAbstract": "false",
+                    "isFinalSpecialization": "false",
+                    "isLeaf": "false",
+                    "xmi:type": "uml:Class",
+                    "isActive": "false"
+                  },
+                  "xmi:Extension": {
+                    "$": {
+                      "extender": "StarUML"
+                    },
+                    "stereotype": {
+                      "$": {
+                        "value": "AAAAAAGOZS0Q/fhE91w="
+                      }
+                    }
+                  },
+                  "ownedOperation": [
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOayhldOZItb0=",
+                        "name": "updateProduct",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOayibNOo/jas=",
+                        "name": "deleteProduct",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhYprA="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOaykS0PP7dRA=",
+                        "name": "getProduct",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhS9jU="
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "$": {
+                    "xmi:id": "AAAAAAGOavElEw2lygA=",
+                    "name": "OrdersRoute",
+                    "visibility": "public",
+                    "isAbstract": "false",
+                    "isFinalSpecialization": "false",
+                    "isLeaf": "false",
+                    "xmi:type": "uml:Class",
+                    "isActive": "false"
+                  },
+                  "ownedMember": {
+                    "$": {
+                      "xmi:id": "AAAAAAGOayzL1GzFsoY=",
+                      "name": "/:orderId",
+                      "visibility": "public",
+                      "xmi:type": "uml:Dependency",
+                      "client": "AAAAAAGOavElEw2lygA=",
+                      "supplier": "AAAAAAGOavFpGRoxGwU="
+                    },
+                    "xmi:Extension": {
+                      "$": {
+                        "extender": "StarUML"
+                      },
+                      "stereotype": {
+                        "$": {
+                          "value": "AAAAAAGOZS0Q/fhlUzM="
+                        }
+                      }
+                    }
+                  },
+                  "xmi:Extension": {
+                    "$": {
+                      "extender": "StarUML"
+                    },
+                    "stereotype": {
+                      "$": {
+                        "value": "AAAAAAGOZS0Q/fhE91w="
+                      }
+                    }
+                  },
+                  "ownedOperation": [
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOayvmCFvGP0M=",
+                        "name": "getOrders",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhS9jU="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOayxQUWBUVvc=",
+                        "name": "createOrder",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "$": {
+                    "xmi:id": "AAAAAAGOavFpGRoxGwU=",
+                    "name": "OrderRoute",
+                    "visibility": "public",
+                    "isAbstract": "false",
+                    "isFinalSpecialization": "false",
+                    "isLeaf": "false",
+                    "xmi:type": "uml:Class",
+                    "isActive": "false"
+                  },
+                  "xmi:Extension": {
+                    "$": {
+                      "extender": "StarUML"
+                    },
+                    "stereotype": {
+                      "$": {
+                        "value": "AAAAAAGOZS0Q/fhE91w="
+                      }
+                    }
+                  },
+                  "ownedOperation": [
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOay0YMnVsKKI=",
+                        "name": "getOrder",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhS9jU="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOay1HEH0vWZ4=",
+                        "name": "updateOrder",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "$": {
+                    "xmi:id": "AAAAAAGOavGK1CUN5ew=",
+                    "name": "ImageRoute",
+                    "visibility": "public",
+                    "isAbstract": "false",
+                    "isFinalSpecialization": "false",
+                    "isLeaf": "false",
+                    "xmi:type": "uml:Class",
+                    "isActive": "false"
+                  },
+                  "xmi:Extension": {
+                    "$": {
+                      "extender": "StarUML"
+                    },
+                    "stereotype": {
+                      "$": {
+                        "value": "AAAAAAGOZS0Q/fhE91w="
+                      }
+                    }
+                  },
+                  "ownedOperation": [
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOayoP8fsLI9c=",
+                        "name": "getImage",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhS9jU="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOayozGv8CiTQ=",
+                        "name": "updateImage",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOaypZ+QJpopA=",
+                        "name": "createImage",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "$": {
+                    "xmi:id": "AAAAAAGOavI+cjgX4sw=",
+                    "name": "PaymentsRoute",
+                    "visibility": "public",
+                    "isAbstract": "false",
+                    "isFinalSpecialization": "false",
+                    "isLeaf": "false",
+                    "xmi:type": "uml:Class",
+                    "isActive": "false"
+                  },
+                  "ownedMember": {
+                    "$": {
+                      "xmi:id": "AAAAAAGOa3O4rsc7q/4=",
+                      "name": "/:paymentId",
+                      "visibility": "public",
+                      "xmi:type": "uml:Dependency",
+                      "client": "AAAAAAGOavI+cjgX4sw=",
+                      "supplier": "AAAAAAGOa3C+gDTAnkw="
+                    },
+                    "xmi:Extension": {
+                      "$": {
+                        "extender": "StarUML"
+                      },
+                      "stereotype": {
+                        "$": {
+                          "value": "AAAAAAGOZS0Q/fhlUzM="
+                        }
+                      }
+                    }
+                  },
+                  "xmi:Extension": {
+                    "$": {
+                      "extender": "StarUML"
+                    },
+                    "stereotype": {
+                      "$": {
+                        "value": "AAAAAAGOZS0Q/fhE91w="
+                      }
+                    }
+                  },
+                  "ownedOperation": [
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOazBQSKo0riw=",
+                        "name": "getPayment",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhS9jU="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOazCbQLbltDM=",
+                        "name": "createPayment",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "$": {
+                    "xmi:id": "AAAAAAGOavJvmz9KQiY=",
+                    "name": "StocksRoute",
+                    "visibility": "public",
+                    "isAbstract": "false",
+                    "isFinalSpecialization": "false",
+                    "isLeaf": "false",
+                    "xmi:type": "uml:Class",
+                    "isActive": "false"
+                  },
+                  "ownedMember": {
+                    "$": {
+                      "xmi:id": "AAAAAAGOa1Uzfw97lHQ=",
+                      "name": "/:stockId",
+                      "visibility": "public",
+                      "xmi:type": "uml:Dependency",
+                      "client": "AAAAAAGOavJvmz9KQiY=",
+                      "supplier": "AAAAAAGOa1SuYfMkXZA="
+                    },
+                    "xmi:Extension": {
+                      "$": {
+                        "extender": "StarUML"
+                      },
+                      "stereotype": {
+                        "$": {
+                          "value": "AAAAAAGOZS0Q/fhlUzM="
+                        }
+                      }
+                    }
+                  },
+                  "xmi:Extension": {
+                    "$": {
+                      "extender": "StarUML"
+                    },
+                    "stereotype": {
+                      "$": {
+                        "value": "AAAAAAGOZS0Q/fhE91w="
+                      }
+                    }
+                  },
+                  "ownedOperation": [
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOazKXgTi5Rc0=",
+                        "name": "getOutOfStock",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhS9jU="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOazLIYT6FnlY=",
+                        "name": "getStock",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhS9jU="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOazdCZGjDOb8=",
+                        "name": "createStock",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "$": {
+                    "xmi:id": "AAAAAAGOavKhu0dVjt8=",
+                    "name": "InvoicesRoute",
+                    "visibility": "public",
+                    "isAbstract": "false",
+                    "isFinalSpecialization": "false",
+                    "isLeaf": "false",
+                    "xmi:type": "uml:Class",
+                    "isActive": "false"
+                  },
+                  "ownedMember": {
+                    "$": {
+                      "xmi:id": "AAAAAAGOa3PEh8uoLZ0=",
+                      "name": "/:invoiceId",
+                      "visibility": "public",
+                      "xmi:type": "uml:Dependency",
+                      "client": "AAAAAAGOavKhu0dVjt8=",
+                      "supplier": "AAAAAAGOa3CRUjCCOFM="
+                    },
+                    "xmi:Extension": {
+                      "$": {
+                        "extender": "StarUML"
+                      },
+                      "stereotype": {
+                        "$": {
+                          "value": "AAAAAAGOZS0Q/fhlUzM="
+                        }
+                      }
+                    }
+                  },
+                  "xmi:Extension": {
+                    "$": {
+                      "extender": "StarUML"
+                    },
+                    "stereotype": {
+                      "$": {
+                        "value": "AAAAAAGOZS0Q/fhE91w="
+                      }
+                    }
+                  },
+                  "ownedOperation": [
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOazF+0Q/9Zb0=",
+                        "name": "getInvoice",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhS9jU="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOazHGVBNku9U=",
+                        "name": "createInvoice",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "$": {
+                    "xmi:id": "AAAAAAGOavbKP4RmmXY=",
+                    "name": "DeliveriesRoute",
+                    "visibility": "public",
+                    "isAbstract": "false",
+                    "isFinalSpecialization": "false",
+                    "isLeaf": "false",
+                    "xmi:type": "uml:Class",
+                    "isActive": "false"
+                  },
+                  "ownedMember": {
+                    "$": {
+                      "xmi:id": "AAAAAAGOazxsGf99pzA=",
+                      "name": "/:deliveryId",
+                      "visibility": "public",
+                      "xmi:type": "uml:Dependency",
+                      "client": "AAAAAAGOavbKP4RmmXY=",
+                      "supplier": "AAAAAAGOazsef7RO0mI="
+                    },
+                    "xmi:Extension": {
+                      "$": {
+                        "extender": "StarUML"
+                      },
+                      "stereotype": {
+                        "$": {
+                          "value": "AAAAAAGOZS0Q/fhlUzM="
+                        }
+                      }
+                    }
+                  },
+                  "xmi:Extension": {
+                    "$": {
+                      "extender": "StarUML"
+                    },
+                    "stereotype": {
+                      "$": {
+                        "value": "AAAAAAGOZS0Q/fhE91w="
+                      }
+                    }
+                  },
+                  "ownedOperation": [
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOazp3aaDMPiM=",
+                        "name": "createDelivery",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOazqi6qPr4b4=",
+                        "name": "getDelivery",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhS9jU="
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "$": {
+                    "xmi:id": "AAAAAAGOazsef7RO0mI=",
+                    "name": "DeliveryRoute",
+                    "visibility": "public",
+                    "isAbstract": "false",
+                    "isFinalSpecialization": "false",
+                    "isLeaf": "false",
+                    "xmi:type": "uml:Class",
+                    "isActive": "false"
+                  },
+                  "xmi:Extension": {
+                    "$": {
+                      "extender": "StarUML"
+                    },
+                    "stereotype": {
+                      "$": {
+                        "value": "AAAAAAGOZS0Q/fhE91w="
+                      }
+                    }
+                  },
+                  "ownedOperation": {
+                    "$": {
+                      "xmi:id": "AAAAAAGOaztl0sKKF1M=",
+                      "name": "updateDelivery",
+                      "visibility": "public",
+                      "isStatic": "false",
+                      "isLeaf": "false",
+                      "concurrency": "sequential",
+                      "isQuery": "false",
+                      "isAbstract": "false",
+                      "xmi:type": "uml:Operation"
+                    },
+                    "xmi:Extension": {
+                      "$": {
+                        "extender": "StarUML"
+                      },
+                      "stereotype": {
+                        "$": {
+                          "value": "AAAAAAGOZS0Q/fhVfqE="
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "$": {
+                    "xmi:id": "AAAAAAGOa1SuYfMkXZA=",
+                    "name": "StockRoute",
+                    "visibility": "public",
+                    "isAbstract": "false",
+                    "isFinalSpecialization": "false",
+                    "isLeaf": "false",
+                    "xmi:type": "uml:Class",
+                    "isActive": "false"
+                  },
+                  "xmi:Extension": {
+                    "$": {
+                      "extender": "StarUML"
+                    },
+                    "stereotype": {
+                      "$": {
+                        "value": "AAAAAAGOZS0Q/fhE91w="
+                      }
+                    }
+                  },
+                  "ownedOperation": {
+                    "$": {
+                      "xmi:id": "AAAAAAGOa1UKCQYHwq8=",
+                      "name": "updateStock",
+                      "visibility": "public",
+                      "isStatic": "false",
+                      "isLeaf": "false",
+                      "concurrency": "sequential",
+                      "isQuery": "false",
+                      "isAbstract": "false",
+                      "xmi:type": "uml:Operation"
+                    },
+                    "xmi:Extension": {
+                      "$": {
+                        "extender": "StarUML"
+                      },
+                      "stereotype": {
+                        "$": {
+                          "value": "AAAAAAGOZS0Q/fhVfqE="
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "$": {
+                    "xmi:id": "AAAAAAGOa3CRUjCCOFM=",
+                    "name": "InvoiceRoute",
+                    "visibility": "public",
+                    "isAbstract": "false",
+                    "isFinalSpecialization": "false",
+                    "isLeaf": "false",
+                    "xmi:type": "uml:Class",
+                    "isActive": "false"
+                  },
+                  "xmi:Extension": {
+                    "$": {
+                      "extender": "StarUML"
+                    },
+                    "stereotype": {
+                      "$": {
+                        "value": "AAAAAAGOZS0Q/fhE91w="
+                      }
+                    }
+                  },
+                  "ownedOperation": {
+                    "$": {
+                      "xmi:id": "AAAAAAGOa3GkPUIASjk=",
+                      "name": "updateInvoice",
+                      "visibility": "public",
+                      "isStatic": "false",
+                      "isLeaf": "false",
+                      "concurrency": "sequential",
+                      "isQuery": "false",
+                      "isAbstract": "false",
+                      "xmi:type": "uml:Operation"
+                    },
+                    "xmi:Extension": {
+                      "$": {
+                        "extender": "StarUML"
+                      },
+                      "stereotype": {
+                        "$": {
+                          "value": "AAAAAAGOZS0Q/fhVfqE="
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "$": {
+                    "xmi:id": "AAAAAAGOa3C+gDTAnkw=",
+                    "name": "PaymentRoute",
+                    "visibility": "public",
+                    "isAbstract": "false",
+                    "isFinalSpecialization": "false",
+                    "isLeaf": "false",
+                    "xmi:type": "uml:Class",
+                    "isActive": "false"
+                  },
+                  "xmi:Extension": {
+                    "$": {
+                      "extender": "StarUML"
+                    },
+                    "stereotype": {
+                      "$": {
+                        "value": "AAAAAAGOZS0Q/fhE91w="
+                      }
+                    }
+                  },
+                  "ownedOperation": {
+                    "$": {
+                      "xmi:id": "AAAAAAGOa3HUw0bPkas=",
+                      "name": "updatePayment",
+                      "visibility": "public",
+                      "isStatic": "false",
+                      "isLeaf": "false",
+                      "concurrency": "sequential",
+                      "isQuery": "false",
+                      "isAbstract": "false",
+                      "xmi:type": "uml:Operation"
+                    },
+                    "xmi:Extension": {
+                      "$": {
+                        "extender": "StarUML"
+                      },
+                      "stereotype": {
+                        "$": {
+                          "value": "AAAAAAGOZS0Q/fhVfqE="
+                        }
+                      }
+                    }
+                  }
                 }
               ],
               "xmi:Extension": {
@@ -2451,8 +2570,8 @@
               "packagedElement": [
                 {
                   "$": {
-                    "xmi:id": "AAAAAAGQIF2RbZF14zE=",
-                    "name": "BillController",
+                    "xmi:id": "AAAAAAGOa4Yfb6EJOxY=",
+                    "name": "StockController",
                     "visibility": "public",
                     "isAbstract": "false",
                     "isFinalSpecialization": "false",
@@ -2473,8 +2592,8 @@
                   "ownedOperation": [
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGQIGwS+pNEkR0=",
-                        "name": "getBillAll",
+                        "xmi:id": "AAAAAAGOa5YszcNFuQw=",
+                        "name": "getStock",
                         "visibility": "public",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -2496,8 +2615,8 @@
                     },
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGQIGwcWpNKtHY=",
-                        "name": "getBillById",
+                        "xmi:id": "AAAAAAGOa5Y52sRro24=",
+                        "name": "getOutOfStock",
                         "visibility": "public",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -2519,78 +2638,8 @@
                     },
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGQIGwm5JNQHh8=",
-                        "name": "updateBillById",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhe+sc="
-                          }
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "$": {
-                    "xmi:id": "AAAAAAGQIF+xkJIdwmI=",
-                    "name": "LocationController",
-                    "visibility": "public",
-                    "isAbstract": "false",
-                    "isFinalSpecialization": "false",
-                    "isLeaf": "false",
-                    "xmi:type": "uml:Class",
-                    "isActive": "false"
-                  },
-                  "xmi:Extension": {
-                    "$": {
-                      "extender": "StarUML"
-                    },
-                    "stereotype": {
-                      "$": {
-                        "value": "AAAAAAGOZS0Q/fhKC9A="
-                      }
-                    }
-                  },
-                  "ownedOperation": [
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIHHz/5OoHVU=",
-                        "name": "getAllLocation",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhS9jU="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIHIAjJOuh6U=",
-                        "name": "addLocation",
+                        "xmi:id": "AAAAAAGOa5ZDysWRw6k=",
+                        "name": "createStock",
                         "visibility": "public",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -2612,217 +2661,8 @@
                     },
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGQIHILm5O0V5s=",
-                        "name": "getLocationById",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhS9jU="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIHIVIJO6ulc=",
-                        "name": "updateLocationById",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhb/nA="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIHIfzpPAwUk=",
-                        "name": "deleteLocationById",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhYprA="
-                          }
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "$": {
-                    "xmi:id": "AAAAAAGQIF+64pJGQZs=",
-                    "name": "OrderController",
-                    "visibility": "public",
-                    "isAbstract": "false",
-                    "isFinalSpecialization": "false",
-                    "isLeaf": "false",
-                    "xmi:type": "uml:Class",
-                    "isActive": "false"
-                  },
-                  "xmi:Extension": {
-                    "$": {
-                      "extender": "StarUML"
-                    },
-                    "stereotype": {
-                      "$": {
-                        "value": "AAAAAAGOZS0Q/fhKC9A="
-                      }
-                    }
-                  },
-                  "ownedOperation": [
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIGsV/ZMs3ZE=",
-                        "name": "getAllOrder",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhS9jU="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIGsjpJMyuf8=",
-                        "name": "getOrderById",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhS9jU="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIGstCJM4hHw=",
-                        "name": "updateOrderById",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhb/nA="
-                          }
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "$": {
-                    "xmi:id": "AAAAAAGQIF+qqZH0cAo=",
-                    "name": "CarController",
-                    "visibility": "public",
-                    "isAbstract": "false",
-                    "isFinalSpecialization": "false",
-                    "isLeaf": "false",
-                    "xmi:type": "uml:Class",
-                    "isActive": "false"
-                  },
-                  "xmi:Extension": {
-                    "$": {
-                      "extender": "StarUML"
-                    },
-                    "stereotype": {
-                      "$": {
-                        "value": "AAAAAAGOZS0Q/fhKC9A="
-                      }
-                    }
-                  },
-                  "ownedOperation": [
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIHJTYZPGW7Y=",
-                        "name": "getAllCar",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhS9jU="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIHJcK5PMNHI=",
-                        "name": "addCar",
+                        "xmi:id": "AAAAAAGOa5ZPOsa3Ei0=",
+                        "name": "updateStock",
                         "visibility": "public",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -2841,82 +2681,13 @@
                           }
                         }
                       }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIHJkO5PSoZE=",
-                        "name": "getCarById",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhS9jU="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIHJvLJPY8KA=",
-                        "name": "updateCarById",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhb/nA="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIHTR15Qi83A=",
-                        "name": "deleteCarById",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhYprA="
-                          }
-                        }
-                      }
                     }
                   ]
                 },
                 {
                   "$": {
-                    "xmi:id": "AAAAAAGQIF+PBZGhx0U=",
-                    "name": "BookingController",
+                    "xmi:id": "AAAAAAGOa4Q4bRq8KYE=",
+                    "name": "SupplierController",
                     "visibility": "public",
                     "isAbstract": "false",
                     "isFinalSpecialization": "false",
@@ -2937,193 +2708,7 @@
                   "ownedOperation": [
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGQIGk/nJMPO3Y=",
-                        "name": "getBookingList",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhS9jU="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIGlP5pMVfNc=",
-                        "name": "getBookingByStatus",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhS9jU="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIGleA5Mb6WI=",
-                        "name": "cancelBookingById",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhe+sc="
-                          }
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "$": {
-                    "xmi:id": "AAAAAAGQIF+mNZHLfT8=",
-                    "name": "PaymentController",
-                    "visibility": "public",
-                    "isAbstract": "false",
-                    "isFinalSpecialization": "false",
-                    "isLeaf": "false",
-                    "xmi:type": "uml:Class",
-                    "isActive": "false"
-                  },
-                  "xmi:Extension": {
-                    "$": {
-                      "extender": "StarUML"
-                    },
-                    "stereotype": {
-                      "$": {
-                        "value": "AAAAAAGOZS0Q/fhKC9A="
-                      }
-                    }
-                  },
-                  "ownedOperation": [
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIGzbGJNc/g4=",
-                        "name": "paymentCheckoutCreditCard",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhVfqE="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIGzpbZNiYzc=",
-                        "name": "paymentCheckoutInternetBanking",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhVfqE="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIGz4NZNoK1o=",
-                        "name": "updatePaymentStatus",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhe+sc="
-                          }
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "$": {
-                    "xmi:id": "AAAAAAGQIGIxCJKCqjQ=",
-                    "name": "UserController",
-                    "visibility": "public",
-                    "isAbstract": "false",
-                    "isFinalSpecialization": "false",
-                    "isLeaf": "false",
-                    "xmi:type": "uml:Class",
-                    "isActive": "false"
-                  },
-                  "xmi:Extension": {
-                    "$": {
-                      "extender": "StarUML"
-                    },
-                    "stereotype": {
-                      "$": {
-                        "value": "AAAAAAGOZS0Q/fhKC9A="
-                      }
-                    }
-                  },
-                  "ownedOperation": [
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIGQr6pLifNw=",
+                        "xmi:id": "AAAAAAGOa5H068uW+Bc=",
                         "name": "login",
                         "visibility": "public",
                         "isStatic": "false",
@@ -3139,14 +2724,14 @@
                         },
                         "stereotype": {
                           "$": {
-                            "value": "AAAAAAGOZS0Q/fhS9jU="
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
                           }
                         }
                       }
                     },
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGQIGQ1HJLoieI=",
+                        "xmi:id": "AAAAAAGOa5IfKs2Vbg0=",
                         "name": "logout",
                         "visibility": "public",
                         "isStatic": "false",
@@ -3169,7 +2754,7 @@
                     },
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGQIGQ/IJLuuVo=",
+                        "xmi:id": "AAAAAAGOa5KFDuQcebA=",
                         "name": "register",
                         "visibility": "public",
                         "isStatic": "false",
@@ -3192,8 +2777,8 @@
                     },
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGQIGRITpL0qoU=",
-                        "name": "forgotPassword",
+                        "xmi:id": "AAAAAAGOa5KyC+jrGy8=",
+                        "name": "updateInfo",
                         "visibility": "public",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -3215,8 +2800,8 @@
                     },
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGQIGRSRJL6Tmg=",
-                        "name": "editUserProfile",
+                        "xmi:id": "AAAAAAGOa5LWkO0G7KM=",
+                        "name": "forgetPassword",
                         "visibility": "public",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -3231,7 +2816,7 @@
                         },
                         "stereotype": {
                           "$": {
-                            "value": "AAAAAAGOZS0Q/fhb/nA="
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
                           }
                         }
                       }
@@ -3240,8 +2825,8 @@
                 },
                 {
                   "$": {
-                    "xmi:id": "AAAAAAGQIGK/WpKuwwU=",
-                    "name": "SearchController",
+                    "xmi:id": "AAAAAAGOa4T/FVxvSZo=",
+                    "name": "MerchantController",
                     "visibility": "public",
                     "isAbstract": "false",
                     "isFinalSpecialization": "false",
@@ -3262,54 +2847,8 @@
                   "ownedOperation": [
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGQIHKTnJPevR8=",
-                        "name": "getCarsList",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhS9jU="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIHKd2ZPk1ZM=",
-                        "name": "getProvinceAndLocation",
-                        "visibility": "public",
-                        "isStatic": "false",
-                        "isLeaf": "false",
-                        "concurrency": "sequential",
-                        "isQuery": "false",
-                        "isAbstract": "false",
-                        "xmi:type": "uml:Operation"
-                      },
-                      "xmi:Extension": {
-                        "$": {
-                          "extender": "StarUML"
-                        },
-                        "stereotype": {
-                          "$": {
-                            "value": "AAAAAAGOZS0Q/fhS9jU="
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "$": {
-                        "xmi:id": "AAAAAAGQIHKqVJPqv8M=",
-                        "name": "createCarOrder",
+                        "xmi:id": "AAAAAAGOa5MOGBoxFQU=",
+                        "name": "login",
                         "visibility": "public",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -3331,8 +2870,332 @@
                     },
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGQIHK4t5PwYTw=",
-                        "name": "getCarDetailById",
+                        "xmi:id": "AAAAAAGOa5MYgxtXacM=",
+                        "name": "logout",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhS9jU="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOa5MmFBx9eDo=",
+                        "name": "register",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOa5MzIyBzI4k=",
+                        "name": "updateInfo",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOa5M+ySGZY9k=",
+                        "name": "forgetPassword",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "po"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "$": {
+                    "xmi:id": "AAAAAAGOa4VJBXU2/XA=",
+                    "name": "OrderController",
+                    "visibility": "public",
+                    "isAbstract": "false",
+                    "isFinalSpecialization": "false",
+                    "isLeaf": "false",
+                    "xmi:type": "uml:Class",
+                    "isActive": "false"
+                  },
+                  "xmi:Extension": {
+                    "$": {
+                      "extender": "StarUML"
+                    },
+                    "stereotype": {
+                      "$": {
+                        "value": "AAAAAAGOZS0Q/fhKC9A="
+                      }
+                    }
+                  },
+                  "ownedOperation": [
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOa5RbF1AzCko=",
+                        "name": "getOrders",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhS9jU="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOa5RqbFFZTmI=",
+                        "name": "createOrder",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOa5R2xFJ/5I4=",
+                        "name": "getOrder",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhS9jU="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOa5SDmVPtsEY=",
+                        "name": "updateOrder",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "$": {
+                    "xmi:id": "AAAAAAGOa4WYmX9dq9s=",
+                    "name": "ProductController",
+                    "visibility": "public",
+                    "isAbstract": "false",
+                    "isFinalSpecialization": "false",
+                    "isLeaf": "false",
+                    "xmi:type": "uml:Class",
+                    "isActive": "false"
+                  },
+                  "xmi:Extension": {
+                    "$": {
+                      "extender": "StarUML"
+                    },
+                    "stereotype": {
+                      "$": {
+                        "value": "AAAAAAGOZS0Q/fhKC9A="
+                      }
+                    }
+                  },
+                  "ownedOperation": [
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOa5UaX34D/kI=",
+                        "name": "createProduct",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOa5UjnX8pfKM=",
+                        "name": "getProducts",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhS9jU="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOa5UvVoBPw/8=",
+                        "name": "updateProduct",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOa5U3/oF1nJk=",
+                        "name": "deleteProduct",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhYprA="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOa5VF7IKbKJk=",
+                        "name": "getProduct",
                         "visibility": "public",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -3356,8 +3219,8 @@
                 },
                 {
                   "$": {
-                    "xmi:id": "AAAAAAGQIHGwnJN+ELo=",
-                    "name": "CustomerController",
+                    "xmi:id": "AAAAAAGOa4X3AJmO54A=",
+                    "name": "ImageController",
                     "visibility": "public",
                     "isAbstract": "false",
                     "isFinalSpecialization": "false",
@@ -3378,8 +3241,8 @@
                   "ownedOperation": [
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGQIHNke5P9CTk=",
-                        "name": "Operation1",
+                        "xmi:id": "AAAAAAGOa5XyRZw+OHM=",
+                        "name": "getImage",
                         "visibility": "public",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -3387,12 +3250,22 @@
                         "isQuery": "false",
                         "isAbstract": "false",
                         "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhS9jU="
+                          }
+                        }
                       }
                     },
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGQIHN3/5QDWsk=",
-                        "name": "Operation2",
+                        "xmi:id": "AAAAAAGOa5X7lp1kxZ8=",
+                        "name": "updateImage",
                         "visibility": "public",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -3400,12 +3273,22 @@
                         "isQuery": "false",
                         "isAbstract": "false",
                         "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
                       }
                     },
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGQIHODEJQJaUQ=",
-                        "name": "Operation3",
+                        "xmi:id": "AAAAAAGOa5YFRZ6K0YE=",
+                        "name": "createImage",
                         "visibility": "public",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -3413,12 +3296,69 @@
                         "isQuery": "false",
                         "isAbstract": "false",
                         "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "$": {
+                    "xmi:id": "AAAAAAGOa4ZdebOgXz0=",
+                    "name": "InvoiceController",
+                    "visibility": "public",
+                    "isAbstract": "false",
+                    "isFinalSpecialization": "false",
+                    "isLeaf": "false",
+                    "xmi:type": "uml:Class",
+                    "isActive": "false"
+                  },
+                  "xmi:Extension": {
+                    "$": {
+                      "extender": "StarUML"
+                    },
+                    "stereotype": {
+                      "$": {
+                        "value": "AAAAAAGOZS0Q/fhKC9A="
+                      }
+                    }
+                  },
+                  "ownedOperation": [
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOa5j+ZTLFCpM=",
+                        "name": "getInvoice",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhS9jU="
+                          }
+                        }
                       }
                     },
                     {
                       "$": {
-                        "xmi:id": "AAAAAAGQIHONnZQP8ng=",
-                        "name": "Operation4",
+                        "xmi:id": "AAAAAAGOa5kK1jPrNt8=",
+                        "name": "createInvoice",
                         "visibility": "public",
                         "isStatic": "false",
                         "isLeaf": "false",
@@ -3426,6 +3366,225 @@
                         "isQuery": "false",
                         "isAbstract": "false",
                         "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOa5kWSjURmdk=",
+                        "name": "updateInvoice",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "$": {
+                    "xmi:id": "AAAAAAGOa4aGCLof0rk=",
+                    "name": "PaymentController",
+                    "visibility": "public",
+                    "isAbstract": "false",
+                    "isFinalSpecialization": "false",
+                    "isLeaf": "false",
+                    "xmi:type": "uml:Class",
+                    "isActive": "false"
+                  },
+                  "xmi:Extension": {
+                    "$": {
+                      "extender": "StarUML"
+                    },
+                    "stereotype": {
+                      "$": {
+                        "value": "AAAAAAGOZS0Q/fhKC9A="
+                      }
+                    }
+                  },
+                  "ownedOperation": [
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOa5mIFWPKz0Q=",
+                        "name": "getPayment",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhS9jU="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOa5mUlWTw/HU=",
+                        "name": "createPayment",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOa5mggWYWS4U=",
+                        "name": "updatePayment",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "$": {
+                    "xmi:id": "AAAAAAGOa4cAFfvSHnQ=",
+                    "name": "DeliveryController",
+                    "visibility": "public",
+                    "isAbstract": "false",
+                    "isFinalSpecialization": "false",
+                    "isLeaf": "false",
+                    "xmi:type": "uml:Class",
+                    "isActive": "false"
+                  },
+                  "xmi:Extension": {
+                    "$": {
+                      "extender": "StarUML"
+                    },
+                    "stereotype": {
+                      "$": {
+                        "value": "AAAAAAGOZS0Q/fhKC9A="
+                      }
+                    }
+                  },
+                  "ownedOperation": [
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOa5n4/YV7ZGU=",
+                        "name": "createDelivery",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOa5oEhYahGcM=",
+                        "name": "getDelivery",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhS9jU="
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$": {
+                        "xmi:id": "AAAAAAGOa5oTGYfHwPg=",
+                        "name": "updateDelivery",
+                        "visibility": "public",
+                        "isStatic": "false",
+                        "isLeaf": "false",
+                        "concurrency": "sequential",
+                        "isQuery": "false",
+                        "isAbstract": "false",
+                        "xmi:type": "uml:Operation"
+                      },
+                      "xmi:Extension": {
+                        "$": {
+                          "extender": "StarUML"
+                        },
+                        "stereotype": {
+                          "$": {
+                            "value": "AAAAAAGOZS0Q/fhVfqE="
+                          }
+                        }
                       }
                     }
                   ]
@@ -3465,7 +3624,7 @@
               },
               "ownedMember": {
                 "$": {
-                  "xmi:id": "AAAAAAGQMHd6ZViTv98=",
+                  "xmi:id": "AAAAAAGQMHTuQztSgd4=",
                   "xmi:type": "uml:Extension"
                 },
                 "memberEnd": {
@@ -3475,7 +3634,7 @@
                 },
                 "ownedEnd": {
                   "$": {
-                    "xmi:id": "AAAAAAGQMHd6ZViUIec=",
+                    "xmi:id": "AAAAAAGQMHTuQztTmHI=",
                     "xmi:type": "uml:ExtensionEnd",
                     "type": "AAAAAAGOZS0Q/fhE91w="
                   }
@@ -3486,7 +3645,7 @@
                   "xmi:id": "AAAAAAGOZS0Q/fhFebs=",
                   "xmi:type": "uml:Property",
                   "name": "base_Class",
-                  "association": "AAAAAAGQMHd6ZViTv98="
+                  "association": "AAAAAAGQMHTuQztSgd4="
                 },
                 "type": {
                   "$": {
@@ -3508,7 +3667,7 @@
               },
               "ownedMember": {
                 "$": {
-                  "xmi:id": "AAAAAAGQMHd6ZViVw0c=",
+                  "xmi:id": "AAAAAAGQMHTuQztUiFc=",
                   "xmi:type": "uml:Extension"
                 },
                 "memberEnd": {
@@ -3518,7 +3677,7 @@
                 },
                 "ownedEnd": {
                   "$": {
-                    "xmi:id": "AAAAAAGQMHd6ZViW0+I=",
+                    "xmi:id": "AAAAAAGQMHTuQztVPn0=",
                     "xmi:type": "uml:ExtensionEnd",
                     "type": "AAAAAAGOZS0Q/fhHz+c="
                   }
@@ -3529,7 +3688,7 @@
                   "xmi:id": "AAAAAAGOZS0Q/fhIE6I=",
                   "xmi:type": "uml:Property",
                   "name": "base_Class",
-                  "association": "AAAAAAGQMHd6ZViVw0c="
+                  "association": "AAAAAAGQMHTuQztUiFc="
                 },
                 "type": {
                   "$": {
@@ -3551,7 +3710,7 @@
               },
               "ownedMember": {
                 "$": {
-                  "xmi:id": "AAAAAAGQMHd6ZViX6D4=",
+                  "xmi:id": "AAAAAAGQMHTuQztWFu8=",
                   "xmi:type": "uml:Extension"
                 },
                 "memberEnd": {
@@ -3561,7 +3720,7 @@
                 },
                 "ownedEnd": {
                   "$": {
-                    "xmi:id": "AAAAAAGQMHd6ZViYPFY=",
+                    "xmi:id": "AAAAAAGQMHTuQztXqe8=",
                     "xmi:type": "uml:ExtensionEnd",
                     "type": "AAAAAAGOZS0Q/fhKC9A="
                   }
@@ -3572,7 +3731,7 @@
                   "xmi:id": "AAAAAAGOZS0Q/fhLLAM=",
                   "xmi:type": "uml:Property",
                   "name": "base_Class",
-                  "association": "AAAAAAGQMHd6ZViX6D4="
+                  "association": "AAAAAAGQMHTuQztWFu8="
                 },
                 "type": {
                   "$": {
@@ -3594,7 +3753,7 @@
               },
               "ownedMember": {
                 "$": {
-                  "xmi:id": "AAAAAAGQMHd6ZViZGRg=",
+                  "xmi:id": "AAAAAAGQMHTuQztYyc8=",
                   "xmi:type": "uml:Extension"
                 },
                 "memberEnd": {
@@ -3604,7 +3763,7 @@
                 },
                 "ownedEnd": {
                   "$": {
-                    "xmi:id": "AAAAAAGQMHd6ZViaqXI=",
+                    "xmi:id": "AAAAAAGQMHTuQztZ7ws=",
                     "xmi:type": "uml:ExtensionEnd",
                     "type": "AAAAAAGOZS0Q/fhNIKw="
                   }
@@ -3615,7 +3774,7 @@
                   "xmi:id": "AAAAAAGOZS0Q/fhOmvc=",
                   "xmi:type": "uml:Property",
                   "name": "base_Class",
-                  "association": "AAAAAAGQMHd6ZViZGRg="
+                  "association": "AAAAAAGQMHTuQztYyc8="
                 },
                 "type": {
                   "$": {
@@ -3742,7 +3901,7 @@
               },
               "ownedMember": {
                 "$": {
-                  "xmi:id": "AAAAAAGQMHd6Zlib22U=",
+                  "xmi:id": "AAAAAAGQMHTuQztaCh8=",
                   "xmi:type": "uml:Extension"
                 },
                 "memberEnd": {
@@ -3752,7 +3911,7 @@
                 },
                 "ownedEnd": {
                   "$": {
-                    "xmi:id": "AAAAAAGQMHd6Zlictp4=",
+                    "xmi:id": "AAAAAAGQMHTuQztbXP0=",
                     "xmi:type": "uml:ExtensionEnd",
                     "type": "AAAAAAGOZS0Q/fhha3w="
                   }
@@ -3763,7 +3922,7 @@
                   "xmi:id": "AAAAAAGOZS0Q/fhii/E=",
                   "xmi:type": "uml:Property",
                   "name": "base_Class",
-                  "association": "AAAAAAGQMHd6Zlib22U="
+                  "association": "AAAAAAGQMHTuQztaCh8="
                 },
                 "type": {
                   "$": {
@@ -3785,7 +3944,7 @@
               },
               "ownedMember": {
                 "$": {
-                  "xmi:id": "AAAAAAGQMHd6ZlidmjM=",
+                  "xmi:id": "AAAAAAGQMHTuQztc7DU=",
                   "xmi:type": "uml:Extension"
                 },
                 "memberEnd": {
@@ -3795,7 +3954,7 @@
                 },
                 "ownedEnd": {
                   "$": {
-                    "xmi:id": "AAAAAAGQMHd6ZlieL3M=",
+                    "xmi:id": "AAAAAAGQMHTuQztdTDM=",
                     "xmi:type": "uml:ExtensionEnd",
                     "type": "AAAAAAGOZS0Q/fhlUzM="
                   }
@@ -3806,7 +3965,7 @@
                   "xmi:id": "AAAAAAGOZS0Q/fhmhfg=",
                   "xmi:type": "uml:Property",
                   "name": "base_Class",
-                  "association": "AAAAAAGQMHd6ZlidmjM="
+                  "association": "AAAAAAGQMHTuQztc7DU="
                 },
                 "type": {
                   "$": {
@@ -3828,7 +3987,7 @@
               },
               "ownedMember": {
                 "$": {
-                  "xmi:id": "AAAAAAGQMHd6ZlifA0Y=",
+                  "xmi:id": "AAAAAAGQMHTuQzteEYw=",
                   "xmi:type": "uml:Extension"
                 },
                 "memberEnd": {
@@ -3838,7 +3997,7 @@
                 },
                 "ownedEnd": {
                   "$": {
-                    "xmi:id": "AAAAAAGQMHd6ZligTiA=",
+                    "xmi:id": "AAAAAAGQMHTuQztfZQA=",
                     "xmi:type": "uml:ExtensionEnd",
                     "type": "AAAAAAGOZS0Q/fhpVAQ="
                   }
@@ -3849,7 +4008,7 @@
                   "xmi:id": "AAAAAAGOZS0Q/fhqtHw=",
                   "xmi:type": "uml:Property",
                   "name": "base_Class",
-                  "association": "AAAAAAGQMHd6ZlifA0Y="
+                  "association": "AAAAAAGQMHTuQzteEYw="
                 },
                 "type": {
                   "$": {
@@ -3871,7 +4030,7 @@
               },
               "ownedMember": {
                 "$": {
-                  "xmi:id": "AAAAAAGQMHd6Zlihc1c=",
+                  "xmi:id": "AAAAAAGQMHTuQztgU6o=",
                   "xmi:type": "uml:Extension"
                 },
                 "memberEnd": {
@@ -3881,7 +4040,7 @@
                 },
                 "ownedEnd": {
                   "$": {
-                    "xmi:id": "AAAAAAGQMHd6ZliiUGc=",
+                    "xmi:id": "AAAAAAGQMHTuQzthyc0=",
                     "xmi:type": "uml:ExtensionEnd",
                     "type": "AAAAAAGOZS0Q/fhsfsY="
                   }
@@ -3892,7 +4051,7 @@
                   "xmi:id": "AAAAAAGOZS0Q/fhtzIs=",
                   "xmi:type": "uml:Property",
                   "name": "base_Class",
-                  "association": "AAAAAAGQMHd6Zlihc1c="
+                  "association": "AAAAAAGQMHTuQztgU6o="
                 },
                 "type": {
                   "$": {
@@ -3914,7 +4073,7 @@
               },
               "ownedMember": {
                 "$": {
-                  "xmi:id": "AAAAAAGQMHd6ZlijaIw=",
+                  "xmi:id": "AAAAAAGQMHTuQzticjs=",
                   "xmi:type": "uml:Extension"
                 },
                 "memberEnd": {
@@ -3924,7 +4083,7 @@
                 },
                 "ownedEnd": {
                   "$": {
-                    "xmi:id": "AAAAAAGQMHd6Zliki0o=",
+                    "xmi:id": "AAAAAAGQMHTuQztjp1o=",
                     "xmi:type": "uml:ExtensionEnd",
                     "type": "AAAAAAGOZS0Q/fhvSJo="
                   }
@@ -3935,7 +4094,7 @@
                   "xmi:id": "AAAAAAGOZS0Q/fhwc7Y=",
                   "xmi:type": "uml:Property",
                   "name": "base_Class",
-                  "association": "AAAAAAGQMHd6ZlijaIw="
+                  "association": "AAAAAAGQMHTuQzticjs="
                 },
                 "type": {
                   "$": {
@@ -3957,7 +4116,7 @@
               },
               "ownedMember": {
                 "$": {
-                  "xmi:id": "AAAAAAGQMHd6Zlilboc=",
+                  "xmi:id": "AAAAAAGQMHTuQztk+4c=",
                   "xmi:type": "uml:Extension"
                 },
                 "memberEnd": {
@@ -3967,7 +4126,7 @@
                 },
                 "ownedEnd": {
                   "$": {
-                    "xmi:id": "AAAAAAGQMHd6Zlim0Pc=",
+                    "xmi:id": "AAAAAAGQMHTuQztlkyY=",
                     "xmi:type": "uml:ExtensionEnd",
                     "type": "AAAAAAGOZS0Q/fhyKpk="
                   }
@@ -3978,7 +4137,7 @@
                   "xmi:id": "AAAAAAGOZS0Q/fhzdCo=",
                   "xmi:type": "uml:Property",
                   "name": "base_Class",
-                  "association": "AAAAAAGQMHd6Zlilboc="
+                  "association": "AAAAAAGQMHTuQztk+4c="
                 },
                 "type": {
                   "$": {
@@ -4008,13 +4167,6 @@
             "xmi:id": "Float_id",
             "xmi:type": "uml:DataType",
             "name": "Float"
-          }
-        },
-        {
-          "$": {
-            "xmi:id": "Date_id",
-            "xmi:type": "uml:DataType",
-            "name": "Date"
           }
         },
         {

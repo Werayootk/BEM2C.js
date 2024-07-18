@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.0" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1">
+	<xmi:Documentation exporter="StarUML" exporterVersion="2.0"/>
+	<uml:Model xmi:id="AAAAAAGQMHTuPjtRTCc=" xmi:type="uml:Model" name="RootModel">
+		<packagedElement xmi:id="AAAAAAFF+qBWK6M3Z8Y=" name="Model" visibility="public" xmi:type="uml:Model">
+			<packagedElement xmi:id="AAAAAAGOajIQ0VrUUt0=" name="Database" visibility="public" xmi:type="uml:Package">
+				<packagedElement xmi:id="AAAAAAGOajJbYFrwtAg=" name="MySQL" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhha3w="/>
+					</xmi:Extension>
+					<ownedAttribute xmi:id="AAAAAAGOajJ9/1sas+c=" name="MySQL" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				</packagedElement>
+				<xmi:Extension extender="StarUML">
+					<stereotype value="AAAAAAGOZS0Q/fhyKpk="/>
+				</xmi:Extension>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAGOajWMClspkbU=" name="Model" visibility="public" xmi:type="uml:Package">
+				<packagedElement xmi:id="AAAAAAGOakP4uFtHMBA=" name="MerchantModel" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhNIKw="/>
+					</xmi:Extension>
+					<ownedAttribute xmi:id="AAAAAAGOakxwUV0wCPM=" name="merchantId" visibility="private" isStatic="false" isLeaf="false" type="Id_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false">
+						<xmi:Extension extender="StarUML">
+							<stereotype value=""/>
+						</xmi:Extension>
+					</ownedAttribute>
+					<ownedAttribute xmi:id="AAAAAAGOalWsVF1OeWI=" name="userName" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+					<ownedAttribute xmi:id="AAAAAAGOalYngl1VsfE=" name="passWord" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+					<ownedAttribute xmi:id="AAAAAAGOalZaSV1csLA=" name="role" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+					<ownedAttribute xmi:id="AAAAAAGOalduAF1krlc=" name="merchantName" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+					<ownedAttribute xmi:id="AAAAAAGOalex9l1rujI=" name="merchantInfo" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+					<ownedAttribute xmi:id="AAAAAAGOalfyql1yapg=" name="merchantPhoto" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+					<ownedAttribute xmi:id="AAAAAAGOallDI116yKc=" name="merchantPhoneNumber" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOakTVSVvKPgo=" name="SupplierModel" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhNIKw="/>
+					</xmi:Extension>
+					<ownedAttribute xmi:id="AAAAAAGOalT88F1AHcs=" name="supplierId" visibility="private" isStatic="false" isLeaf="false" type="Id_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false">
+						<xmi:Extension extender="StarUML">
+							<stereotype value=""/>
+						</xmi:Extension>
+					</ownedAttribute>
+					<ownedAttribute xmi:id="AAAAAAGOalqOy12Luzs=" name="userName" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+					<ownedAttribute xmi:id="AAAAAAGOalq8Sl2TEz0=" name="passWord" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+					<ownedAttribute xmi:id="AAAAAAGOalrjS12aCVs=" name="role" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+					<ownedAttribute xmi:id="AAAAAAGOalsV812hSTw=" name="supplierName" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+					<ownedAttribute xmi:id="AAAAAAGOaltFZV2ocVg=" name="supplierInfo" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+					<ownedAttribute xmi:id="AAAAAAGOalt3l12vdtM=" name="supplierPhoto" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+					<ownedAttribute xmi:id="AAAAAAGOalukhF22cuI=" name="supplierPhoneNumber" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOakVobFv3q7U=" name="ProductModel" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhNIKw="/>
+					</xmi:Extension>
+					<ownedAttribute xmi:id="AAAAAAGOanLual2/Ei0=" name="productId" visibility="private" isStatic="false" isLeaf="false" type="Id_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false">
+						<xmi:Extension extender="StarUML">
+							<stereotype value=""/>
+						</xmi:Extension>
+					</ownedAttribute>
+					<ownedAttribute xmi:id="AAAAAAGOan2nsV3LLYI=" name="productName" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+					<ownedAttribute xmi:id="AAAAAAGOan6hGF3SpD8=" name="category" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+					<ownedAttribute xmi:id="AAAAAAGOan9OYl3gy2o=" name="price" visibility="private" isStatic="false" isLeaf="false" type="Float_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+					<ownedAttribute xmi:id="AAAAAAGOan+FcF3nLI4=" name="description" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+					<ownedAttribute xmi:id="AAAAAAGOaoFvc13ukCY=" name="sku" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOakXQ+1wnFv8=" name="OrderModel" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhNIKw="/>
+					</xmi:Extension>
+					<ownedAttribute xmi:id="AAAAAAGOaojtj148bVU=" name="orderId" visibility="private" isStatic="false" isLeaf="false" type="Id_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false">
+						<xmi:Extension extender="StarUML">
+							<stereotype value=""/>
+						</xmi:Extension>
+					</ownedAttribute>
+					<ownedAttribute xmi:id="AAAAAAGOaqna/V5zh4E=" name="orderStatus" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+					<ownedAttribute xmi:id="AAAAAAGOari39nxBxo4=" name="orderTo" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+					<ownedAttribute xmi:id="AAAAAAGOauEQBaITkWU=" name="orderQuantity" visibility="private" isStatic="false" isLeaf="false" type="Integer_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOakbEJVx9DMg=" name="PaymentModel" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhNIKw="/>
+					</xmi:Extension>
+					<ownedAttribute xmi:id="AAAAAAGOapDMJl5KiFs=" name="paymentId" visibility="private" isStatic="false" isLeaf="false" type="Id_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false">
+						<xmi:Extension extender="StarUML">
+							<stereotype value=""/>
+						</xmi:Extension>
+					</ownedAttribute>
+					<ownedAttribute xmi:id="AAAAAAGOaqtot156lUU=" name="paymentMethod" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+					<ownedAttribute xmi:id="AAAAAAGOaquprl6B23c=" name="paymentStatus" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOakaVRlxSphQ=" name="ImageModel" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhNIKw="/>
+					</xmi:Extension>
+					<ownedAttribute xmi:id="AAAAAAGOaoO3X14B5ew=" name="imageId" visibility="private" isStatic="false" isLeaf="false" type="Id_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false">
+						<xmi:Extension extender="StarUML">
+							<stereotype value=""/>
+						</xmi:Extension>
+					</ownedAttribute>
+					<ownedAttribute xmi:id="AAAAAAGOaoPhwF4IcVI=" name="fileName" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+					<ownedAttribute xmi:id="AAAAAAGOaoQrQ14P/uU=" name="filePath" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+					<ownedAttribute xmi:id="AAAAAAGOaoVh3F4WGRQ=" name="fileType" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+					<ownedAttribute xmi:id="AAAAAAGOaoWMpV4drf8=" name="fileSize" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOakcEiFyq5sg=" name="StockModel" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhNIKw="/>
+					</xmi:Extension>
+					<ownedAttribute xmi:id="AAAAAAGOaokail5DRvU=" name="stockId" visibility="private" isStatic="false" isLeaf="false" type="Id_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false">
+						<xmi:Extension extender="StarUML">
+							<stereotype value=""/>
+						</xmi:Extension>
+					</ownedAttribute>
+					<ownedAttribute xmi:id="AAAAAAGOapeQtV5qjxU=" name="quantity" visibility="private" isStatic="false" isLeaf="false" type="Integer_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOakdNEVzY3Lg=" name="InvoiceModel" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhNIKw="/>
+					</xmi:Extension>
+					<ownedAttribute xmi:id="AAAAAAGOapE+iF5Y9zE=" name="invoiceId" visibility="private" isStatic="false" isLeaf="false" type="Id_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false">
+						<xmi:Extension extender="StarUML">
+							<stereotype value=""/>
+						</xmi:Extension>
+					</ownedAttribute>
+					<ownedAttribute xmi:id="AAAAAAGOaqy0/l6R1xQ=" name="invoicePrice" visibility="private" isStatic="false" isLeaf="false" type="Float_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+					<ownedAttribute xmi:id="AAAAAAGOaq0RPl6Yl/A=" name="invoiceStatus" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+					<ownedAttribute xmi:id="AAAAAAGOar0CMYwQyo0=" name="invoiceTo" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOakeSy10D0JI=" name="DeliveryModel" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhNIKw="/>
+					</xmi:Extension>
+					<ownedAttribute xmi:id="AAAAAAGOapEJEl5RfRU=" name="deliveryId" visibility="private" isStatic="false" isLeaf="false" type="Id_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false">
+						<xmi:Extension extender="StarUML">
+							<stereotype value=""/>
+						</xmi:Extension>
+					</ownedAttribute>
+					<ownedAttribute xmi:id="AAAAAAGOarDUiWF17vc=" name="deliveryMethod" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+					<ownedAttribute xmi:id="AAAAAAGOarFVLWIM0bY=" name="deliveryStatus" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+					<ownedAttribute xmi:id="AAAAAAGOasBKbg0ovuI=" name="deliveryTo" visibility="private" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				</packagedElement>
+				<xmi:Extension extender="StarUML">
+					<stereotype value="AAAAAAGOZS0Q/fhvSJo="/>
+				</xmi:Extension>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAGOauf1gQsRCFg=" name="Route" visibility="public" xmi:type="uml:Package">
+				<packagedElement xmi:id="AAAAAAGOavA5IsxHlSE=" name="ProductsRoute" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<ownedMember xmi:id="AAAAAAGOayqYdQtx/eg=" name="/:productId" visibility="public" xmi:type="uml:Dependency" client="AAAAAAGOavA5IsxHlSE=" supplier="AAAAAAGOavDAm+uyQM0=">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhlUzM="/>
+						</xmi:Extension>
+					</ownedMember>
+					<ownedMember xmi:id="AAAAAAGOaysTVBfB4jg=" name="/:productId" visibility="public" xmi:type="uml:Dependency" client="AAAAAAGOavA5IsxHlSE=" supplier="AAAAAAGOavGK1CUN5ew=">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhlUzM="/>
+						</xmi:Extension>
+					</ownedMember>
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhE91w="/>
+					</xmi:Extension>
+					<ownedOperation xmi:id="AAAAAAGOaye9290VEBk=" name="createProduct" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOaygF+uB8B5s=" name="getProducts" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhS9jU="/>
+						</xmi:Extension>
+					</ownedOperation>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOau3L12ZwjgM=" name="SupplierRoute" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<ownedMember xmi:id="AAAAAAGOa3OCkb1BRUo=" name="/:supplierId" visibility="public" xmi:type="uml:Dependency" client="AAAAAAGOau3L12ZwjgM=" supplier="AAAAAAGOavKhu0dVjt8=">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhlUzM="/>
+						</xmi:Extension>
+					</ownedMember>
+					<ownedMember xmi:id="AAAAAAGOa3OmD8KGtOc=" name="/:supplierId" visibility="public" xmi:type="uml:Dependency" client="AAAAAAGOau3L12ZwjgM=" supplier="AAAAAAGOavI+cjgX4sw=">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhlUzM="/>
+						</xmi:Extension>
+					</ownedMember>
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhE91w="/>
+					</xmi:Extension>
+					<ownedOperation xmi:id="AAAAAAGOayUY9uGMq4I=" name="login" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOayXpbTHyhDA=" name="logout" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhS9jU="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOayYzozksh2M=" name="register" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOayZ0bkBmaxk=" name="updateInfo" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOayaw+kbsjYU=" name="forgetPassword" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOauzzuxtPzpA=" name="MerchantRoute" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<ownedMember xmi:id="AAAAAAGOa0KZEcuxK/g=" name="/:merchantId" visibility="public" xmi:type="uml:Dependency" client="AAAAAAGOauzzuxtPzpA=" supplier="AAAAAAGOavElEw2lygA=">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhlUzM="/>
+						</xmi:Extension>
+					</ownedMember>
+					<ownedMember xmi:id="AAAAAAGOa1qefKuMULo=" name="/:merchantId" visibility="public" xmi:type="uml:Dependency" client="AAAAAAGOauzzuxtPzpA=" supplier="AAAAAAGOavJvmz9KQiY=">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhlUzM="/>
+						</xmi:Extension>
+					</ownedMember>
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhE91w="/>
+					</xmi:Extension>
+					<ownedOperation xmi:id="AAAAAAGOayRoNt4lwLQ=" name="login" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOayXC0y8/W0E=" name="logout" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhS9jU="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOayYXTzXFbvw=" name="register" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOayZXLTxLWCg=" name="updateInfo" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOayaaskOFMA4=" name="forgetPassword" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOavDAm+uyQM0=" name="ProductRoute" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhE91w="/>
+					</xmi:Extension>
+					<ownedOperation xmi:id="AAAAAAGOayhldOZItb0=" name="updateProduct" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOayibNOo/jas=" name="deleteProduct" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhYprA="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOaykS0PP7dRA=" name="getProduct" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhS9jU="/>
+						</xmi:Extension>
+					</ownedOperation>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOavElEw2lygA=" name="OrdersRoute" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<ownedMember xmi:id="AAAAAAGOayzL1GzFsoY=" name="/:orderId" visibility="public" xmi:type="uml:Dependency" client="AAAAAAGOavElEw2lygA=" supplier="AAAAAAGOavFpGRoxGwU=">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhlUzM="/>
+						</xmi:Extension>
+					</ownedMember>
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhE91w="/>
+					</xmi:Extension>
+					<ownedOperation xmi:id="AAAAAAGOayvmCFvGP0M=" name="getOrders" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhS9jU="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOayxQUWBUVvc=" name="createOrder" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOavFpGRoxGwU=" name="OrderRoute" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhE91w="/>
+					</xmi:Extension>
+					<ownedOperation xmi:id="AAAAAAGOay0YMnVsKKI=" name="getOrder" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhS9jU="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOay1HEH0vWZ4=" name="updateOrder" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOavGK1CUN5ew=" name="ImageRoute" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhE91w="/>
+					</xmi:Extension>
+					<ownedOperation xmi:id="AAAAAAGOayoP8fsLI9c=" name="getImage" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhS9jU="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOayozGv8CiTQ=" name="updateImage" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOaypZ+QJpopA=" name="createImage" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOavI+cjgX4sw=" name="PaymentsRoute" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<ownedMember xmi:id="AAAAAAGOa3O4rsc7q/4=" name="/:paymentId" visibility="public" xmi:type="uml:Dependency" client="AAAAAAGOavI+cjgX4sw=" supplier="AAAAAAGOa3C+gDTAnkw=">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhlUzM="/>
+						</xmi:Extension>
+					</ownedMember>
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhE91w="/>
+					</xmi:Extension>
+					<ownedOperation xmi:id="AAAAAAGOazBQSKo0riw=" name="getPayment" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhS9jU="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOazCbQLbltDM=" name="createPayment" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOavJvmz9KQiY=" name="StocksRoute" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<ownedMember xmi:id="AAAAAAGOa1Uzfw97lHQ=" name="/:stockId" visibility="public" xmi:type="uml:Dependency" client="AAAAAAGOavJvmz9KQiY=" supplier="AAAAAAGOa1SuYfMkXZA=">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhlUzM="/>
+						</xmi:Extension>
+					</ownedMember>
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhE91w="/>
+					</xmi:Extension>
+					<ownedOperation xmi:id="AAAAAAGOazKXgTi5Rc0=" name="getOutOfStock" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhS9jU="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOazLIYT6FnlY=" name="getStock" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhS9jU="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOazdCZGjDOb8=" name="createStock" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOavKhu0dVjt8=" name="InvoicesRoute" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<ownedMember xmi:id="AAAAAAGOa3PEh8uoLZ0=" name="/:invoiceId" visibility="public" xmi:type="uml:Dependency" client="AAAAAAGOavKhu0dVjt8=" supplier="AAAAAAGOa3CRUjCCOFM=">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhlUzM="/>
+						</xmi:Extension>
+					</ownedMember>
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhE91w="/>
+					</xmi:Extension>
+					<ownedOperation xmi:id="AAAAAAGOazF+0Q/9Zb0=" name="getInvoice" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhS9jU="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOazHGVBNku9U=" name="createInvoice" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOavbKP4RmmXY=" name="DeliveriesRoute" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<ownedMember xmi:id="AAAAAAGOazxsGf99pzA=" name="/:deliveryId" visibility="public" xmi:type="uml:Dependency" client="AAAAAAGOavbKP4RmmXY=" supplier="AAAAAAGOazsef7RO0mI=">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhlUzM="/>
+						</xmi:Extension>
+					</ownedMember>
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhE91w="/>
+					</xmi:Extension>
+					<ownedOperation xmi:id="AAAAAAGOazp3aaDMPiM=" name="createDelivery" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOazqi6qPr4b4=" name="getDelivery" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhS9jU="/>
+						</xmi:Extension>
+					</ownedOperation>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOazsef7RO0mI=" name="DeliveryRoute" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhE91w="/>
+					</xmi:Extension>
+					<ownedOperation xmi:id="AAAAAAGOaztl0sKKF1M=" name="updateDelivery" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOa1SuYfMkXZA=" name="StockRoute" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhE91w="/>
+					</xmi:Extension>
+					<ownedOperation xmi:id="AAAAAAGOa1UKCQYHwq8=" name="updateStock" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOa3CRUjCCOFM=" name="InvoiceRoute" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhE91w="/>
+					</xmi:Extension>
+					<ownedOperation xmi:id="AAAAAAGOa3GkPUIASjk=" name="updateInvoice" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOa3C+gDTAnkw=" name="PaymentRoute" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhE91w="/>
+					</xmi:Extension>
+					<ownedOperation xmi:id="AAAAAAGOa3HUw0bPkas=" name="updatePayment" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+				</packagedElement>
+				<xmi:Extension extender="StarUML">
+					<stereotype value="AAAAAAGOZS0Q/fhpVAQ="/>
+				</xmi:Extension>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAGOa34Ps4Q2LHo=" name="Controller" visibility="public" xmi:type="uml:Package">
+				<packagedElement xmi:id="AAAAAAGOa4Yfb6EJOxY=" name="StockController" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhKC9A="/>
+					</xmi:Extension>
+					<ownedOperation xmi:id="AAAAAAGOa5YszcNFuQw=" name="getStock" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhS9jU="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOa5Y52sRro24=" name="getOutOfStock" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhS9jU="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOa5ZDysWRw6k=" name="createStock" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOa5ZPOsa3Ei0=" name="updateStock" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOa4Q4bRq8KYE=" name="SupplierController" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhKC9A="/>
+					</xmi:Extension>
+					<ownedOperation xmi:id="AAAAAAGOa5H068uW+Bc=" name="login" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOa5IfKs2Vbg0=" name="logout" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhS9jU="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOa5KFDuQcebA=" name="register" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOa5KyC+jrGy8=" name="updateInfo" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOa5LWkO0G7KM=" name="forgetPassword" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOa4T/FVxvSZo=" name="MerchantController" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhKC9A="/>
+					</xmi:Extension>
+					<ownedOperation xmi:id="AAAAAAGOa5MOGBoxFQU=" name="login" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOa5MYgxtXacM=" name="logout" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhS9jU="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOa5MmFBx9eDo=" name="register" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOa5MzIyBzI4k=" name="updateInfo" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOa5M+ySGZY9k=" name="forgetPassword" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="po"/>
+						</xmi:Extension>
+					</ownedOperation>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOa4VJBXU2/XA=" name="OrderController" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhKC9A="/>
+					</xmi:Extension>
+					<ownedOperation xmi:id="AAAAAAGOa5RbF1AzCko=" name="getOrders" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhS9jU="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOa5RqbFFZTmI=" name="createOrder" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOa5R2xFJ/5I4=" name="getOrder" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhS9jU="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOa5SDmVPtsEY=" name="updateOrder" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOa4WYmX9dq9s=" name="ProductController" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhKC9A="/>
+					</xmi:Extension>
+					<ownedOperation xmi:id="AAAAAAGOa5UaX34D/kI=" name="createProduct" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOa5UjnX8pfKM=" name="getProducts" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhS9jU="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOa5UvVoBPw/8=" name="updateProduct" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOa5U3/oF1nJk=" name="deleteProduct" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhYprA="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOa5VF7IKbKJk=" name="getProduct" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhS9jU="/>
+						</xmi:Extension>
+					</ownedOperation>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOa4X3AJmO54A=" name="ImageController" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhKC9A="/>
+					</xmi:Extension>
+					<ownedOperation xmi:id="AAAAAAGOa5XyRZw+OHM=" name="getImage" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhS9jU="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOa5X7lp1kxZ8=" name="updateImage" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOa5YFRZ6K0YE=" name="createImage" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOa4ZdebOgXz0=" name="InvoiceController" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhKC9A="/>
+					</xmi:Extension>
+					<ownedOperation xmi:id="AAAAAAGOa5j+ZTLFCpM=" name="getInvoice" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhS9jU="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOa5kK1jPrNt8=" name="createInvoice" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOa5kWSjURmdk=" name="updateInvoice" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOa4aGCLof0rk=" name="PaymentController" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhKC9A="/>
+					</xmi:Extension>
+					<ownedOperation xmi:id="AAAAAAGOa5mIFWPKz0Q=" name="getPayment" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhS9jU="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOa5mUlWTw/HU=" name="createPayment" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOa5mggWYWS4U=" name="updatePayment" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+				</packagedElement>
+				<packagedElement xmi:id="AAAAAAGOa4cAFfvSHnQ=" name="DeliveryController" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+					<xmi:Extension extender="StarUML">
+						<stereotype value="AAAAAAGOZS0Q/fhKC9A="/>
+					</xmi:Extension>
+					<ownedOperation xmi:id="AAAAAAGOa5n4/YV7ZGU=" name="createDelivery" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOa5oEhYahGcM=" name="getDelivery" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhS9jU="/>
+						</xmi:Extension>
+					</ownedOperation>
+					<ownedOperation xmi:id="AAAAAAGOa5oTGYfHwPg=" name="updateDelivery" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+						<xmi:Extension extender="StarUML">
+							<stereotype value="AAAAAAGOZS0Q/fhVfqE="/>
+						</xmi:Extension>
+					</ownedOperation>
+				</packagedElement>
+				<xmi:Extension extender="StarUML">
+					<stereotype value="AAAAAAGOZS0Q/fhsfsY="/>
+				</xmi:Extension>
+			</packagedElement>
+		</packagedElement>
+		<packagedElement xmi:id="AAAAAAGOZS0Q/PdYGqM=" name="UML_profile_for_NodeJs" visibility="public" xmi:type="uml:Profile">
+			<packagedElement xmi:id="AAAAAAGOZS0Q/fhE91w=" name="Route" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+				<ownedMember xmi:id="AAAAAAGQMHTuQztSgd4=" xmi:type="uml:Extension">
+					<memberEnd xmi:idref="AAAAAAGOZS0Q/fhFebs="/>
+					<ownedEnd xmi:id="AAAAAAGQMHTuQztTmHI=" xmi:type="uml:ExtensionEnd" type="AAAAAAGOZS0Q/fhE91w="/>
+				</ownedMember>
+				<ownedAttribute xmi:id="AAAAAAGOZS0Q/fhFebs=" xmi:type="uml:Property" name="base_Class" association="AAAAAAGQMHTuQztSgd4=">
+					<type href="http://schema.omg.org/spec/UML/2.0/uml.xml#Class"/>
+				</ownedAttribute>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAGOZS0Q/fhHz+c=" name="HTTPMethod" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+				<ownedMember xmi:id="AAAAAAGQMHTuQztUiFc=" xmi:type="uml:Extension">
+					<memberEnd xmi:idref="AAAAAAGOZS0Q/fhIE6I="/>
+					<ownedEnd xmi:id="AAAAAAGQMHTuQztVPn0=" xmi:type="uml:ExtensionEnd" type="AAAAAAGOZS0Q/fhHz+c="/>
+				</ownedMember>
+				<ownedAttribute xmi:id="AAAAAAGOZS0Q/fhIE6I=" xmi:type="uml:Property" name="base_Class" association="AAAAAAGQMHTuQztUiFc=">
+					<type href="http://schema.omg.org/spec/UML/2.0/uml.xml#Class"/>
+				</ownedAttribute>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAGOZS0Q/fhKC9A=" name="Controller" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+				<ownedMember xmi:id="AAAAAAGQMHTuQztWFu8=" xmi:type="uml:Extension">
+					<memberEnd xmi:idref="AAAAAAGOZS0Q/fhLLAM="/>
+					<ownedEnd xmi:id="AAAAAAGQMHTuQztXqe8=" xmi:type="uml:ExtensionEnd" type="AAAAAAGOZS0Q/fhKC9A="/>
+				</ownedMember>
+				<ownedAttribute xmi:id="AAAAAAGOZS0Q/fhLLAM=" xmi:type="uml:Property" name="base_Class" association="AAAAAAGQMHTuQztWFu8=">
+					<type href="http://schema.omg.org/spec/UML/2.0/uml.xml#Class"/>
+				</ownedAttribute>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAGOZS0Q/fhNIKw=" name="Model" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+				<ownedMember xmi:id="AAAAAAGQMHTuQztYyc8=" xmi:type="uml:Extension">
+					<memberEnd xmi:idref="AAAAAAGOZS0Q/fhOmvc="/>
+					<ownedEnd xmi:id="AAAAAAGQMHTuQztZ7ws=" xmi:type="uml:ExtensionEnd" type="AAAAAAGOZS0Q/fhNIKw="/>
+				</ownedMember>
+				<ownedAttribute xmi:id="AAAAAAGOZS0Q/fhOmvc=" xmi:type="uml:Property" name="base_Class" association="AAAAAAGQMHTuQztYyc8=">
+					<type href="http://schema.omg.org/spec/UML/2.0/uml.xml#Class"/>
+				</ownedAttribute>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAGOZS0Q/fhS9jU=" name="GET" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+				<generalization xmi:id="AAAAAAGOZS0Q/fhTwPQ=" visibility="public" xmi:type="uml:Generalization" specific="AAAAAAGOZS0Q/fhS9jU=" general="AAAAAAGOZS0Q/fhHz+c="/>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAGOZS0Q/fhVfqE=" name="POST" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+				<generalization xmi:id="AAAAAAGOZS0Q/fhWVRY=" visibility="public" xmi:type="uml:Generalization" specific="AAAAAAGOZS0Q/fhVfqE=" general="AAAAAAGOZS0Q/fhHz+c="/>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAGOZS0Q/fhYprA=" name="DELETE" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+				<generalization xmi:id="AAAAAAGOZS0Q/fhZT8w=" visibility="public" xmi:type="uml:Generalization" specific="AAAAAAGOZS0Q/fhYprA=" general="AAAAAAGOZS0Q/fhHz+c="/>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAGOZS0Q/fhb/nA=" name="PUT" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+				<generalization xmi:id="AAAAAAGOZS0Q/fhcnvs=" visibility="public" xmi:type="uml:Generalization" specific="AAAAAAGOZS0Q/fhb/nA=" general="AAAAAAGOZS0Q/fhHz+c="/>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAGOZS0Q/fhe+sc=" name="PATCH" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+				<generalization xmi:id="AAAAAAGOZS0Q/fhfqUU=" visibility="public" xmi:type="uml:Generalization" specific="AAAAAAGOZS0Q/fhe+sc=" general="AAAAAAGOZS0Q/fhHz+c="/>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAGOZS0Q/fhha3w=" name="Database" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+				<ownedMember xmi:id="AAAAAAGQMHTuQztaCh8=" xmi:type="uml:Extension">
+					<memberEnd xmi:idref="AAAAAAGOZS0Q/fhii/E="/>
+					<ownedEnd xmi:id="AAAAAAGQMHTuQztbXP0=" xmi:type="uml:ExtensionEnd" type="AAAAAAGOZS0Q/fhha3w="/>
+				</ownedMember>
+				<ownedAttribute xmi:id="AAAAAAGOZS0Q/fhii/E=" xmi:type="uml:Property" name="base_Class" association="AAAAAAGQMHTuQztaCh8=">
+					<type href="http://schema.omg.org/spec/UML/2.0/uml.xml#Class"/>
+				</ownedAttribute>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAGOZS0Q/fhlUzM=" name="ResourcePath" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+				<ownedMember xmi:id="AAAAAAGQMHTuQztc7DU=" xmi:type="uml:Extension">
+					<memberEnd xmi:idref="AAAAAAGOZS0Q/fhmhfg="/>
+					<ownedEnd xmi:id="AAAAAAGQMHTuQztdTDM=" xmi:type="uml:ExtensionEnd" type="AAAAAAGOZS0Q/fhlUzM="/>
+				</ownedMember>
+				<ownedAttribute xmi:id="AAAAAAGOZS0Q/fhmhfg=" xmi:type="uml:Property" name="base_Class" association="AAAAAAGQMHTuQztc7DU=">
+					<type href="http://schema.omg.org/spec/UML/2.0/uml.xml#Class"/>
+				</ownedAttribute>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAGOZS0Q/fhpVAQ=" name="APIPackage" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+				<ownedMember xmi:id="AAAAAAGQMHTuQzteEYw=" xmi:type="uml:Extension">
+					<memberEnd xmi:idref="AAAAAAGOZS0Q/fhqtHw="/>
+					<ownedEnd xmi:id="AAAAAAGQMHTuQztfZQA=" xmi:type="uml:ExtensionEnd" type="AAAAAAGOZS0Q/fhpVAQ="/>
+				</ownedMember>
+				<ownedAttribute xmi:id="AAAAAAGOZS0Q/fhqtHw=" xmi:type="uml:Property" name="base_Class" association="AAAAAAGQMHTuQzteEYw=">
+					<type href="http://schema.omg.org/spec/UML/2.0/uml.xml#Class"/>
+				</ownedAttribute>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAGOZS0Q/fhsfsY=" name="ControllerPackage" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+				<ownedMember xmi:id="AAAAAAGQMHTuQztgU6o=" xmi:type="uml:Extension">
+					<memberEnd xmi:idref="AAAAAAGOZS0Q/fhtzIs="/>
+					<ownedEnd xmi:id="AAAAAAGQMHTuQzthyc0=" xmi:type="uml:ExtensionEnd" type="AAAAAAGOZS0Q/fhsfsY="/>
+				</ownedMember>
+				<ownedAttribute xmi:id="AAAAAAGOZS0Q/fhtzIs=" xmi:type="uml:Property" name="base_Class" association="AAAAAAGQMHTuQztgU6o=">
+					<type href="http://schema.omg.org/spec/UML/2.0/uml.xml#Class"/>
+				</ownedAttribute>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAGOZS0Q/fhvSJo=" name="ModelPackage" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+				<ownedMember xmi:id="AAAAAAGQMHTuQzticjs=" xmi:type="uml:Extension">
+					<memberEnd xmi:idref="AAAAAAGOZS0Q/fhwc7Y="/>
+					<ownedEnd xmi:id="AAAAAAGQMHTuQztjp1o=" xmi:type="uml:ExtensionEnd" type="AAAAAAGOZS0Q/fhvSJo="/>
+				</ownedMember>
+				<ownedAttribute xmi:id="AAAAAAGOZS0Q/fhwc7Y=" xmi:type="uml:Property" name="base_Class" association="AAAAAAGQMHTuQzticjs=">
+					<type href="http://schema.omg.org/spec/UML/2.0/uml.xml#Class"/>
+				</ownedAttribute>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAGOZS0Q/fhyKpk=" name="DatabasePackage" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Stereotype" isActive="false">
+				<ownedMember xmi:id="AAAAAAGQMHTuQztk+4c=" xmi:type="uml:Extension">
+					<memberEnd xmi:idref="AAAAAAGOZS0Q/fhzdCo="/>
+					<ownedEnd xmi:id="AAAAAAGQMHTuQztlkyY=" xmi:type="uml:ExtensionEnd" type="AAAAAAGOZS0Q/fhyKpk="/>
+				</ownedMember>
+				<ownedAttribute xmi:id="AAAAAAGOZS0Q/fhzdCo=" xmi:type="uml:Property" name="base_Class" association="AAAAAAGQMHTuQztk+4c=">
+					<type href="http://schema.omg.org/spec/UML/2.0/uml.xml#Class"/>
+				</ownedAttribute>
+			</packagedElement>
+		</packagedElement>
+		<packagedElement xmi:id="String_id" xmi:type="uml:DataType" name="String"/>
+		<packagedElement xmi:id="Id_id" xmi:type="uml:DataType" name="Id"/>
+		<packagedElement xmi:id="Float_id" xmi:type="uml:DataType" name="Float"/>
+		<packagedElement xmi:id="Integer_id" xmi:type="uml:DataType" name="Integer"/>
+	</uml:Model>
+</xmi:XMI>

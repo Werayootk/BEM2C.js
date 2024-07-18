@@ -20,7 +20,7 @@ if (yargs.argv._[0] == null) {
     if (yargs.argv.m === 'forward') {
         try {
             if (yargs.argv.i != null && yargs.argv.o != null) {
-                utils.forwardEngineer(yargs.argv.i, yargs.argv.o);
+                utils.forwardEngineering(yargs.argv.i, yargs.argv.o);
             } else {
                 console.log("\n" + boxen(chalk.red("\n" + "-i and -o not null." + "\n"), { padding: 1, borderColor: 'red', dimBorder: true, borderStyle: 'classic' }) + "\n");
                 return;
@@ -32,7 +32,7 @@ if (yargs.argv._[0] == null) {
     } else if (yargs.argv.m === 'reverse') {
         try {
             if (yargs.argv.i != null && yargs.argv.o != null) {
-                utils.reverseEngineer(yargs.argv.i, yargs.argv.o);
+                utils.reverseEngineering(yargs.argv.i, yargs.argv.o);
             } else {
                 console.log("\n" + boxen(chalk.red("\n" + "-i and -o not null." + "\n"), { padding: 1, borderColor: 'red', dimBorder: true, borderStyle: 'classic' }) + "\n");
                 return;

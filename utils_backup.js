@@ -498,11 +498,10 @@ function generateRouter(data) {
     if (e.routePath.length != 0) {
       e.routePath.forEach((p) => {
         let obj = {
-          from: e.name,
-          param: p.param,
-          to: idToNameMap[p.endPath],
+          name: e.name,
+          value: p.param,
+          supplier: idToNameMap[p.endPath],
         };
-        console.log("obj", obj);
         pathNext.push(obj);
       });
       allDependency.push(pathNext);
@@ -550,8 +549,8 @@ function generateRouter(data) {
             if (iterator.endPath == elem.nameId) {
               allDependency.forEach((i) => {
                 i.forEach((j) => {
-                  if (iterator.fromPath == j.from) {
-                    const combination = `${j.from}-${j.param}-${j.to}`;
+                  if (iterator.fromPath == j.name) {
+                    const combination = `${j.name}-${j.value}-${j.supplier}`;
                     if (!uniqueCombinations.has(combination)) {
                       uniqueCombinations.add(combination);
                       dependency.push(j);
@@ -590,10 +589,10 @@ function generateRouter(data) {
       );
       let commentSection = `
   /**
-   * @routeClass :${JSON.stringify(resource)}
+   * @route :${JSON.stringify(resource)}
    * @methodName :${JSON.stringify(methodName)}
    * @controllerName :${JSON.stringify(controllerName)}
-   * @nextPath :${JSON.stringify(dependency)}
+   * @dependency :${JSON.stringify(dependency)}
    */
   
   const express = require("express");
@@ -853,10 +852,10 @@ async function dataInRoute(pathFile) {
   try {
     const fileRouteContent = await fs_promises.readFile(pathFile, 'utf-8');
     // Define regex patterns
-    const resourcePattern = /@routeClass\s*:\s*\[([^\]]+)\]/;
+    const resourcePattern = /@route\s*:\s*\[([^\]]+)\]/;
     const methodNamePattern = /@methodName\s*:\s*\[([^\]]+)\]/;
     const controllerNamePattern = /@controllerName\s*:\s*\[([^\]]+)\]/;
-    const dependencyRegex = /@nextPath\s*:\s*(\[[\s\S]*?\])/;
+    const dependencyRegex = /@dependency\s*:\s*(\[[\s\S]*?\])/;
 
     // Extract matches using regex
     const resourceMatches = fileRouteContent.match(resourcePattern);
@@ -1264,14 +1263,14 @@ function mappingRoute(data) {
     // Mapped Route
     for (let i = 0; i < data.length; i++) {
       data[i].dependencyName.forEach((j) => {
-        const combination = `${j.from}-${j.param}-${j.to}`;
-        if (Object.keys(item)[0] == j.from) {
+        const combination = `${j.name}-${j.value}-${j.supplier}`;
+        if (Object.keys(item)[0] == j.name) {
           if (!uniqueCombinations.has(combination)) {
             uniqueCombinations.add(combination);
             const supplierValue = outputMappedID.find((obj) =>
-              obj.hasOwnProperty(j.to)
-            )[j.to];
-            mapRoute = `<ownedMember xmi:id="${generateId()}=" name="${j.param}" xmi:type="uml:Dependency" client="${
+              obj.hasOwnProperty(j.supplier)
+            )[j.supplier];
+            mapRoute = `<ownedMember xmi:id="${generateId()}=" name="${j.value}" xmi:type="uml:Dependency" client="${
               Object.values(item)[0]
             }" supplier="${supplierValue}"/>
             `;
