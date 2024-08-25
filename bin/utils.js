@@ -1324,7 +1324,7 @@ function mappingModel(data) {
     <!-- <<DB_ELEM>> -->
   </packagedElement>`;
   let attr_db = `
-  <ownedAttribute xmi:id="${generateId()}" name="${data[0].database[0]}" xmi:type="uml:Property"/>
+  <ownedAttribute xmi:id="${generateId()}" name="${data[0].database[0]}" visibility="private" xmi:type="uml:Property"/>
   `;
   packaged_db = packaged_db.replace('<!-- <<DB_ELEM>> -->', attr_db);
   packaged_database = packaged_database.replace(
@@ -1383,7 +1383,7 @@ function mappingModel(data) {
       const mappedType = mapType(a.type);
       const outputMapped = { ...a, type: mappedType };
       let attrModel = `
-      <ownedAttribute xmi:id="${generateId()}" name="${a.name}" type="${outputMapped.type}" xmi:type="uml:Property"/>
+      <ownedAttribute xmi:id="${generateId()}" name="${a.name}" type="${outputMapped.type}" visibility="private" xmi:type="uml:Property"/>
       `;
       attrMapped.push(attrModel);
     });
