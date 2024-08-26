@@ -1,6 +1,6 @@
 {
   "name": "bem2c.js",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "description": "Backend model to code in node js",
   "main": "bin/index.js",
   "scripts": {
