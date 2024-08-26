@@ -643,7 +643,8 @@ function generateModel(data) {
   const filteredDataDB = data.package.filter(
     (item) => mapProfile[item.stereotype] === 'Database'
   );
-  const isSQL = filteredDataDB[0].name === 'MySql';
+  const isSQL = filteredDataDB[0].name === 'MySQL';
+  const isNoSQL = filteredDataDB[0].name === 'MongoDB';
   let database = [];
   database.push(filteredDataDB[0].name);
 
@@ -711,7 +712,7 @@ function generateModel(data) {
         result.push(newModel);
       }
     });
-  } else {
+  } else if (isNoSQL) {
     filteredDataModel.forEach((element) => {
       let newModel = {
         nameOfFile: '',
@@ -766,9 +767,8 @@ function generateModel(data) {
         let modelTemplate = `
   ${commentSection}
   const mongoose = require("mongoose");
-  const ${
-    element.name.toLowerCase().replace('model', '') + 'Schema'
-  } = mongoose.Schema(
+  const ${element.name.toLowerCase().replace('model', '') + 'Schema'
+          } = mongoose.Schema(
     {
       ${fieldTemplate}
     },
@@ -777,17 +777,18 @@ function generateModel(data) {
     }
   );
   const ${element.name.replace(
-    'Model',
-    ''
-  )} = mongoose.model("${element.name.replace('Model', '')}", ${
-          element.name.toLowerCase().replace('model', '') + 'Schema'
-        });
+            'Model',
+            ''
+          )} = mongoose.model("${element.name.replace('Model', '')}", ${element.name.toLowerCase().replace('model', '') + 'Schema'
+          });
   module.exports = ${element.name.replace('Model', '')};
     `;
         newModel.contentFile.push(modelTemplate);
         result.push(newModel);
       }
     });
+  } else { 
+    throw new Error("Can't Detection Database type.")
   }
   return result;
 }
