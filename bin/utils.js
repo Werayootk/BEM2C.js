@@ -73,7 +73,6 @@ function showExample() {
 async function forwardEngineering(inputPath, outPath) {
   const xmiToJson = await convertXMIToJSON(inputPath);
   // const pathJson = path.join(__dirname, `../json/converted.json`);
-  console.log("xmiToJson", xmiToJson)
   const { profileConfig, dataTypeConfig, packageConfig } =
     // await processJsonFile(pathJson);
     await processJsonFile(xmiToJson);
@@ -508,7 +507,6 @@ function generateRouter(data) {
           param: p.param,
           to: idToNameMap[p.endPath],
         };
-        console.log("obj", obj);
         pathNext.push(obj);
       });
       allDependency.push(pathNext);
@@ -623,7 +621,7 @@ function generateModel(data) {
   let result = [];
   const mapType = data.type
     .filter((item) =>
-      ['String', 'Boolean', 'Integer', 'Float', 'Date', 'Id'].includes(
+      ['String', 'Boolean', 'Integer', 'Float', 'Date', 'Id', 'ARRAY'].includes(
         item.name
       )
     )
@@ -686,6 +684,7 @@ function generateModel(data) {
     primaryKey: true,
     },`;
           } else {
+            console.log("attr.attrType", attr.attrType)
             fieldTemplate += `
     ${attr.attrName}: {
     type: DataTypes.${mapType[attr.attrType].toUpperCase()},
@@ -1141,6 +1140,7 @@ const type_for_uml = `
 <packagedElement xmi:id="Float_id" name="Float" xmi:type="uml:DataType"/>
 <packagedElement xmi:id="Date_id" name="Date" xmi:type="uml:DataType"/>
 <packagedElement xmi:id="Id_id" name="Id" xmi:type="uml:DataType"/>
+<packagedElement xmi:id="Array_id" name="Array" xmi:type="uml:DataType"/>
 `;
 
 const core_template = `
