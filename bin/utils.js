@@ -71,10 +71,12 @@ function showExample() {
 }
 
 async function forwardEngineering(inputPath, outPath) {
-  await convertXMIToJSON(inputPath);
-  const pathJson = path.join(__dirname, `../json/converted.json`);
+  const xmiToJson = await convertXMIToJSON(inputPath);
+  // const pathJson = path.join(__dirname, `../json/converted.json`);
+  console.log("xmiToJson", xmiToJson)
   const { profileConfig, dataTypeConfig, packageConfig } =
-    await processJsonFile(pathJson);
+    // await processJsonFile(pathJson);
+    await processJsonFile(xmiToJson);
   const data = {
     profile: profileConfig,
     type: dataTypeConfig,
@@ -218,24 +220,27 @@ async function convertXMIToJSON(pathFile) {
           reject();
         }
         const jsonResult = JSON.stringify(result, null, 2);
-        const jsonFileName = path.join(__dirname, `../json/converted.json`);
-        fs.writeFile(jsonFileName, jsonResult, 'utf-8', (err) => {
-          if (err) {
-            console.error(chalk.red('Error writing JSON file:', err));
-            reject();
-          } else {
-            console.log(
-              chalk.green('JSON file saved successfully:', jsonFileName)
-            );
-            resolve();
-          }
+        return resolve({
+          jsonResult
         });
+        // const jsonFileName = path.join(__dirname, `../json/converted.json`);
+        // fs.writeFile(jsonFileName, jsonResult, 'utf-8', (err) => {
+        //   if (err) {
+        //     console.error(chalk.red('Error writing JSON file:', err));
+        //     reject();
+        //   } else {
+        //     console.log(
+        //       chalk.green('JSON file saved successfully:', jsonFileName)
+        //     );
+        //     resolve();
+        //   }
+        // });
       });
     });
   });
 }
 
-async function processJsonFile(jsonFileName) {
+async function processJsonFile(json) {
   return new Promise((resolve, reject) => {
     const profileConfig = [];
     const dataTypeConfig = [];
@@ -440,8 +445,9 @@ async function processJsonFile(jsonFileName) {
       return packageConfig;
     }
 
-    const jsonData = fs.readFileSync(jsonFileName, 'utf-8');
-    const jsonObj = JSON.parse(jsonData);
+    // const jsonData = fs.readFileSync(json, 'utf-8');
+    // const jsonObj = JSON.parse(jsonData);
+    const jsonObj = JSON.parse(json.jsonResult);
     if (
       jsonObj['xmi:XMI']['uml:Model'].$['xmi:type'] === 'uml:Model' &&
       jsonObj['xmi:XMI']['uml:Model'].$.name === 'RootModel'
