@@ -621,7 +621,7 @@ function generateModel(data) {
   let result = [];
   const mapType = data.type
     .filter((item) =>
-      ['String', 'Boolean', 'Integer', 'Float', 'Date', 'Id', 'ARRAY'].includes(
+      ['String', 'Boolean', 'Integer', 'Float', 'Date', 'Id', 'Array'].includes(
         item.name
       )
     )
