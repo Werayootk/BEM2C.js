@@ -187,14 +187,16 @@ async function forwardEngineering(inputPath, outPath) {
 }
 
 async function reverseEngineering(inputPath, outPath) {
-    const { modelData, controllerData, routeData } = await extractDataFromProject(inputPath);
+  const { modelData, controllerData, routeData } = await extractDataFromProject(
+    inputPath
+  );
   const data = {
     model: modelData,
     controller: controllerData,
     route: routeData,
   };
-    await generateXMI(data, outPath);
-    console.log(
+  await generateXMI(data, outPath);
+  console.log(
     '\n' +
       boxen(chalk.green('\n' + 'Reverse Method Successfully.' + '\n'), {
         padding: 1,
@@ -220,7 +222,7 @@ async function convertXMIToJSON(pathFile) {
         }
         const jsonResult = JSON.stringify(result, null, 2);
         return resolve({
-          jsonResult
+          jsonResult,
         });
         // const jsonFileName = path.join(__dirname, `../json/converted.json`);
         // fs.writeFile(jsonFileName, jsonResult, 'utf-8', (err) => {
@@ -684,7 +686,7 @@ function generateModel(data) {
     primaryKey: true,
     },`;
           } else {
-            console.log("attr.attrType", attr.attrType)
+            console.log('attr.attrType', attr.attrType);
             fieldTemplate += `
     ${attr.attrName}: {
     type: DataTypes.${mapType[attr.attrType].toUpperCase()},
@@ -706,7 +708,7 @@ function generateModel(data) {
       {
         ${fieldTemplate}
       },{
-        timestamps: false
+        timestamps: true
       }
     );
   
@@ -772,8 +774,9 @@ function generateModel(data) {
         let modelTemplate = `
   ${commentSection}
   const mongoose = require("mongoose");
-  const ${element.name.toLowerCase().replace('model', '') + 'Schema'
-          } = mongoose.Schema(
+  const ${
+    element.name.toLowerCase().replace('model', '') + 'Schema'
+  } = mongoose.Schema(
     {
       ${fieldTemplate}
     },
@@ -782,18 +785,19 @@ function generateModel(data) {
     }
   );
   const ${element.name.replace(
-            'Model',
-            ''
-          )} = mongoose.model("${element.name.replace('Model', '')}", ${element.name.toLowerCase().replace('model', '') + 'Schema'
-          });
+    'Model',
+    ''
+  )} = mongoose.model("${element.name.replace('Model', '')}", ${
+          element.name.toLowerCase().replace('model', '') + 'Schema'
+        });
   module.exports = ${element.name.replace('Model', '')};
     `;
         newModel.contentFile.push(modelTemplate);
         result.push(newModel);
       }
     });
-  } else { 
-    throw new Error("Can't Detection Database type.")
+  } else {
+    throw new Error("Can't Detection Database type.");
   }
   return result;
 }
@@ -987,7 +991,9 @@ async function extractDataFromProject(projectPath) {
         const subfolderPath = path.join(projectPath, subfolder);
 
         // Check if it's a directory
-        const isDirectory = (await fs_promises.stat(subfolderPath)).isDirectory();
+        const isDirectory = (
+          await fs_promises.stat(subfolderPath)
+        ).isDirectory();
 
         if (isDirectory) {
           // Read the contents of the subfolder
@@ -1207,7 +1213,9 @@ function mappingController(data) {
   data.forEach((element) => {
     let operationMapped = [];
     let controllerPackaged = `
-            <packagedElement xmi:id="${generateId()}" name="${element.className[0]}" xmi:type="uml:Class">
+            <packagedElement xmi:id="${generateId()}" name="${
+      element.className[0]
+    }" xmi:type="uml:Class">
                 <!-- <<CONTROLLER_OPERATION>> -->
             </packagedElement>
           `;
@@ -1261,7 +1269,9 @@ function mappingRoute(data) {
     resultMappedOperation = [];
     const uniqueCombinations = new Set();
     let packaged_route = `
-    <packagedElement xmi:id="${Object.values(item)[0]}" name="${Object.keys(item)[0]}" xmi:type="uml:Class">
+    <packagedElement xmi:id="${Object.values(item)[0]}" name="${
+      Object.keys(item)[0]
+    }" xmi:type="uml:Class">
       <!-- <<ROUTE_ELEM>> -->
     </packagedElement>
     `;
@@ -1276,7 +1286,9 @@ function mappingRoute(data) {
             const supplierValue = outputMappedID.find((obj) =>
               obj.hasOwnProperty(j.to)
             )[j.to];
-            mapRoute = `<ownedMember xmi:id="${generateId()}=" name="${j.param}" xmi:type="uml:Dependency" client="${
+            mapRoute = `<ownedMember xmi:id="${generateId()}=" name="${
+              j.param
+            }" xmi:type="uml:Dependency" client="${
               Object.values(item)[0]
             }" supplier="${supplierValue}"/>
             `;
@@ -1327,11 +1339,15 @@ function mappingModel(data) {
   </packagedElement>
   `;
   let packaged_db = `
-  <packagedElement xmi:id="${generateId()}" name="${data[0].database[0]}" xmi:type="uml:Class">
+  <packagedElement xmi:id="${generateId()}" name="${
+    data[0].database[0]
+  }" xmi:type="uml:Class">
     <!-- <<DB_ELEM>> -->
   </packagedElement>`;
   let attr_db = `
-  <ownedAttribute xmi:id="${generateId()}" name="${data[0].database[0]}" visibility="private" xmi:type="uml:Property"/>
+  <ownedAttribute xmi:id="${generateId()}" name="${
+    data[0].database[0]
+  }" visibility="private" xmi:type="uml:Property"/>
   `;
   packaged_db = packaged_db.replace('<!-- <<DB_ELEM>> -->', attr_db);
   packaged_database = packaged_database.replace(
@@ -1390,7 +1406,9 @@ function mappingModel(data) {
       const mappedType = mapType(a.type);
       const outputMapped = { ...a, type: mappedType };
       let attrModel = `
-      <ownedAttribute xmi:id="${generateId()}" name="${a.name}" type="${outputMapped.type}" visibility="private" xmi:type="uml:Property"/>
+      <ownedAttribute xmi:id="${generateId()}" name="${a.name}" type="${
+        outputMapped.type
+      }" visibility="private" xmi:type="uml:Property"/>
       `;
       attrMapped.push(attrModel);
     });
@@ -1458,5 +1476,5 @@ async function generateXMI(data, outPath) {
     const fileName = outPath;
     fs.writeFileSync(fileName, xmi);
     resolve();
-  })
+  });
 }
