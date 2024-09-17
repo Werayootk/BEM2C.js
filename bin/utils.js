@@ -309,6 +309,15 @@ async function processJsonFile(json) {
                     objModel.attribute.push(objAttr);
                   }
                 }
+              } else {
+                // Only one attr
+                let objAttr = {
+                  attrId: elem['ownedAttribute'].$['xmi:id'],
+                  attrName: elem['ownedAttribute'].$.name,
+                  attrType: elem['ownedAttribute'].$.type,
+                  attrKey: 'no_key',
+                };
+                objModel.attribute.push(objAttr);
               }
               if (elem['ownedMember']?.length) {
                 for (const ass of elem['ownedMember']) {
