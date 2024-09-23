@@ -1,12 +1,12 @@
-const chalk = require('chalk');
-const boxen = require('boxen');
-const xml2js = require('xml2js');
-const fs_promises = require('fs').promises;
-const fs = require('fs');
-const path = require('path');
+const chalk = require("chalk");
+const boxen = require("boxen");
+const xml2js = require("xml2js");
+const fs_promises = require("fs").promises;
+const fs = require("fs");
+const path = require("path");
 
-const usage = chalk.hex('#83aaff')('\nUsage: bem2c <command>');
-const packageJson = require('../package.json');
+const usage = chalk.hex("#83aaff")("\nUsage: bem2c <command>");
+const packageJson = require("../package.json");
 module.exports = {
   showHelp: showHelp,
   showVersion: showVersion,
@@ -21,52 +21,52 @@ function showVersion() {
 
 function showHelp() {
   console.log(usage);
-  console.log('Command:\r');
-  console.log('\t--version\t      ' + 'Show version number.');
-  console.log('\t--list\t\t      ' + 'Show help.' + '\t\t');
+  console.log("Command:\r");
+  console.log("\t--version\t      " + "Show version number.");
+  console.log("\t--list\t\t      " + "Show help." + "\t\t");
   console.log(
-    '\t-m\t\t      ' + 'method transformation. (forward or reverse)' + '\t\t'
+    "\t-m\t\t      " + "method transformation. (forward or reverse)" + "\t\t"
   );
   console.log(
-    '\t-i\t\t      ' +
-      'path input. (forward method is path xmi but if reverse method is path source code.)' +
-      '\t\t'
+    "\t-i\t\t      " +
+      "path input. (forward method is path xmi but if reverse method is path source code.)" +
+      "\t\t"
   );
   console.log(
-    '\t-o\t\t      ' +
-      'path output.(forward method is path source code but if reverse method is path xmi.)' +
-      '\t\t'
+    "\t-o\t\t      " +
+      "path output.(forward method is path source code but if reverse method is path xmi.)" +
+      "\t\t"
   );
 }
 
 function showExample() {
   console.log(
-    '\n' +
-      boxen(chalk.green('\n' + 'Example Forward Method' + '\n'), {
+    "\n" +
+      boxen(chalk.green("\n" + "Example Forward Method" + "\n"), {
         padding: 1,
-        borderColor: 'green',
+        borderColor: "green",
         dimBorder: true,
-        borderStyle: 'classic',
+        borderStyle: "classic",
       }) +
-      '\n'
+      "\n"
   );
   console.log(
     chalk.green(
-      'bem2c -m forward -i <path_of_xmi> -o <path_of_source_code>\t  '
+      "bem2c -m forward -i <path_of_xmi> -o <path_of_source_code>\t  "
     )
   );
   console.log(
-    '\n' +
-      boxen(chalk.red('\n' + 'Example Reverse Method' + '\n'), {
+    "\n" +
+      boxen(chalk.red("\n" + "Example Reverse Method" + "\n"), {
         padding: 1,
-        borderColor: 'red',
+        borderColor: "red",
         dimBorder: true,
-        borderStyle: 'classic',
+        borderStyle: "classic",
       }) +
-      '\n'
+      "\n"
   );
   console.log(
-    chalk.red('bem2c -m reverse -i <path_of_source_code> -o <path_of_xmi>\t  ')
+    chalk.red("bem2c -m reverse -i <path_of_source_code> -o <path_of_xmi>\t  ")
   );
 }
 
@@ -85,18 +85,18 @@ async function forwardEngineering(inputPath, outPath) {
   const modelContent = generateModel(data);
   const controllerContent = generateController(data);
   // Define the folder and file names
-  const folderNameService = outPath + '/backend';
-  const folderNameRoute = folderNameService + '/' + 'routes';
-  const folderNameModel = folderNameService + '/' + 'models';
-  const folderNameController = folderNameService + '/' + 'controllers';
+  const folderNameService = outPath + "/backend";
+  const folderNameRoute = folderNameService + "/" + "routes";
+  const folderNameModel = folderNameService + "/" + "models";
+  const folderNameController = folderNameService + "/" + "controllers";
 
   function createRouteFiles(pathFile) {
     routeContent.forEach((item) => {
-      const pathFolderAndFile = pathFile + '/' + item.nameOfFile;
-      const fileContent = item.contentWithComment.join('');
+      const pathFolderAndFile = pathFile + "/" + item.nameOfFile;
+      const fileContent = item.contentWithComment.join("");
       fs.writeFileSync(pathFolderAndFile, fileContent, (err) => {
         if (err) {
-          console.error('Error writing to file:', err);
+          console.error("Error writing to file:", err);
         } else {
           console.log(`Content writing to ${item.nameOfFile}`);
         }
@@ -106,11 +106,11 @@ async function forwardEngineering(inputPath, outPath) {
 
   function createModelFiles(pathFile) {
     modelContent.forEach((item) => {
-      const pathFolderAndFile = pathFile + '/' + item.nameOfFile;
-      const fileContent = item.contentFile.join('');
+      const pathFolderAndFile = pathFile + "/" + item.nameOfFile;
+      const fileContent = item.contentFile.join("");
       fs.writeFileSync(pathFolderAndFile, fileContent, (err) => {
         if (err) {
-          console.error('Error writing to file:', err);
+          console.error("Error writing to file:", err);
         } else {
           console.log(`Content writing to ${item.nameOfFile}`);
         }
@@ -120,11 +120,11 @@ async function forwardEngineering(inputPath, outPath) {
 
   function createControllerFiles(pathFile) {
     controllerContent.forEach((item) => {
-      const pathFolderAndFile = pathFile + '/' + item.nameOfFile;
-      const fileContent = item.contentFile.join('');
+      const pathFolderAndFile = pathFile + "/" + item.nameOfFile;
+      const fileContent = item.contentFile.join("");
       fs.writeFileSync(pathFolderAndFile, fileContent, (err) => {
         if (err) {
-          console.error('Error writing to file:', err);
+          console.error("Error writing to file:", err);
         } else {
           console.log(`Content writing to ${item.nameOfFile}`);
         }
@@ -175,14 +175,14 @@ async function forwardEngineering(inputPath, outPath) {
   }
 
   console.log(
-    '\n' +
-      boxen(chalk.green('\n' + 'Forward Method Successfully.' + '\n'), {
+    "\n" +
+      boxen(chalk.green("\n" + "Forward Method Successfully." + "\n"), {
         padding: 1,
-        borderColor: 'green',
+        borderColor: "green",
         dimBorder: true,
-        borderStyle: 'classic',
+        borderStyle: "classic",
       }) +
-      '\n'
+      "\n"
   );
 }
 
@@ -197,27 +197,27 @@ async function reverseEngineering(inputPath, outPath) {
   };
   await generateXMI(data, outPath);
   console.log(
-    '\n' +
-      boxen(chalk.green('\n' + 'Reverse Method Successfully.' + '\n'), {
+    "\n" +
+      boxen(chalk.green("\n" + "Reverse Method Successfully." + "\n"), {
         padding: 1,
-        borderColor: 'green',
+        borderColor: "green",
         dimBorder: true,
-        borderStyle: 'classic',
+        borderStyle: "classic",
       }) +
-      '\n'
+      "\n"
   );
 }
 
 async function convertXMIToJSON(pathFile) {
   return new Promise((resolve, reject) => {
-    fs.readFile(pathFile, 'utf-8', (err, data) => {
+    fs.readFile(pathFile, "utf-8", (err, data) => {
       if (err) {
-        console.error(chalk.red('Error reading XMI file:', err));
+        console.error(chalk.red("Error reading XMI file:", err));
         reject();
       }
       xml2js.parseString(data, { explicitArray: false }, (err, result) => {
         if (err) {
-          console.error(chalk.red('Error parsing XML:', err));
+          console.error(chalk.red("Error parsing XML:", err));
           reject();
         }
         const jsonResult = JSON.stringify(result, null, 2);
@@ -249,12 +249,12 @@ async function processJsonFile(json) {
 
     function mapProfile(obj) {
       for (const item of obj) {
-        if (item.$['xmi:type'] === 'uml:Stereotype') {
+        if (item.$["xmi:type"] === "uml:Stereotype") {
           let objProfileMap = {
-            id: '',
-            name: '',
+            id: "",
+            name: "",
           };
-          objProfileMap.id = item.$['xmi:id'];
+          objProfileMap.id = item.$["xmi:id"];
           objProfileMap.name = item.$.name;
           profileConfig.push(objProfileMap);
         }
@@ -264,10 +264,10 @@ async function processJsonFile(json) {
 
     function mapDataType(obj) {
       let objDataTypeMap = {
-        id: '',
-        name: '',
+        id: "",
+        name: "",
       };
-      objDataTypeMap.id = obj['xmi:id'];
+      objDataTypeMap.id = obj["xmi:id"];
       objDataTypeMap.name = obj.name;
       dataTypeConfig.push(objDataTypeMap);
       return dataTypeConfig;
@@ -275,36 +275,36 @@ async function processJsonFile(json) {
 
     function mapPackage(obj) {
       for (const item of obj) {
-        if (item.$['xmi:type'] === 'uml:Package') {
-          if (item.$.name === 'Model') {
+        if (item.$["xmi:type"] === "uml:Package") {
+          if (item.$.name === "Model") {
             for (const elem of item.packagedElement) {
               let objModel = {
-                nameId: '',
-                name: '',
-                stereotype: '',
+                nameId: "",
+                name: "",
+                stereotype: "",
                 attribute: [],
                 association: [],
                 pairModel: [],
               };
-              objModel.nameId = elem.$['xmi:id'];
+              objModel.nameId = elem.$["xmi:id"];
               objModel.name = elem.$.name;
-              objModel.stereotype = elem['xmi:Extension'].stereotype.$.value;
-              if (elem['ownedAttribute']?.length) {
-                for (const attr of elem['ownedAttribute']) {
-                  if (attr['xmi:Extension']?.stereotype.$.value != undefined) {
+              objModel.stereotype = elem["xmi:Extension"].stereotype.$.value;
+              if (elem["ownedAttribute"]?.length) {
+                for (const attr of elem["ownedAttribute"]) {
+                  if (attr["xmi:Extension"]?.stereotype.$.value != undefined) {
                     let objAttr = {
-                      attrId: attr.$['xmi:id'],
+                      attrId: attr.$["xmi:id"],
                       attrName: attr.$.name,
                       attrType: attr.$.type,
-                      attrKey: attr['xmi:Extension'].stereotype.$.value,
+                      attrKey: attr["xmi:Extension"].stereotype.$.value,
                     };
                     objModel.attribute.push(objAttr);
                   } else {
                     let objAttr = {
-                      attrId: attr.$['xmi:id'],
+                      attrId: attr.$["xmi:id"],
                       attrName: attr.$.name,
                       attrType: attr.$.type,
-                      attrKey: 'no_key',
+                      attrKey: "no_key",
                     };
                     objModel.attribute.push(objAttr);
                   }
@@ -312,19 +312,19 @@ async function processJsonFile(json) {
               } else {
                 // Only one attr
                 let objAttr = {
-                  attrId: elem['ownedAttribute'].$['xmi:id'],
-                  attrName: elem['ownedAttribute'].$.name,
-                  attrType: elem['ownedAttribute'].$.type,
-                  attrKey: 'no_key',
+                  attrId: elem["ownedAttribute"].$["xmi:id"],
+                  attrName: elem["ownedAttribute"].$.name,
+                  attrType: elem["ownedAttribute"].$.type,
+                  attrKey: "no_key",
                 };
                 objModel.attribute.push(objAttr);
               }
-              if (elem['ownedMember']?.length) {
-                for (const ass of elem['ownedMember']) {
+              if (elem["ownedMember"]?.length) {
+                for (const ass of elem["ownedMember"]) {
                   if (ass.ownedEnd?.length) {
                     for (const e of ass.ownedEnd) {
                       let objAss = {
-                        assId: e.$['xmi:id'],
+                        assId: e.$["xmi:id"],
                         modelId: e.$.type,
                         lowerValue: e.lowerValue.$.value,
                         upperValue: e.upperValue.$.value,
@@ -332,17 +332,17 @@ async function processJsonFile(json) {
                       objModel.association.push(objAss);
                     }
                     let objPairModel = {
-                      id1: ass.memberEnd[0].$['xmi:idref'],
-                      id2: ass.memberEnd[1].$['xmi:idref'],
+                      id1: ass.memberEnd[0].$["xmi:idref"],
+                      id2: ass.memberEnd[1].$["xmi:idref"],
                     };
                     objModel.pairModel.push(objPairModel);
                   }
                 }
-              } else if (elem['ownedMember']) {
-                if (elem['ownedMember']?.ownedEnd?.length) {
-                  for (const e of elem['ownedMember'].ownedEnd) {
+              } else if (elem["ownedMember"]) {
+                if (elem["ownedMember"]?.ownedEnd?.length) {
+                  for (const e of elem["ownedMember"].ownedEnd) {
                     let objAss = {
-                      assId: e.$['xmi:id'],
+                      assId: e.$["xmi:id"],
                       modelId: e.$.type,
                       lowerValue: e.lowerValue.$.value,
                       upperValue: e.upperValue.$.value,
@@ -350,31 +350,31 @@ async function processJsonFile(json) {
                     objModel.association.push(objAss);
                   }
                   let objPairModel = {
-                    id1: elem['ownedMember'].memberEnd[0].$['xmi:idref'],
-                    id2: elem['ownedMember'].memberEnd[1].$['xmi:idref'],
+                    id1: elem["ownedMember"].memberEnd[0].$["xmi:idref"],
+                    id2: elem["ownedMember"].memberEnd[1].$["xmi:idref"],
                   };
                   objModel.pairModel.push(objPairModel);
                 }
               }
               packageConfig.push(objModel);
             }
-          } else if (item.$.name === 'Route') {
+          } else if (item.$.name === "Route") {
             for (const elem of item.packagedElement) {
               let objResource = {
-                nameId: '',
-                name: '',
-                stereotype: '',
+                nameId: "",
+                name: "",
+                stereotype: "",
                 operation: [],
                 routePath: [],
               };
-              objResource.nameId = elem.$['xmi:id'];
+              objResource.nameId = elem.$["xmi:id"];
               objResource.name = elem.$.name;
-              objResource.stereotype = elem['xmi:Extension'].stereotype.$.value;
+              objResource.stereotype = elem["xmi:Extension"].stereotype.$.value;
               if (elem.ownedOperation?.length) {
                 for (const opr of elem.ownedOperation) {
                   let objOperation = {
                     nameOpr: opr.$.name,
-                    method: opr['xmi:Extension'].stereotype.$.value,
+                    method: opr["xmi:Extension"].stereotype.$.value,
                   };
                   objResource.operation.push(objOperation);
                 }
@@ -382,7 +382,7 @@ async function processJsonFile(json) {
                 let objOperation = {
                   nameOpr: elem.ownedOperation.$.name,
                   method:
-                    elem.ownedOperation['xmi:Extension'].stereotype.$.value,
+                    elem.ownedOperation["xmi:Extension"].stereotype.$.value,
                 };
                 objResource.operation.push(objOperation);
               }
@@ -407,23 +407,23 @@ async function processJsonFile(json) {
               }
               packageConfig.push(objResource);
             }
-          } else if (item.$.name === 'Controller') {
+          } else if (item.$.name === "Controller") {
             for (const elem of item.packagedElement) {
               let objController = {
-                nameId: '',
-                name: '',
-                stereotype: '',
+                nameId: "",
+                name: "",
+                stereotype: "",
                 operation: [],
               };
-              objController.nameId = elem.$['xmi:id'];
+              objController.nameId = elem.$["xmi:id"];
               objController.name = elem.$.name;
               objController.stereotype =
-                elem['xmi:Extension']?.stereotype.$.value;
+                elem["xmi:Extension"]?.stereotype.$.value;
               if (elem.ownedOperation?.length) {
                 for (const opr of elem.ownedOperation) {
                   let objOperation = {
                     nameOpr: opr.$.name,
-                    method: opr['xmi:Extension']?.stereotype.$.value,
+                    method: opr["xmi:Extension"]?.stereotype.$.value,
                   };
                   objController.operation.push(objOperation);
                 }
@@ -431,23 +431,23 @@ async function processJsonFile(json) {
                 let objOperation = {
                   nameOpr: elem.ownedOperation.$.name,
                   method:
-                    elem.ownedOperation['xmi:Extension']?.stereotype.$.value ||
-                    '',
+                    elem.ownedOperation["xmi:Extension"]?.stereotype.$.value ||
+                    "",
                 };
                 objController.operation.push(objOperation);
               }
               packageConfig.push(objController);
             }
-          } else if (item.$.name === 'Database') {
+          } else if (item.$.name === "Database") {
             let objDatabase = {
-              nameId: '',
-              name: '',
-              stereotype: '',
+              nameId: "",
+              name: "",
+              stereotype: "",
             };
-            objDatabase.nameId = item.packagedElement.$['xmi:id'];
+            objDatabase.nameId = item.packagedElement.$["xmi:id"];
             objDatabase.name = item.packagedElement.$.name;
             objDatabase.stereotype =
-              item.packagedElement['xmi:Extension'].stereotype.$.value;
+              item.packagedElement["xmi:Extension"].stereotype.$.value;
             packageConfig.push(objDatabase);
           }
         }
@@ -459,17 +459,17 @@ async function processJsonFile(json) {
     // const jsonObj = JSON.parse(jsonData);
     const jsonObj = JSON.parse(json.jsonResult);
     if (
-      jsonObj['xmi:XMI']['uml:Model'].$['xmi:type'] === 'uml:Model' &&
-      jsonObj['xmi:XMI']['uml:Model'].$.name === 'RootModel'
+      jsonObj["xmi:XMI"]["uml:Model"].$["xmi:type"] === "uml:Model" &&
+      jsonObj["xmi:XMI"]["uml:Model"].$.name === "RootModel"
     ) {
-      const uml = jsonObj['xmi:XMI']['uml:Model'].packagedElement;
+      const uml = jsonObj["xmi:XMI"]["uml:Model"].packagedElement;
       let package;
       for (const obj of uml) {
-        if (obj.$['xmi:type'] === 'uml:Profile') {
+        if (obj.$["xmi:type"] === "uml:Profile") {
           mapProfile(obj.packagedElement);
-        } else if (obj.$['xmi:type'] === 'uml:DataType') {
+        } else if (obj.$["xmi:type"] === "uml:DataType") {
           mapDataType(obj.$);
-        } else if (obj.$['xmi:type'] === 'uml:Model') {
+        } else if (obj.$["xmi:type"] === "uml:Model") {
           package = obj.packagedElement;
         }
       }
@@ -487,14 +487,14 @@ function generateRouter(data) {
   let result = [];
   const mapProfileObj = data.profile
     .filter((item) =>
-      ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'Route'].includes(item.name)
+      ["GET", "POST", "PUT", "PATCH", "DELETE", "Route"].includes(item.name)
     )
     .reduce((acc, item) => {
       acc[item.id] = item.name;
       return acc;
     }, {});
   const filteredData = data.package.filter(
-    (item) => mapProfileObj[item.stereotype] === 'Route'
+    (item) => mapProfileObj[item.stereotype] === "Route"
   );
   let endPathList = [];
   filteredData.forEach((element) => {
@@ -526,7 +526,7 @@ function generateRouter(data) {
 
   filteredData.forEach((element) => {
     let newPath = {
-      nameOfFile: '',
+      nameOfFile: "",
       contentFile: [],
       contentWithComment: [],
     };
@@ -534,19 +534,19 @@ function generateRouter(data) {
     if (!endPathList.includes(element.nameId)) {
       newPath.nameOfFile = `${element.name
         .toLowerCase()
-        .replace('route', '')}.route.js`;
+        .replace("route", "")}.route.js`;
       let dependency = [];
       let resource = [];
       let methodName = [];
       let controllerName = [];
-      let content = '';
-      let method = '';
-      let path = '';
-      let controller = '';
-      let templateRoute = '';
+      let content = "";
+      let method = "";
+      let path = "";
+      let controller = "";
+      let templateRoute = "";
       element.operation.forEach((opr) => {
         method = mapProfileObj[opr.method];
-        path = element.name.toLowerCase().replace('route', '');
+        path = element.name.toLowerCase().replace("route", "");
         controller = opr.nameOpr;
         templateRoute = `\nrouter.${method.toLowerCase()}("/${path}/${controller}", ${controller});`;
         content = templateRoute;
@@ -579,29 +579,29 @@ function generateRouter(data) {
                 method = mapProfileObj[elem_opr.method];
                 methodName.push(method);
                 isCheckPath = iterator.param;
-                let defineNewPath = '';
-                if (isCheckPath == '/') {
-                  defineNewPath = '';
+                let defineNewPath = "";
+                if (isCheckPath == "/") {
+                  defineNewPath = "";
                 } else {
                   defineNewPath = iterator.param;
                 }
                 path = `${currentPath}/${elem.name
                   .toLowerCase()
-                  .replace('route', '')}${defineNewPath}`;
+                  .replace("route", "")}${defineNewPath}`;
                 controller = elem_opr.nameOpr;
                 templateRoute = `\nrouter.${method?.toLowerCase()}("/${path}/${controller}", ${controller});`;
                 content = templateRoute;
                 controllerName.push(controller);
                 newPath.contentFile.push(content);
               });
-              nextRoutePath(elem.routePath, path.replace('Route', ''));
+              nextRoutePath(elem.routePath, path.replace("Route", ""));
             }
           }
         }
       }
       nextRoutePath(
         element.routePath,
-        element.name.toLowerCase().replace('route', '')
+        element.name.toLowerCase().replace("route", "")
       );
       let commentSection = `
   /**
@@ -619,7 +619,7 @@ function generateRouter(data) {
   
   module.exports = router;
         `;
-      const concatenatedString = newPath.contentFile.join('');
+      const concatenatedString = newPath.contentFile.join("");
       commentSection = commentSection + concatenatedString + exportSection;
       newPath.contentWithComment.push(commentSection);
       result.push(newPath);
@@ -632,7 +632,7 @@ function generateModel(data) {
   let result = [];
   const mapType = data.type
     .filter((item) =>
-      ['String', 'Boolean', 'Integer', 'Float', 'Date', 'Id', 'Array'].includes(
+      ["String", "Boolean", "Integer", "Float", "Date", "Id", "Array"].includes(
         item.name
       )
     )
@@ -642,36 +642,36 @@ function generateModel(data) {
     }, {});
   const mapProfile = data.profile
     .filter((item) =>
-      ['Model', 'Database', 'PK', 'FK', 'REF', 'EMD'].includes(item.name)
+      ["Model", "Database", "PK", "FK", "REF", "EMD"].includes(item.name)
     )
     .reduce((acc, item) => {
       acc[item.id] = item.name;
       return acc;
     }, {});
   const filteredDataModel = data.package.filter(
-    (item) => mapProfile[item.stereotype] === 'Model'
+    (item) => mapProfile[item.stereotype] === "Model"
   );
   const idToNameMap = {};
   filteredDataModel.forEach((obj) => {
     idToNameMap[obj.nameId] = obj.name;
   });
   const filteredDataDB = data.package.filter(
-    (item) => mapProfile[item.stereotype] === 'Database'
+    (item) => mapProfile[item.stereotype] === "Database"
   );
-  const isSQL = filteredDataDB[0].name === 'MySQL';
-  const isNoSQL = filteredDataDB[0].name === 'MongoDB';
+  const isSQL = filteredDataDB[0].name === "MySQL";
+  const isNoSQL = filteredDataDB[0].name === "MongoDB";
   let database = [];
   database.push(filteredDataDB[0].name);
 
   if (isSQL) {
     filteredDataModel.forEach((element) => {
       let newModel = {
-        nameOfFile: '',
+        nameOfFile: "",
         contentFile: [],
       };
       newModel.nameOfFile = `${element.name
         .toLowerCase()
-        .replace('model', '')}.model.js`;
+        .replace("model", "")}.model.js`;
       let model = [];
       model.push(element.name);
       let relations = [];
@@ -683,19 +683,19 @@ function generateModel(data) {
           relations.push(idToNameMap[filteredRelations[0].modelId]);
         }
       }
-      let fieldTemplate = '';
+      let fieldTemplate = "";
       let attribute = [];
       if (element.attribute?.length != 0) {
         element.attribute.forEach((attr) => {
           attribute.push({ name: attr.attrName, type: mapType[attr.attrType] });
-          if (attr.attrKey != 'no_key' && mapProfile[attr.attrKey] === 'PK') {
+          if (attr.attrKey != "no_key" && mapProfile[attr.attrKey] === "PK") {
             fieldTemplate += `
     ${attr.attrName}: {
     type: DataTypes.INTEGER,
     primaryKey: true,
     },`;
           } else {
-            console.log('attr.attrType', attr.attrType);
+            console.log("attr.attrType", attr.attrType);
             fieldTemplate += `
     ${attr.attrName}: {
     type: DataTypes.${mapType[attr.attrType].toUpperCase()},
@@ -712,8 +712,8 @@ function generateModel(data) {
         let modelTemplate = `
   ${commentSection}
   module.exports = (sequelize, DataTypes) => {
-    const ${element.name.replace('Model', '')} = sequelize.define(
-      "${element.name.replace('Model', '')}",
+    const ${element.name.replace("Model", "")} = sequelize.define(
+      "${element.name.replace("Model", "")}",
       {
         ${fieldTemplate}
       },{
@@ -721,7 +721,7 @@ function generateModel(data) {
       }
     );
   
-    return ${element.name.replace('Model', '')};
+    return ${element.name.replace("Model", "")};
   };
         `;
         newModel.contentFile.push(modelTemplate);
@@ -731,12 +731,12 @@ function generateModel(data) {
   } else if (isNoSQL) {
     filteredDataModel.forEach((element) => {
       let newModel = {
-        nameOfFile: '',
+        nameOfFile: "",
         contentFile: [],
       };
       newModel.nameOfFile = `${element.name
         .toLowerCase()
-        .replace('model', '')}.model.js`;
+        .replace("model", "")}.model.js`;
       let model = [];
       model.push(element.name);
       let relations = [];
@@ -748,27 +748,27 @@ function generateModel(data) {
           relations.push(idToNameMap[filteredRelations[0].modelId]);
         }
       }
-      let fieldTemplate = '';
+      let fieldTemplate = "";
       let attribute = [];
       if (element.attribute?.length != 0) {
         element.attribute.forEach((attr) => {
           attribute.push({ name: attr.attrName, type: mapType[attr.attrType] });
-          if (attr.attrKey != 'no_key' && mapProfile[attr.attrKey] === 'REF') {
+          if (attr.attrKey != "no_key" && mapProfile[attr.attrKey] === "REF") {
             fieldTemplate += `
               ${attr.attrName}: {
                 type: mongoose.Schema.Types.ObjectId,
-                ref: '${attr.attrName.replace('Id', '')}'
+                ref: '${attr.attrName.replace("Id", "")}'
               },
                 `;
           } else if (
-            attr.attrKey != 'no_key' &&
-            mapProfile[attr.attrKey] === 'PK'
+            attr.attrKey != "no_key" &&
+            mapProfile[attr.attrKey] === "PK"
           ) {
             // SKIP
           } else {
             fieldTemplate += `
               ${attr.attrName}: {
-                type: ${mapType[attr.attrType] || ''}
+                type: ${mapType[attr.attrType] || ""}
               },
                 `;
           }
@@ -784,7 +784,7 @@ function generateModel(data) {
   ${commentSection}
   const mongoose = require("mongoose");
   const ${
-    element.name.toLowerCase().replace('model', '') + 'Schema'
+    element.name.toLowerCase().replace("model", "") + "Schema"
   } = mongoose.Schema(
     {
       ${fieldTemplate}
@@ -794,12 +794,12 @@ function generateModel(data) {
     }
   );
   const ${element.name.replace(
-    'Model',
-    ''
-  )} = mongoose.model("${element.name.replace('Model', '')}", ${
-          element.name.toLowerCase().replace('model', '') + 'Schema'
+    "Model",
+    ""
+  )} = mongoose.model("${element.name.replace("Model", "")}", ${
+          element.name.toLowerCase().replace("model", "") + "Schema"
         });
-  module.exports = ${element.name.replace('Model', '')};
+  module.exports = ${element.name.replace("Model", "")};
     `;
         newModel.contentFile.push(modelTemplate);
         result.push(newModel);
@@ -814,26 +814,26 @@ function generateModel(data) {
 function generateController(data) {
   let result = [];
   const mapProfile = data.profile
-    .filter((item) => ['Controller'].includes(item.name))
+    .filter((item) => ["Controller"].includes(item.name))
     .reduce((acc, item) => {
       acc[item.id] = item.name;
       return acc;
     }, {});
   const filteredData = data.package.filter(
-    (item) => mapProfile[item.stereotype] === 'Controller'
+    (item) => mapProfile[item.stereotype] === "Controller"
   );
   filteredData.forEach((element) => {
     let newController = {
-      nameOfFile: '',
+      nameOfFile: "",
       contentFile: [],
     };
-    let controllerTemplate = '';
+    let controllerTemplate = "";
     newController.nameOfFile = `${element.name
       .toLowerCase()
-      .replace('controller', '')}.controller.js`;
+      .replace("controller", "")}.controller.js`;
     let className = [];
     className.push(element.name);
-    let controllerContent = '';
+    let controllerContent = "";
     if (element.operation?.length != 0) {
       let controllerName = [];
       element.operation.forEach((opr) => {
@@ -868,7 +868,7 @@ function generateController(data) {
 
 async function dataInRoute(pathFile) {
   try {
-    const fileRouteContent = await fs_promises.readFile(pathFile, 'utf-8');
+    const fileRouteContent = await fs_promises.readFile(pathFile, "utf-8");
     // Define regex patterns
     const resourcePattern = /@routeClass\s*:\s*\[([^\]]+)\]/;
     const methodNamePattern = /@methodName\s*:\s*\[([^\]]+)\]/;
@@ -904,13 +904,13 @@ async function dataInRoute(pathFile) {
     };
     return await data;
   } catch (err) {
-    console.error('Error reading the file:', err.message);
+    console.error("Error reading the file:", err.message);
   }
 }
 
 async function dataInModel(pathFile) {
   try {
-    const fileModelContent = await fs_promises.readFile(pathFile, 'utf-8');
+    const fileModelContent = await fs_promises.readFile(pathFile, "utf-8");
     // Define regex patterns
     const modelPattern = /@modelName\s*:\s*\[([^\]]+)\]/;
     const databasePattern = /@databaseType\s*:\s*\[([^\]]+)\]/;
@@ -943,13 +943,13 @@ async function dataInModel(pathFile) {
     };
     return await data;
   } catch (err) {
-    console.error('Error reading the file:', err.message);
+    console.error("Error reading the file:", err.message);
   }
 }
 
 async function dataInController(pathFile) {
   try {
-    const fileControllerContent = await fs_promises.readFile(pathFile, 'utf-8');
+    const fileControllerContent = await fs_promises.readFile(pathFile, "utf-8");
     // Define regex patterns
     const controllerNamePattern = /@operationName\s*:\s*\[([^\]]+)\]/;
     const classNamePattern = /@controllerClass\s*:\s*\[([^\]]+)\]/;
@@ -975,7 +975,7 @@ async function dataInController(pathFile) {
     };
     return await data;
   } catch (err) {
-    console.error('Error reading the file:', err.message);
+    console.error("Error reading the file:", err.message);
   }
 }
 
@@ -986,7 +986,7 @@ async function extractDataFromProject(projectPath) {
     const routeData = [];
 
     // Specify the subfolders you want to include
-    const targetSubfolders = ['models', 'controllers', 'routes'];
+    const targetSubfolders = ["models", "controllers", "routes"];
     // Read the contents of the main folder
     const subfolders = await fs_promises.readdir(projectPath);
     // Filter the subfolders to include only the target subfolders
@@ -1012,15 +1012,15 @@ async function extractDataFromProject(projectPath) {
           await Promise.all(
             files.map(async (file) => {
               // You can do something with each file here
-              if (file.includes('.model.js')) {
+              if (file.includes(".model.js")) {
                 const filePath = path.join(subfolderPath, file);
                 const result = await dataInModel(filePath);
                 modelData.push(result);
-              } else if (file.includes('.controller.js')) {
+              } else if (file.includes(".controller.js")) {
                 const filePath = path.join(subfolderPath, file);
                 const result = await dataInController(filePath);
                 controllerData.push(result);
-              } else if (file.includes('.route.js')) {
+              } else if (file.includes(".route.js")) {
                 const filePath = path.join(subfolderPath, file);
                 const result = await dataInRoute(filePath);
                 routeData.push(result);
@@ -1171,12 +1171,12 @@ const core_template = `
 `;
 
 const type_model = [
-  { String_id: 'String' },
-  { Boolean_id: 'Boolean' },
-  { Integer_id: 'Integer' },
-  { Float_id: 'Float' },
-  { Date_id: 'Date' },
-  { Id_id: 'Id' },
+  { String_id: "String" },
+  { Boolean_id: "Boolean" },
+  { Integer_id: "Integer" },
+  { Float_id: "Float" },
+  { Date_id: "Date" },
+  { Id_id: "Id" },
 ];
 
 function mapType(inputType) {
@@ -1192,8 +1192,8 @@ function mapType(inputType) {
 function generateId() {
   let lengthId = 16;
   const characters =
-    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  let id = '';
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let id = "";
   for (let i = 0; i < lengthId; i++) {
     const randomChar = characters.charAt(
       Math.floor(Math.random() * characters.length)
@@ -1232,16 +1232,16 @@ function mappingController(data) {
       let operationMap = `<ownedOperation xmi:id="${generateId()}" name="${elem}" xmi:type="uml:Operation"/>`;
       operationMapped.push(operationMap);
     });
-    const operationContent = operationMapped.join('');
+    const operationContent = operationMapped.join("");
     const controllerMapped = controllerPackaged.replace(
-      '<!-- <<CONTROLLER_OPERATION>> -->',
+      "<!-- <<CONTROLLER_OPERATION>> -->",
       operationContent
     );
     resultEachClass.push(controllerMapped);
   });
-  let resultClass = resultEachClass.join('');
+  let resultClass = resultEachClass.join("");
   result = packaged_controller.replace(
-    '<!-- <<CONTROLLER_ELEM>> -->',
+    "<!-- <<CONTROLLER_ELEM>> -->",
     resultClass
   );
   return result;
@@ -1268,8 +1268,8 @@ function mappingRoute(data) {
   });
 
   const outputMappedID = mapToID(filteredDuplicate);
-  let mapOperation = '';
-  let mapRoute = '';
+  let mapOperation = "";
+  let mapRoute = "";
   let resultMappedOperation = [];
   let resultMappedRoute = [];
 
@@ -1319,15 +1319,15 @@ function mappingRoute(data) {
       }
     }
     const concatenatedString =
-      resultMappedRoute.join('') + resultMappedOperation.join('');
+      resultMappedRoute.join("") + resultMappedOperation.join("");
     packaged_route = packaged_route.replace(
-      '<!-- <<ROUTE_ELEM>> -->',
+      "<!-- <<ROUTE_ELEM>> -->",
       concatenatedString
     );
     resultEachPath.push(packaged_route);
   });
   result = packaged_resource.replace(
-    '<!-- <<RESOURCE_ELEM>> -->',
+    "<!-- <<RESOURCE_ELEM>> -->",
     resultEachPath
   );
   return result;
@@ -1358,9 +1358,9 @@ function mappingModel(data) {
     data[0].database[0]
   }" visibility="private" xmi:type="uml:Property"/>
   `;
-  packaged_db = packaged_db.replace('<!-- <<DB_ELEM>> -->', attr_db);
+  packaged_db = packaged_db.replace("<!-- <<DB_ELEM>> -->", attr_db);
   packaged_database = packaged_database.replace(
-    '<!-- <<DATABASE_ELEM>> -->',
+    "<!-- <<DATABASE_ELEM>> -->",
     packaged_db
   );
   resultDB.push(packaged_database);
@@ -1421,16 +1421,16 @@ function mappingModel(data) {
       `;
       attrMapped.push(attrModel);
     });
-    const attrContent = ownedMemberMapped.join('') + attrMapped.join('');
+    const attrContent = ownedMemberMapped.join("") + attrMapped.join("");
     const modelMapped = modelPackaged.replace(
-      '<!-- <<Model_MEMBER_ATTR>> -->',
+      "<!-- <<Model_MEMBER_ATTR>> -->",
       attrContent
     );
     resultEachModel.push(modelMapped);
   });
-  let resultModel = resultEachModel.join('');
-  result = packaged_model.replace('<!-- <<MODEL_ELEM>> -->', resultModel);
-  let result_DB = resultDB.join('');
+  let resultModel = resultEachModel.join("");
+  result = packaged_model.replace("<!-- <<MODEL_ELEM>> -->", resultModel);
+  let result_DB = resultDB.join("");
   return { result, result_DB };
 }
 
@@ -1453,34 +1453,34 @@ async function generateXMI(data, outPath) {
     let mappedModel = mappingModel(data.model);
     // Compound All
     let mapProfileAndType = core_template.replace(
-      '<!-- <<PROFILE_NODE.JS>> -->',
+      "<!-- <<PROFILE_NODE.JS>> -->",
       profile_for_nodejs
     );
     mapProfileAndType = mapProfileAndType.replace(
-      '<!-- <<type_for_uml>> -->',
+      "<!-- <<type_for_uml>> -->",
       type_for_uml
     );
     let mapToCoreController = core_packaged_template.replace(
-      '<!-- <<PACKAGED_CONTROLLER>> -->',
+      "<!-- <<PACKAGED_CONTROLLER>> -->",
       mappedController
     );
     let mapToCoreRoute = mapToCoreController.replace(
-      ' <!-- <<PACKAGED_RESOURCE>> -->',
+      " <!-- <<PACKAGED_RESOURCE>> -->",
       mappedRoute
     );
     let mapToCoreModel = mapToCoreRoute.replace(
-      '<!-- <<PACKAGED_MODEL>> -->',
+      "<!-- <<PACKAGED_MODEL>> -->",
       mappedModel.result
     );
     let mapToCoreDb = mapToCoreModel.replace(
-      '<!-- <<PACKAGED_DATABASE>> -->',
+      "<!-- <<PACKAGED_DATABASE>> -->",
       mappedModel.result_DB
     );
     mapToCoreDb = mapProfileAndType.replace(
-      '<!-- <<UML_MODEL>> -->',
+      "<!-- <<UML_MODEL>> -->",
       mapToCoreDb
     );
-    xmi = mapToCoreDb.replace(/^\s+|\s+$/g, '');
+    xmi = mapToCoreDb.replace(/^\s+|\s+$/g, "");
     // xmi = mapToCore.replace(/(\r\n|\n|\r)/gm, '');  // One Line
     const fileName = outPath;
     fs.writeFileSync(fileName, xmi);
