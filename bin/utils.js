@@ -1445,13 +1445,9 @@ async function generateXMI(data, outPath) {
           <!-- <<PACKAGED_RESOURCE>> -->
       </packagedElement>
       `;
-    // Map Controller
     let mappedController = mappingController(data.controller);
-    // Map Route
     let mappedRoute = mappingRoute(data.route);
-    // Map Model // Map Database
     let mappedModel = mappingModel(data.model);
-    // Compound All
     let mapProfileAndType = core_template.replace(
       "<!-- <<PROFILE_NODE.JS>> -->",
       profile_for_nodejs
@@ -1481,7 +1477,6 @@ async function generateXMI(data, outPath) {
       mapToCoreDb
     );
     xmi = mapToCoreDb.replace(/^\s+|\s+$/g, "");
-    // xmi = mapToCore.replace(/(\r\n|\n|\r)/gm, '');  // One Line
     const fileName = outPath;
     fs.writeFileSync(fileName, xmi);
     resolve();
