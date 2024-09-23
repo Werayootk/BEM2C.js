@@ -3,9 +3,7 @@
 const chalk = require('chalk');
 const boxen = require('boxen');
 const utils = require('./utils.js');
-
 const yargs = require("yargs");
-
 if(yargs.argv.version == true){
   utils.showVersion();
   return;
