@@ -1385,7 +1385,7 @@ function mappingModel(data) {
       <!-- <<Model_MEMBER_ATTR>> -->
   </packagedElement>
   `;
-
+    // This New feature for relation
     // item.relations.forEach((i) => {
     //   let storeEndID = generateId();
     //   let storeStartID = generateId();
