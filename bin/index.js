@@ -29,10 +29,10 @@ if (yargs.argv._[0] == null) {
         }
     } else if (yargs.argv.m === 'reverse') {
         try {
-            if (yargs.argv.i != null && yargs.argv.o != null) {
-                utils.reverseEngineering(yargs.argv.i, yargs.argv.o);
+            if (yargs.argv.i != null && yargs.argv.o != null && yargs.argv.t != null) {
+                utils.reverseEngineering(yargs.argv.i, yargs.argv.o, yargs.argv.t);
             } else {
-                console.log("\n" + boxen(chalk.red("\n" + "-i and -o not null." + "\n"), { padding: 1, borderColor: 'red', dimBorder: true, borderStyle: 'classic' }) + "\n");
+                console.log("\n" + boxen(chalk.red("\n" + "-i -t -o not null." + "\n"), { padding: 1, borderColor: 'red', dimBorder: true, borderStyle: 'classic' }) + "\n");
                 return;
             }
         } catch (error) {
