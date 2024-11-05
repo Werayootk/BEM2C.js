@@ -326,6 +326,8 @@ async function reverseEngineering(inputPath, outPath, typeDB) {
     controller: controllerData,
     route: routeData,
   };
+  console.log('data', data);
+  
   await generateXMI(data, outPath);
   console.log(
     '\n' +
@@ -1008,11 +1010,9 @@ async function analyzeRoutes(filePath) {
   function processPath(path) {
     const segments = path.split('/').filter(Boolean);
     const params = path.match(/:[^\/]+/g) || [];
-    console.log('params', params);
     
     // ไม่เอา segment สุดท้ายเพราะเป็น action
     const pathSegments = segments.slice(0, -1); 
-    console.log('pathSegments', pathSegments);
     
     let className;
     if (params.length > 0) {
@@ -1085,13 +1085,11 @@ async function analyzeRoutes(filePath) {
         node.expression.arguments[1].property.name;
 
       const pathInfo = processPath(path);
-      console.log('pathInfo', pathInfo);
       routeClass.push(pathInfo.className);
       methodName.push(method);
       controllerName.push(handler);
       
       const relationships = buildNextPath(pathInfo.segments);
-      console.log('relationships', relationships);
       relationships.forEach(rel => {
         const key = `${rel.from}-${rel.param}-${rel.to}`;
         if (!nextPathMap.has(key)) {
@@ -1112,12 +1110,12 @@ async function analyzeRoutes(filePath) {
 async function dataInRoute(pathFile) {
   try {
     const fileRouteContent = await fs_promises.readFile(pathFile, 'utf-8');
-    const result = await analyzeRoutes(fileRouteContent);
+    const result = await analyzeRoutes(pathFile);
     const data = {
-      resource: JSON.stringify(result.routeClass),
-      dependencyName: JSON.stringify(result.nextPath),
-      methodName: JSON.stringify(result.methodName),
-      controllerName: JSON.stringify(result.controllerName),
+      resource: result.routeClass,
+      dependencyName: result.nextPath,
+      methodName: result.methodName,
+      controllerName: result.controllerName,
     };
     return await data;
   } catch (err) {
@@ -1130,7 +1128,7 @@ async function analyzeMongooseModel(filePath) {
   const ast = esprima.parseModule(sourceCode);
   const modelName = [];
   const attribute = [];
-  const databaseType = ["MySQL"];
+  const databaseType = ["MongoDB"];
 
   try {
     // Find mongoose.model call to get model name
@@ -1245,20 +1243,20 @@ async function dataInModel(pathFile, typeDB="MySQL") {
   try {
     const fileModelContent = await fs_promises.readFile(pathFile, 'utf-8');
     if (typeDB === "MySQL") {
-      const result = await analyzeSequelizeModel(fileModelContent);
+      const result = await analyzeSequelizeModel(pathFile);
       const data = {
-        model: JSON.stringify(result.modelName),
-        database: JSON.stringify(result.databaseType),
-        attribute: JSON.stringify(result.attribute),
+        model: result.modelName,
+        database: result.databaseType,
+        attribute: result.attribute,
         // relations,
       };
       return await data;
     } else if (typeDB === "MongoDB") {
-      const result = await analyzeMongooseModel(fileModelContent);
+      const result = await analyzeMongooseModel(pathFile);
       const data = {
-        model: JSON.stringify(result.modelName),
-        database: JSON.stringify(result.databaseType),
-        attribute: JSON.stringify(result.attribute),
+        model: result.modelName,
+        database: result.databaseType,
+        attribute: result.attribute,
         // relations,
       };
       return await data;
@@ -1269,7 +1267,7 @@ async function dataInModel(pathFile, typeDB="MySQL") {
 }
 
 async function analyzeController(filePath) {
-  try {
+  try {    
     const sourceCode = fs.readFileSync(filePath, 'utf-8');
     const ast = esprima.parseModule(sourceCode);
 
@@ -1306,7 +1304,7 @@ async function analyzeController(filePath) {
     };
 
   } catch (error) {
-    console.error('Error analyzing controller:', error);
+    console.error('Error analyzing controller:', filePath, error);
     throw error;
   }
 }
@@ -1314,12 +1312,12 @@ async function analyzeController(filePath) {
 async function dataInController(pathFile) {
   try {
     const fileControllerContent = await fs_promises.readFile(pathFile, 'utf-8');
-    const result = await analyzeController(fileControllerContent);
+    const result = await analyzeController(pathFile);
     
     // Create the final object
     const data = {
-      controllerName: JSON.stringify(result.operationName),
-      className: JSON.stringify(result.controllerClass),
+      controllerName: result.operationName,
+      className: result.controllerClass,
     };
     return await data;
   } catch (err) {
@@ -1362,14 +1360,17 @@ async function extractDataFromProject(projectPath, typeDB) {
               // You can do something with each file here
               if (file.includes('.model.js')) {
                 const filePath = path.join(subfolderPath, file);
+                console.log('Reading model file:', filePath);                
                 const result = await dataInModel(filePath, typeDB);
                 modelData.push(result);
               } else if (file.includes('.controller.js')) {
                 const filePath = path.join(subfolderPath, file);
+                console.log('Reading controller file:', filePath);
                 const result = await dataInController(filePath);
                 controllerData.push(result);
               } else if (file.includes('.route.js')) {
                 const filePath = path.join(subfolderPath, file);
+                console.log('Reading route file:', filePath);
                 const result = await dataInRoute(filePath);
                 routeData.push(result);
               }
