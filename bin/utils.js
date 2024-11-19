@@ -1744,7 +1744,7 @@ function mappingModel(data) {
   let attr_db = `
   <ownedAttribute xmi:id="${generateId()}" name="${
     data[0].database[0]
-  }" visibility="private" xmi:type="uml:Property"/>
+  }" visibility="private" type="String_id" xmi:type="uml:Property"/>
   `;
   packaged_db = packaged_db.replace('<!-- <<DB_ELEM>> -->', attr_db);
   packaged_database = packaged_database.replace(
