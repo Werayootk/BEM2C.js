@@ -1530,6 +1530,14 @@ const type_model = [
   { Number_id: 'Number' },
 ];
 
+const mapMethodType = {
+  GET: 'AAAAAAGMmgLI/3Kpf3A=',
+  POST: 'AAAAAAGMmgLxTHLXFS4=',
+  DELETE: 'AAAAAAGMmgMTNnMFpHg=',
+  PUT: 'AAAAAAGMmgM/jHMzGcI=',
+  PATCH: 'AAAAAAGMmgNrlHNizAM=',
+};
+
 function mapType(inputType) {
   for (const typeObj of type_model) {
     const [typeId, type] = Object.entries(typeObj)[0];
@@ -1568,6 +1576,9 @@ function mappingController(data) {
   const packaged_controller = `
   <packagedElement xmi:id="${generateId()}" name="Controller" xmi:type="uml:Package">
     <!-- <<CONTROLLER_ELEM>> -->
+    <xmi:Extension extender="StarUML">
+      <stereotype value="AAAAAAGNm5lfNROkcaQ="/> 
+    </xmi:Extension>
   </packagedElement>
     `;
   data.forEach((element) => {
@@ -1576,6 +1587,9 @@ function mappingController(data) {
             <packagedElement xmi:id="${generateId()}" name="${
       element.className[0]
     }" xmi:type="uml:Class">
+            <xmi:Extension extender="StarUML">
+              <stereotype value="AAAAAAGMmdhx6F/AjOw="/>
+            </xmi:Extension>
                 <!-- <<CONTROLLER_OPERATION>> -->
             </packagedElement>
           `;
@@ -1604,6 +1618,9 @@ function mappingRoute(data) {
   let packaged_resource = `
   <packagedElement xmi:id="${generateId()}" name="Route" xmi:type="uml:Package">
     <!-- <<RESOURCE_ELEM>> -->
+    <xmi:Extension extender="StarUML">
+      <stereotype value="AAAAAAGNm4m4d2OgCNQ="/> 
+    </xmi:Extension>
   </packagedElement>
   `;
   const filteredDuplicate = [];
@@ -1632,6 +1649,9 @@ function mappingRoute(data) {
     <packagedElement xmi:id="${Object.values(item)[0]}" name="${
       Object.keys(item)[0]
     }" xmi:type="uml:Class">
+      <xmi:Extension extender="StarUML">
+        <stereotype value="AAAAAAGMmc+pm15OkLo="/>
+      </xmi:Extension>
       <!-- <<ROUTE_ELEM>> -->
     </packagedElement>
     `;
@@ -1650,7 +1670,11 @@ function mappingRoute(data) {
               j.param
             }" xmi:type="uml:Dependency" client="${
               Object.values(item)[0]
-            }" supplier="${supplierValue}"/>
+              }" supplier="${supplierValue}">
+                <xmi:Extension extender="StarUML">
+                  <stereotype value="AAAAAAGMt9vIbknkDC0="/>
+                </xmi:Extension>
+              </ownedMember>
             `;
             resultMappedRoute.push(mapRoute);
           }
@@ -1663,7 +1687,11 @@ function mappingRoute(data) {
         if (data[i].resource[j] == Object.keys(item)[0]) {
           mapOperation = `<ownedOperation xmi:id="${generateId()}" name="${
             data[i].controllerName[j]
-          }" xmi:type="uml:Operation"/>
+          }" xmi:type="uml:Operation">
+            <xmi:Extension extender="StarUML">
+              <stereotype value="${mapMethodType[data[i].methodName[j].toUpperCase()]}"/>
+            </xmi:Extension>
+          </ownedOperation>
           `;
           resultMappedOperation.push(mapOperation);
         }
@@ -1691,17 +1719,26 @@ function mappingModel(data) {
   let packaged_model = `
   <packagedElement xmi:id="${generateId()}" name="Model" xmi:type="uml:Package">
     <!-- <<MODEL_ELEM>> -->
+    <xmi:Extension extender="StarUML">
+      <stereotype value="AAAAAAGNm5l9ehPS+rU="/> 
+    </xmi:Extension>
   </packagedElement>
   `;
   let packaged_database = `
   <packagedElement xmi:id="${generateId()}" name="Database" xmi:type="uml:Package">
     <!-- <<DATABASE_ELEM>> -->
+    <xmi:Extension extender="StarUML">
+      <stereotype value="AAAAAAGNm5mxXRQB3tc="/> 
+    </xmi:Extension>
   </packagedElement>
   `;
   let packaged_db = `
   <packagedElement xmi:id="${generateId()}" name="${
     data[0].database[0]
   }" xmi:type="uml:Class">
+    <xmi:Extension extender="StarUML">
+      <stereotype value="AAAAAAGMmgYuNHQtJpU="/> 
+    </xmi:Extension>
     <!-- <<DB_ELEM>> -->
   </packagedElement>`;
   let attr_db = `
@@ -1733,6 +1770,9 @@ function mappingModel(data) {
     ];
     let modelPackaged = `
   <packagedElement xmi:id="${idValue}" name="${item.model[0]}" xmi:type="uml:Class">
+      <xmi:Extension extender="StarUML">
+        <stereotype value="AAAAAAGMmdjJmGABFtE="/> 
+      </xmi:Extension>
       <!-- <<Model_MEMBER_ATTR>> -->
   </packagedElement>
   `;
