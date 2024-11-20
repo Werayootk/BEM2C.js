@@ -1200,6 +1200,7 @@ async function analyzeSequelizeModel(filePath) {
     'STRING': 'String',
     'INTEGER': 'Number',
     'BOOLEAN': 'Boolean',
+    'DATE': 'Date',
   };
 
   try {
