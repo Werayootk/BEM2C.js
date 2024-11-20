@@ -1198,7 +1198,8 @@ async function analyzeSequelizeModel(filePath) {
   const typeMapping = {
     'UUID': 'UUID',
     'STRING': 'String',
-    'INTEGER': 'Number'
+    'INTEGER': 'Number',
+    'BOOLEAN': 'Boolean',
   };
 
   try {
