@@ -768,6 +768,7 @@ function generateModel(data) {
         'Id',
         'Array',
         'Number',
+        'UUID'
       ].includes(item.name)
     )
     .reduce((acc, item) => {
@@ -1196,7 +1197,7 @@ async function analyzeSequelizeModel(filePath) {
 
   // Map SQL types to our types
   const typeMapping = {
-    'UUID': 'UUID',
+    'UUID': 'Id',
     'STRING': 'String',
     'INTEGER': 'Number',
     'BOOLEAN': 'Boolean',
@@ -1508,6 +1509,7 @@ const type_for_uml = `
 <packagedElement xmi:id="Id_id" name="Id" xmi:type="uml:DataType"/>
 <packagedElement xmi:id="Array_id" name="Array" xmi:type="uml:DataType"/>
 <packagedElement xmi:id="Number_id" name="Number" xmi:type="uml:DataType"/>
+<packagedElement xmi:id="UUID_id" name="Id" xmi:type="uml:DataType"/>
 `;
 
 const core_template = `
@@ -1530,6 +1532,7 @@ const type_model = [
   { Date_id: 'Date' },
   { Id_id: 'Id' },
   { Number_id: 'Number' },
+  { UUID_id: 'Id' },
 ];
 
 const mapMethodType = {
