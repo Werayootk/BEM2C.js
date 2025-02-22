@@ -326,7 +326,7 @@ async function reverseEngineering(inputPath, outPath, typeDB) {
     controller: controllerData,
     route: routeData,
   };
-  console.log('data', data);
+  // console.log('data', data);
   
   await generateXMI(data, outPath);
   console.log(
