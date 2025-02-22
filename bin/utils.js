@@ -747,7 +747,7 @@ function generateRouter(data) {
   module.exports = router;
         `;
       const concatenatedString = newPath.contentFile.join('');
-      commentSection = commentSection + importController + concatenatedString + exportSection;
+      commentSection = commentSection + concatenatedString + exportSection;
       newPath.contentWithComment.push(commentSection);
       result.push(newPath);
     }
